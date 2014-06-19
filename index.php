@@ -10,6 +10,7 @@
 <body>
 <!-- head -->
 <div id="layHead">小金鱼的运气小屋</div>
+<div style="text-align:center;color:#838383">恭迎第XX号 小金鱼 大人 </div>
 <hr size=1 style="color: #C0C0C0;border-style:dotted;width:100%">
 
 <!-- content -->
