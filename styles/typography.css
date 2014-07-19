@@ -42,3 +42,34 @@ h1 {
 	border-bottom-style: dotted;
 	*/
 }
+
+.r-btn {
+    padding: 6px 10px;
+    width:auto; overflow:visible; *width:1;
+
+   
+    border: solid 1px #999;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+
+   
+    background: #DDD;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#DDDDDD');
+    background: -moz-linear-gradient(top,  #FFF,  #DDD);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF), to(#DDD));
+
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-shadow: 0px 1px 1px rgba(255,255,255,1);
+    line-height: 1;
+}
+.r-btn:active {
+   
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DDDDDD', endColorstr='#FFFFFF');
+    background: -moz-linear-gradient(top,  #DDD,  #FFF);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDD), to(#FFF));
+}
