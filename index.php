@@ -16,7 +16,24 @@
 
 <!-- content -->
 <div style="text-align:center;color:#0000ff">今天</div>
-<div style="text-align:center;">财运: </div>
+
+ 
+	<table width="" border="0" cellspacing="0" cellpadding="0">
+	<tr> 
+		<td>财运: </td> 
+		<td>
+			<div class="Bar"> 
+			<div style="width: 50%;"> 
+				<span>50%</span>
+			</div> 
+			</div>
+		</td> 
+		<td>5</td> 
+	</tr>
+	</table>
+ 
+
+
 <div style="text-align:center;">事业: </div>
 <div style="text-align:center;">健康: </div>
 <div style="text-align:center;">运气: </div>
@@ -34,7 +51,7 @@
 <div style="margin:20px;" </div>
 
 <div style="text-align:center;">增加明日运气方式</div>
-
+ 
 <!-- bottom -->
 <div id="layFoot">愿望什么的就交给锦鲤们把，你努力就好。握鳍:)</div>
 </body>
