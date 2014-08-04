@@ -15,42 +15,66 @@
 <hr size=1 style="color: #C0C0C0;border-style:dotted;width:100%">
 
 <!-- content -->
-<div style="text-align:center;color:#0000ff">今天</div>
-
  
-	<table width="" border="0" cellspacing="0" cellpadding="0">
+<table width="200" border="0" cellspacing="3" cellpadding="0">
+	<tr >
+		<td style="color:#0066FF;font-weight:bold">今天 </td>
+	</tr>
 	<tr> 
 		<td>财运: </td> 
 		<td>
 			<div class="Bar"> 
-			<div style="width: 50%;"> 
-				<span>50%</span>
-			</div> 
+				<div style="width: 50%;"> <span>5</span> </div> 
 			</div>
 		</td> 
-		<td>5</td> 
 	</tr>
-	</table>
+
+	<tr> 
+		<td>事业: </td> 
+		<td>
+			<div class="Bar"> 
+				<div style="width: 80%;"> <span>8</span> </div> 
+			</div>
+		</td> 
+	</tr>
+
+	<tr> 
+		<td>健康: </td> 
+		<td>
+			<div class="Bar"> 
+				<div style="width: 20%;"> <span>2</span> </div> 
+			</div>
+		</td> 
+	</tr>
+
+	<tr> 
+		<td>运气: </td> 
+		<td>
+			<div class="Bar"> 
+				<div style="width: 10%;"> <span>1</span> </div> 
+			</div>
+		</td> 
+	</tr>
+
+	<tr height="20">
+
+	</tr>
+</table> 
  
+<div style="text-align:center;">宜: 小鸟依人，主动交配</div>
+<div style="text-align:center;">忌: 无框眼镜，苹果拍照</div>
+
+<div style="height:20"></div>
+
+<div style="text-align:center;">幸运物: 锦鲤转运手链</div>
+<div style="text-align:center;">幸运色: 红色 </div>
+
+<div style="height:20"></div>
+
+<div style="text-align:center;">增加明日运气方式: 转发锦鲤微博3次</div>
 
 
-<div style="text-align:center;">事业: </div>
-<div style="text-align:center;">健康: </div>
-<div style="text-align:center;">运气: </div>
-
-<div style="margin:20px;" </div>
-
-<div style="text-align:center;">宜: </div>
-<div style="text-align:center;">忌: </div>
-
-<div style="margin:20px;" </div>
-
-<div style="text-align:center;">幸运物 </div>
-<div style="text-align:center;">幸运色 </div>
-
-<div style="margin:20px;" </div>
-
-<div style="text-align:center;">增加明日运气方式</div>
+</div>
  
 <!-- bottom -->
 <div id="layFoot">愿望什么的就交给锦鲤们把，你努力就好。握鳍:)</div>
