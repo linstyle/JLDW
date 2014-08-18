@@ -9,6 +9,11 @@
 
 <body>
 <!-- head -->
+<?php 
+	$user_id = isset($_GET["id"]) ? $_GET["id"]:0;
+	
+echo "test param:".$user_id;  
+?>
 <div id="layHead">小金鱼的运气小屋</div>
 <div style="text-align:center;color:#838383">恭迎第XX号 小金鱼 大人 </div>
 <div style="padding:0 0 0 10px"><button class="r-btn">运势</button></div>
@@ -20,6 +25,7 @@
 	<tr >
 		<td style="color:#0066FF;font-weight:bold">今天 </td>
 	</tr>
+
 	<tr> 
 		<td>财运: </td> 
 		<td>

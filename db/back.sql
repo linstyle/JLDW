@@ -35,6 +35,26 @@ CREATE TABLE `luck` (
 
 /*Data for the table `luck` */
 
+/*Table structure for table `template_level` */
+
+DROP TABLE IF EXISTS `template_level`;
+
+CREATE TABLE `template_level` (
+  `level_id` int(11) NOT NULL,
+  `chinese` varchar(18) DEFAULT NULL,
+  PRIMARY KEY (`level_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `template_level` */
+
+insert  into `template_level`(`level_id`,`chinese`) values (0,'测试小金鱼');
+insert  into `template_level`(`level_id`,`chinese`) values (11,'小金鱼(1级)');
+insert  into `template_level`(`level_id`,`chinese`) values (12,'小金鱼(2级)');
+insert  into `template_level`(`level_id`,`chinese`) values (13,'小金鱼(3级)');
+insert  into `template_level`(`level_id`,`chinese`) values (14,'小锦鲤(1级)');
+insert  into `template_level`(`level_id`,`chinese`) values (15,'小锦鲤(2级)');
+insert  into `template_level`(`level_id`,`chinese`) values (16,'小锦鲤(3级)');
+
 /*Table structure for table `template_luck` */
 
 DROP TABLE IF EXISTS `template_luck`;
@@ -79,11 +99,13 @@ CREATE TABLE `user` (
   `wx_id` bigint(20) DEFAULT NULL,
   `level` int(11) DEFAULT NULL,
   `todayluck_id` int(11) DEFAULT NULL,
-  `lastlogintime` datetime DEFAULT NULL,
+  `lastlogintime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `user` */
+
+insert  into `user`(`user_id`,`wx_id`,`level`,`todayluck_id`,`lastlogintime`) values (1,1,1,1,'2014-08-06 21:58:04');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
