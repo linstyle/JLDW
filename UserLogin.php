@@ -34,11 +34,14 @@
 	function update_todayluck_id($db, &$user_db_row)
 	{
 		//判断月日时间是否和当前一致
-		$today_time = date('Y-m-d H:i:s');
+		$today_time = date('m-d');
 		$last_logintime = $user_db_row['lastlogintime'];
 
-		//如果不一致，更新运气模板ID，并且更新时间
+		//如果不一致，更新运气模板ID
+		$today_time = data();
 
+
+		//更新时间
 		update_login_time($db, $user_db_row['user_id']);
 	}
 ?>
