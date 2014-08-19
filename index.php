@@ -12,7 +12,7 @@
 <?php 
 	include 'UserLogin.php';
 
-	$user_id = GetUserID();
+	$user_id = get_userid();
 
 	//db
 	@$db = new mysqli('localhost', 'root', '123456', 'jldw');
@@ -21,35 +21,31 @@
 		echo 'Error:Could not connect to database.Please try again later.';
 		exit;
 	}
-
-	UpdateLoginTime($db, $user_id);
-
-	//select table user 
-	$db_query = "SELECT * FROM USER WHERE user_id=".$user_id;
-	$db_result = $db->query($db_query);
-	$db_row = $db_result->fetch_assoc();
-
-	//show 
+ 
+	create_user($db, $user_id, $user_db_row);
 	$fish_number = 1;
 	$fish_level = 0;
-	$fish_level_chinese = "来历不明的小金鱼";
-	if( $db_result->num_rows!=0 )
+	if( !$user_db_row )
 	{
-		$fish_number = $db_row['fish_number'];
-		$fish_level = $db_row['level'];
+		echo "你是通过哪个渠道溜进来的小金鱼？没找到你的记录哦，快快向大王微博私信报道这个错误吧";
+		exit;
 	}
+	$fish_number = $user_db_row['fish_number'];
+	$fish_level = $user_db_row['level'];
 
-	//select table template_level
-	$db_query = "SELECT * FROM template_level WHERE level_id=".$fish_level;
-	$db_result = $db->query($db_query);
-	$db_row = $db_result->fetch_assoc();
-	if( $db_result->num_rows!=0 )
+	echo "上回登陆时间:".$user_db_row['lastlogintime'];
+
+	create_template_level($db, $fish_level, $level_db_row);
+	$fish_level_chinese = "来历不明的小金鱼";
+	if( $level_db_row )
 	{
-		$fish_level_chinese = stripslashes($db_row['chinese']);
+		$fish_level_chinese = stripslashes($level_db_row['chinese']);
 	}
 
 	echo "<div id=\"layHead\">第".$fish_number."号小金鱼的运气小屋</div>";
 	echo "<div style=\"text-align:center;color:#838383\">恭迎 ".$fish_level_chinese." 大人 </div>";
+
+	update_todayluck_id($db, $user_db_row);	
 ?>
 
 
