@@ -10,12 +10,49 @@
 <body>
 <!-- head -->
 <?php 
-	$user_id = isset($_GET["id"]) ? $_GET["id"]:0;
-	
-echo "test param:".$user_id;  
+	include 'UserLogin.php';
+
+	$user_id = GetUserID();
+
+	//db
+	@$db = new mysqli('localhost', 'root', '123456', 'jldw');
+	if( mysqli_connect_error() )
+	{
+		echo 'Error:Could not connect to database.Please try again later.';
+		exit;
+	}
+
+	UpdateLoginTime($db, $user_id);
+
+	//select table user 
+	$db_query = "SELECT * FROM USER WHERE user_id=".$user_id;
+	$db_result = $db->query($db_query);
+	$db_row = $db_result->fetch_assoc();
+
+	//show 
+	$fish_number = 1;
+	$fish_level = 0;
+	$fish_level_chinese = "来历不明的小金鱼";
+	if( $db_result->num_rows!=0 )
+	{
+		$fish_number = $db_row['fish_number'];
+		$fish_level = $db_row['level'];
+	}
+
+	//select table template_level
+	$db_query = "SELECT * FROM template_level WHERE level_id=".$fish_level;
+	$db_result = $db->query($db_query);
+	$db_row = $db_result->fetch_assoc();
+	if( $db_result->num_rows!=0 )
+	{
+		$fish_level_chinese = stripslashes($db_row['chinese']);
+	}
+
+	echo "<div id=\"layHead\">第".$fish_number."号小金鱼的运气小屋</div>";
+	echo "<div style=\"text-align:center;color:#838383\">恭迎 ".$fish_level_chinese." 大人 </div>";
 ?>
-<div id="layHead">小金鱼的运气小屋</div>
-<div style="text-align:center;color:#838383">恭迎第XX号 小金鱼 大人 </div>
+
+
 <div style="padding:0 0 0 10px"><button class="r-btn">运势</button></div>
 <hr size=1 style="color: #C0C0C0;border-style:dotted;width:100%">
 
