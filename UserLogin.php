@@ -38,10 +38,35 @@
 		$last_logintime = $user_db_row['lastlogintime'];
 
 		//如果不一致，更新运气模板ID
-		$today_time = data();
+		$last_logintime = date('m-d', strtotime($last_logintime));
+		
+		if( $today_time!=$last_logintime )
+		{
+			echo "time no eaual <br/>";
+		}
 
+		reset_luck($db, $user_db_row);
+
+		echo "time today_time:".$today_time."<br/>";
+		echo "time last_logintime:".$last_logintime."<br/>";
 
 		//更新时间
 		update_login_time($db, $user_db_row['user_id']);
+	}
+
+	function reset_luck($db, $user_db_row)
+	{
+		//user_luck_id
+		$v_caiyun = 0;			//财运数值
+		$v_shiye = 0;			//事业数值
+		$v_jiankang = 0;		//健康数值
+		$v_yunqi= 0；			//运气数值
+		$yi = 0;				//宜
+		$ji = 0;				//忌
+		$luck_item = 0;			//幸运物品
+		$luck_color = 0;		//幸运颜色
+		$addluck_way = 0;		//增加运气的办法
+
+
 	}
 ?>

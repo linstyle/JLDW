@@ -10,7 +10,7 @@
 <body>
 <!-- head -->
 <?php 
-	include 'UserLogin.php';
+	include_once 'UserLogin.php';
 
 	$user_id = get_userid();
 
