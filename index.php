@@ -13,21 +13,13 @@
 	include_once 'UserLogin.php';
 
 	$user_id = get_userid();
-
-	//db
-	@$db = new mysqli('localhost', 'root', '123456', 'jldw');
-	if( mysqli_connect_error() )
-	{
-		echo 'Error:Could not connect to database.Please try again later.';
-		exit;
-	}
  
-	create_user($db, $user_id, $user_db_row);
+	create_user($user_id, $user_db_row);
 	$fish_number = 1;
 	$fish_level = 0;
 	if( !$user_db_row )
 	{
-		echo "你是通过哪个渠道溜进来的小金鱼？没找到你的记录哦，快快向大王微博私信报道这个错误吧";
+		echo "说，你是通过哪个渠道溜进来的小金鱼？没找到你的记录哦，快快向大王微博私信报道这个错误吧";
 		exit;
 	}
 	$fish_number = $user_db_row['fish_number'];
@@ -35,17 +27,20 @@
 
 	echo "上回登陆时间:".$user_db_row['lastlogintime'];
 
-	create_template_level($db, $fish_level, $level_db_row);
+	create_template_level($fish_level, $level_db_row);
 	$fish_level_chinese = "来历不明的小金鱼";
 	if( $level_db_row )
 	{
 		$fish_level_chinese = stripslashes($level_db_row['chinese']);
 	}
 
-	echo "<div id=\"layHead\">第".$fish_number."号小金鱼的运气小屋</div>";
-	echo "<div style=\"text-align:center;color:#838383\">恭迎 ".$fish_level_chinese." 大人 </div>";
+	echo "<div id=\"layHead\">第 $fish_number 号小金鱼的运气小屋</div>";
+	echo "<div style=\"text-align:center;color:#838383\">恭迎 $fish_level_chinese 大人 </div>";
 
-	update_todayluck_id($db, $user_db_row);	
+	update_todayluck_id($user_db_row);
+
+	//获得用户的运气数据模型
+	create_user_luck($user_luck_db_row, $user_db_row);
 ?>
 
 
@@ -63,7 +58,13 @@
 		<td>财运: </td> 
 		<td>
 			<div class="Bar"> 
-				<div style="width: 50%;"> <span>5</span> </div> 
+				<?php 
+					global $user_luck_db_row;					
+					$v_caiyun_per = $user_luck_db_row['v_caiyun'] * 10;
+					$v_caiyun = $v_caiyun_per/10; 
+
+					echo "<div style=\"width:$v_caiyun_per%;\"> <span> $v_caiyun </span> </div>";
+				?>
 			</div>
 		</td> 
 	</tr>
@@ -72,7 +73,13 @@
 		<td>事业: </td> 
 		<td>
 			<div class="Bar"> 
-				<div style="width: 80%;"> <span>8</span> </div> 
+				<?php 
+					global $user_luck_db_row;					
+					$v_shiye_per = $user_luck_db_row['v_shiye'] * 10;
+					$v_shiye = $v_shiye_per/10; 
+
+					echo "<div style=\"width:$v_shiye_per%;\"> <span> $v_shiye </span> </div>";
+				?>
 			</div>
 		</td> 
 	</tr>
@@ -81,7 +88,13 @@
 		<td>健康: </td> 
 		<td>
 			<div class="Bar"> 
-				<div style="width: 20%;"> <span>2</span> </div> 
+				<?php 
+					global $user_luck_db_row;					
+					$v_jiankang_per = $user_luck_db_row['v_jiankang'] * 10;
+					$v_jiankang = $v_jiankang_per/10; 
+
+					echo "<div style=\"width:$v_jiankang_per%;\"> <span> $v_jiankang </span> </div>";
+				?>
 			</div>
 		</td> 
 	</tr>
@@ -90,7 +103,13 @@
 		<td>运气: </td> 
 		<td>
 			<div class="Bar"> 
-				<div style="width: 10%;"> <span>1</span> </div> 
+				<?php 
+					global $user_luck_db_row;					
+					$v_yunqi_per = $user_luck_db_row['v_yunqi'] * 10;
+					$v_yunqi = $v_yunqi_per/10; 
+
+					echo "<div style=\"width:$v_yunqi_per%;\"> <span> $v_yunqi </span> </div>";
+				?>
 			</div>
 		</td> 
 	</tr>
