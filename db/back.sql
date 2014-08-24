@@ -16,25 +16,6 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`jldw` /*!40100 DEFAULT CHARACTER SET ut
 
 USE `jldw`;
 
-/*Table structure for table `luck` */
-
-DROP TABLE IF EXISTS `luck`;
-
-CREATE TABLE `luck` (
-  `user_id` bigint(20) DEFAULT NULL,
-  `v_caiyun` int(11) DEFAULT NULL,
-  `v_shiye` int(11) DEFAULT NULL,
-  `v_jiankang` int(11) DEFAULT NULL,
-  `v_yunqi` int(11) DEFAULT NULL,
-  `yi` int(11) DEFAULT NULL,
-  `ji` int(11) DEFAULT NULL,
-  `luck_item` int(11) DEFAULT NULL,
-  `luck_color` int(11) DEFAULT NULL,
-  `addluck_way` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-/*Data for the table `luck` */
-
 /*Table structure for table `template_level` */
 
 DROP TABLE IF EXISTS `template_level`;
@@ -89,6 +70,8 @@ insert  into `template_luck`(`id`,`chinese`) values (30004,'橙色');
 insert  into `template_luck`(`id`,`chinese`) values (30005,'绿色');
 insert  into `template_luck`(`id`,`chinese`) values (30006,'青色');
 insert  into `template_luck`(`id`,`chinese`) values (30007,'黑色');
+insert  into `template_luck`(`id`,`chinese`) values (40001,'转发锦鲤微博三次');
+insert  into `template_luck`(`id`,`chinese`) values (40002,'给乞讨者1块钱');
 
 /*Table structure for table `user` */
 
@@ -97,15 +80,41 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `user_id` bigint(20) NOT NULL,
   `wx_id` bigint(20) DEFAULT NULL,
+  `fish_number` int(20) NOT NULL AUTO_INCREMENT,
   `level` int(11) DEFAULT NULL,
   `todayluck_id` int(11) DEFAULT NULL,
   `lastlogintime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`user_id`,`fish_number`),
+  KEY `user_number` (`fish_number`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `user` */
 
-insert  into `user`(`user_id`,`wx_id`,`level`,`todayluck_id`,`lastlogintime`) values (1,1,1,1,'2014-08-06 21:58:04');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (0,0,1,0,1,'2014-08-22 00:23:32');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (1,1,2,11,1,'2014-08-19 21:13:18');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (2,2,3,12,2,'2014-08-19 16:54:02');
+
+/*Table structure for table `user_luck` */
+
+DROP TABLE IF EXISTS `user_luck`;
+
+CREATE TABLE `user_luck` (
+  `user_id` bigint(20) NOT NULL,
+  `v_caiyun` int(11) DEFAULT NULL,
+  `v_shiye` int(11) DEFAULT NULL,
+  `v_jiankang` int(11) DEFAULT NULL,
+  `v_yunqi` int(11) DEFAULT NULL,
+  `yi` int(11) DEFAULT NULL,
+  `ji` int(11) DEFAULT NULL,
+  `luck_item` int(11) DEFAULT NULL,
+  `luck_color` int(11) DEFAULT NULL,
+  `addluck_way` int(11) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `user_luck` */
+
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_jiankang`,`v_yunqi`,`yi`,`ji`,`luck_item`,`luck_color`,`addluck_way`) values (0,9,9,8,2,5,10004,20002,30004,40001);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
