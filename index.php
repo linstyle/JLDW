@@ -118,18 +118,44 @@
 
 	</tr>
 </table> 
- 
-<div style="text-align:center;">宜: 小鸟依人，主动交配</div>
-<div style="text-align:center;">忌: 无框眼镜，苹果拍照</div>
+
+<?php
+	global $user_luck_db_row, $init_yi_rows;
+	$yi = $user_luck_db_row['yi'];
+	$yi_chinese = $init_yi_rows[$yi];
+
+	echo "<div style=\"text-align:center;\">宜: $yi_chinese</div>";
+
+	$ji = $user_luck_db_row['ji'];
+	$ji_chinese = $init_ji_rows[$ji];
+	echo "<div style=\"text-align:center;\">忌: $ji_chinese</div>";
+?>
 
 <div style="height:20"></div>
 
-<div style="text-align:center;">幸运物: 锦鲤转运手链</div>
-<div style="text-align:center;">幸运色: 红色 </div>
+<?php
+	global $user_luck_db_row, $init_luck_item_rows;
+	$luck_item = $user_luck_db_row['luck_item'];
+	$luck_item_chinese = $init_luck_item_rows[$luck_item];
+
+	echo "<div style=\"text-align:center;\">幸运物: $luck_item_chinese</div>";
+
+	$luck_color = $user_luck_db_row['luck_color'];
+	$luck_color_chinese = $init_luck_color_rows[$luck_color];
+	echo "<div style=\"text-align:center;\">幸运色: $luck_color_chinese </div>";
+?>
 
 <div style="height:20"></div>
 
-<div style="text-align:center;">增加明日运气方式: 转发锦鲤微博3次</div>
+<?php
+	global $user_luck_db_row, $init_addluck_way_rows;
+	$addluck_way = $user_luck_db_row['addluck_way'];
+	$addluck_way_chinese = $init_addluck_way_rows[$addluck_way];
+
+	echo "<div style=\"text-align:center;\">增加明日运气方式: $addluck_way_chinese</div>";
+?>
+
+
 
 
 </div>
