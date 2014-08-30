@@ -112,7 +112,7 @@
 		$user_db_row = $db_result->fetch_assoc();
 	}
 
-	function create_template_level($level_id, &$level_db_row)
+	function get_template_level($level_id, &$level_db_row)
 	{
 		global $db_handle;
 
@@ -121,7 +121,7 @@
 		$level_db_row = $db_result->fetch_assoc();		
 	}
 
-	function create_user_luck(&$user_luck_db_row, $user_db_row)
+	function get_user_luck(&$user_luck_db_row, $user_db_row)
 	{
 		global $db_handle;
 

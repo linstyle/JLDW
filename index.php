@@ -27,7 +27,7 @@
 
 	echo "上回登陆时间:".$user_db_row['lastlogintime'];
 
-	create_template_level($fish_level, $level_db_row);
+	get_template_level($fish_level, $level_db_row);
 	$fish_level_chinese = "来历不明的小金鱼";
 	if( $level_db_row )
 	{
@@ -40,7 +40,7 @@
 	update_todayluck_id($user_db_row);
 
 	//获得用户的运气数据模型
-	create_user_luck($user_luck_db_row, $user_db_row);
+	get_user_luck($user_luck_db_row, $user_db_row);
 ?>
 
 
