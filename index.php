@@ -25,7 +25,7 @@
 	$fish_number = $user_db_row['fish_number'];
 	$fish_level = $user_db_row['level'];
 
-	echo "上回登陆时间:".$user_db_row['lastlogintime'];
+	//echo "上回登陆时间:".$user_db_row['lastlogintime'];
 
 	get_template_level($fish_level, $level_db_row);
 	$fish_level_chinese = "来历不明的小金鱼";
@@ -34,28 +34,32 @@
 		$fish_level_chinese = stripslashes($level_db_row['chinese']);
 	}
 
-	echo "<div id=\"layHead\">第 $fish_number 号小金鱼的运气小屋</div>";
-	echo "<div style=\"text-align:center;color:#838383\">恭迎 $fish_level_chinese 大人 </div>";
+	$today_y = date('y')+2000;
+	$today_m = (int)date('m');
+	$today_d = (int)date('d');
+	$today_date = $today_y."年".$today_m."月".$today_d."日";
+
+	echo "<div id=\"layHead\">运气小屋门牌号 $fish_number  </div>";
+	echo "<div style=\"text-align:center;color:#838383\">$fish_level_chinese  $today_date</div>";
 
 	update_todayluck_id($user_db_row);
 
 	//获得用户的运气数据模型
 	get_user_luck($user_luck_db_row, $user_db_row);
+
+	$a=array("a"=>"Dog","b"=>"Cat","c"=>"Horse");
+	print_r(array_rand($a,2));
 ?>
 
-
+<!--
 <div style="padding:0 0 0 10px"><button class="r-btn">运势</button></div>
-<hr size=1 style="color: #C0C0C0;border-style:dotted;width:100%">
+-->
+<hr size=1 style="margin-bottom:10px;color: #C0C0C0;border-style:dotted;width:100%">
 
 <!-- content -->
- 
 <table width="200" border="0" cellspacing="3" cellpadding="0">
-	<tr >
-		<td style="color:#0066FF;font-weight:bold">今天 </td>
-	</tr>
-
 	<tr> 
-		<td>财运: </td> 
+		<td>财运 </td> 
 		<td>
 			<div class="Bar"> 
 				<?php 
@@ -70,7 +74,7 @@
 	</tr>
 
 	<tr> 
-		<td>事业: </td> 
+		<td>事业  </td> 
 		<td>
 			<div class="Bar"> 
 				<?php 
@@ -85,7 +89,7 @@
 	</tr>
 
 	<tr> 
-		<td>健康: </td> 
+		<td>健康  </td> 
 		<td>
 			<div class="Bar"> 
 				<?php 
@@ -100,7 +104,7 @@
 	</tr>
 
 	<tr> 
-		<td>运气: </td> 
+		<td>运气     </td> 
 		<td>
 			<div class="Bar"> 
 				<?php 
@@ -124,11 +128,11 @@
 	$yi = $user_luck_db_row['yi'];
 	$yi_chinese = $init_yi_rows[$yi];
 
-	echo "<div style=\"text-align:center;\">宜: $yi_chinese</div>";
+	echo "<div style=\"text-align:center;\"><span style=font-weight:bold>宜</span> $yi_chinese</div>";
 
 	$ji = $user_luck_db_row['ji'];
 	$ji_chinese = $init_ji_rows[$ji];
-	echo "<div style=\"text-align:center;\">忌: $ji_chinese</div>";
+	echo "<div style=\"text-align:center;\"><span style=font-weight:bold>忌</span> $ji_chinese</div>";
 ?>
 
 <div style="height:20"></div>
@@ -138,11 +142,11 @@
 	$luck_item = $user_luck_db_row['luck_item'];
 	$luck_item_chinese = $init_luck_item_rows[$luck_item];
 
-	echo "<div style=\"text-align:center;\">幸运物: $luck_item_chinese</div>";
+	echo "<div style=\"text-align:center;\"><span style=font-weight:bold>幸运物</span> $luck_item_chinese</div>";
 
 	$luck_color = $user_luck_db_row['luck_color'];
 	$luck_color_chinese = $init_luck_color_rows[$luck_color];
-	echo "<div style=\"text-align:center;\">幸运色: $luck_color_chinese </div>";
+	echo "<div style=\"text-align:center;\"><span style=font-weight:bold>幸运色 </span>$luck_color_chinese </div>";
 ?>
 
 <div style="height:20"></div>
@@ -161,7 +165,7 @@
 </div>
  
 <!-- bottom -->
-<div id="layFoot">愿望什么的就交给锦鲤们把，你努力就好。握鳍:)</div>
+<div id="layFoot">愿望什么的就交给锦鲤们把，你努力就好。握鳍:)  </br>新浪微博 @锦鲤大王 微信号：JinLiDaWang</div>
 </body>
 
 </html>
