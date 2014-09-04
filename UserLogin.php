@@ -11,8 +11,9 @@
 	//一些数据库模版初始化,以init打头使用
 	$db_template_luck;
 	
-	$init_yi_rows = array();
-	$init_ji_rows = array();
+	$init_yiji1_rows = array();
+	$init_yiji2_rows = array();
+	$init_yiji3_rows = array();
 	$init_luck_item_rows = array();
 	$init_luck_color_rows = array();
 	$init_addluck_way_rows = array();
@@ -26,8 +27,9 @@
 	function init_create_template_luck(&$db_template_luck)
 	{
 		global $db_handle;
-		global $init_yi_rows;
-		global $init_ji_rows;
+		global $init_yiji1_rows;
+		global $init_yiji2_rows;
+		global $init_yiji3_rows;
 		global $init_luck_item_rows;
 		global $init_luck_color_rows;
 		global $init_addluck_way_rows;
@@ -56,11 +58,11 @@
 
 			if( $id_template_luck>=1 && $id_template_luck <=10000 )
 			{
-				$init_yi_rows[$id_template_luck]=$chinese_template_luck;
+				$init_yiyi1_rows[$id_template_luck]=$chinese_template_luck;
 			}
 			else if( $id_template_luck>=10001 && $id_template_luck <=20000 )
 			{
-				$init_ji_rows[$id_template_luck]=$chinese_template_luck;
+				$init_yiyi2_rows[$id_template_luck]=$chinese_template_luck;
 			}
 			else if( $id_template_luck>=20001 && $id_template_luck <=30000 )
 			{
@@ -73,6 +75,10 @@
 			else if( $id_template_luck>=40001 && $id_template_luck <=50000 )
 			{
 				$init_addluck_way_rows[$id_template_luck]=$chinese_template_luck;
+			}	
+			else if( $id_template_luck>=50001 && $id_template_luck <=60000 )
+			{
+				$init_yiyi3_rows[$id_template_luck]=$chinese_template_luck;
 			}			
 		}
 /*
@@ -169,8 +175,9 @@
 	function reset_luck($user_db_row)
 	{
 		global $db_handle;
-		global $init_yi_rows;
-		global $init_ji_rows;
+		global $init_yiji1_rows;
+		global $init_yiji2_rows;
+		global $init_yiji3_rows;
 		global $init_luck_item_rows;
 		global $init_luck_color_rows;
 		global $init_addluck_way_rows;

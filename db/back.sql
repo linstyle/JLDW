@@ -134,7 +134,7 @@ CREATE TABLE `user` (
 
 /*Data for the table `user` */
 
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (0,0,1,0,1,'2014-09-03 17:59:25');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (0,0,1,0,1,'2014-09-04 13:20:29');
 insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (1,1,2,11,1,'2014-08-19 21:13:18');
 insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (2,2,3,12,2,'2014-08-19 16:54:02');
 
@@ -148,12 +148,12 @@ CREATE TABLE `user_luck` (
   `v_shiye` int(11) DEFAULT NULL,
   `v_jiankang` int(11) DEFAULT NULL,
   `v_yunqi` int(11) DEFAULT NULL,
-  `yi` int(11) DEFAULT NULL,
   `yi1` int(11) DEFAULT NULL,
   `yi2` int(11) DEFAULT NULL,
-  `ji` int(11) DEFAULT NULL,
+  `yi3` int(11) DEFAULT NULL,
   `ji1` int(11) DEFAULT NULL,
   `ji2` int(11) DEFAULT NULL,
+  `ji3` int(11) DEFAULT NULL,
   `luck_item` int(11) DEFAULT NULL,
   `luck_color` int(11) DEFAULT NULL,
   `addluck_way` int(11) DEFAULT NULL,
@@ -162,7 +162,7 @@ CREATE TABLE `user_luck` (
 
 /*Data for the table `user_luck` */
 
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_jiankang`,`v_yunqi`,`yi`,`yi1`,`yi2`,`ji`,`ji1`,`ji2`,`luck_item`,`luck_color`,`addluck_way`) values (0,3,1,8,10,4,NULL,NULL,10004,NULL,NULL,20001,30003,40001);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_jiankang`,`v_yunqi`,`yi1`,`yi2`,`yi3`,`ji1`,`ji2`,`ji3`,`luck_item`,`luck_color`,`addluck_way`) values (0,9,1,9,5,3,NULL,NULL,10004,NULL,NULL,20003,30003,40001);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
