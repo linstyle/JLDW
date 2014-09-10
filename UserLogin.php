@@ -11,9 +11,9 @@
 	//一些数据库模版初始化,以init打头使用
 	$db_template_luck;
 	
+	$init_yiji0_rows = array();
 	$init_yiji1_rows = array();
 	$init_yiji2_rows = array();
-	$init_yiji3_rows = array();
 	$init_luck_item_rows = array();
 	$init_luck_color_rows = array();
 	$init_addluck_way_rows = array();
@@ -27,9 +27,9 @@
 	function init_create_template_luck(&$db_template_luck)
 	{
 		global $db_handle;
+		global $init_yiji0_rows;
 		global $init_yiji1_rows;
 		global $init_yiji2_rows;
-		global $init_yiji3_rows;
 		global $init_luck_item_rows;
 		global $init_luck_color_rows;
 		global $init_addluck_way_rows;
@@ -58,11 +58,11 @@
 
 			if( $id_template_luck>=1 && $id_template_luck <=10000 )
 			{
-				$init_yiyi1_rows[$id_template_luck]=$chinese_template_luck;
+				$init_yiji0_rows[$id_template_luck]=$chinese_template_luck;
 			}
 			else if( $id_template_luck>=10001 && $id_template_luck <=20000 )
 			{
-				$init_yiyi2_rows[$id_template_luck]=$chinese_template_luck;
+				$init_yiji1_rows[$id_template_luck]=$chinese_template_luck;
 			}
 			else if( $id_template_luck>=20001 && $id_template_luck <=30000 )
 			{
@@ -78,26 +78,25 @@
 			}	
 			else if( $id_template_luck>=50001 && $id_template_luck <=60000 )
 			{
-				$init_yiyi3_rows[$id_template_luck]=$chinese_template_luck;
+				$init_yiji2_rows[$id_template_luck]=$chinese_template_luck;
 			}			
 		}
 /*
-		echo "<br/>宜 1~10000,count:";
+		echo "宜 1~10000,count:";
 		print_r($init_yi_rows);
 
-		echo "<br/>忌 10001~20000：";
+		echo "忌 10001~20000：";
 		print_r($init_ji_rows);
 
-		echo "<br/>幸运物 20001～30000：";
+		echo "幸运物 20001～30000：";
 		print_r($init_luck_item_rows);
 
-		echo "<br/>幸运颜色 30001～40000：";
+		echo "幸运颜色 30001～40000：";
 		print_r($init_luck_color_rows);
 
-		echo "<br/>增加运气方式 40001～50000：";
+		echo "增加运气方式 40001～50000：";
 		print_r($init_addluck_way_rows);
 
-		echo "<br/>";
 */
 		return true;
 	}
@@ -151,7 +150,7 @@
 		
 		if( $today_time!=$last_logintime )
 		{
-			echo "time no eaual <br/>";
+			echo "time no eaual:$today_time,$last_logintime <br/>";
 		}
 
 		reset_luck($user_db_row);
@@ -175,9 +174,9 @@
 	function reset_luck($user_db_row)
 	{
 		global $db_handle;
+		global $init_yiji0_rows;
 		global $init_yiji1_rows;
 		global $init_yiji2_rows;
-		global $init_yiji3_rows;
 		global $init_luck_item_rows;
 		global $init_luck_color_rows;
 		global $init_addluck_way_rows;
@@ -187,8 +186,12 @@
 		$v_shiye = 0;			//事业数值
 		$v_jiankang = 0;		//健康数值
 		$v_yunqi= 0;			//运气数值
-		$yi = 0;				//宜
-		$ji = 0;				//忌
+		$yi0_0 = 0; $yi0_1 = 0; $yi1_0 = 0;      //宜
+		$yi1_1 = 0; $yi2_0 = 0; $yi2_1 = 0;      //宜
+
+		$ji0_0 = 0;  $ji0_1 = 0; $ji1_0 = 0;  	 //忌
+		$ji2_1 = 0;  $ji2_0 = 0; $ji2_1 = 0;  	 //忌
+
 		$luck_item = 0;			//幸运物品
 		$luck_color = 0;		//幸运颜色
 		$addluck_way = 0;		//增加运气的办法
@@ -199,8 +202,18 @@
 		$v_jiankang = mt_rand(0,10);
 		$v_yunqi = mt_rand(0,10);
 
-		$yi = array_rand($init_yi_rows);
-		$ji = array_rand($init_ji_rows);
+		$yiji0s = array_rand($init_yiji0_rows, 4);
+		$yi0_0 = $yiji0s[0]; $yi0_1 = $yiji0s[1]; $ji0_0 = $yiji0s[2]; $ji0_1 = $yiji0s[3];
+
+		$yiji1s = array_rand($init_yiji1_rows, 4);
+		$yi1_0 = $yiji1s[0]; $yi1_1 = $yiji1s[1]; $ji1_0 = $yiji1s[2]; $ji1_1 = $yiji1s[3];
+
+		$yiji2s = array_rand($init_yiji2_rows, 4);
+		$yi2_0 = $yiji2s[0]; $yi2_1 = $yiji2s[1]; $ji2_0 = $yiji2s[2]; $ji2_1 = $yiji2s[3];
+
+//debug
+//		echo "yi0_0:$yi0_0 ,yi0_1:$yi0_1, yi1_0:$yi1_0, yi1_1:$yi1_1, yi2_0:$yi2_0, yi2_1:$yi2_1";
+
 		$luck_item = array_rand($init_luck_item_rows);
 		$luck_color = array_rand($init_luck_color_rows);
 		$addluck_way = array_rand($init_addluck_way_rows);
@@ -212,7 +225,7 @@
 
 		if(0==$num_results)
 		{
-			$db_query = "insert into user_luck(`user_id`,`v_caiyun`,`v_shiye`,`v_jiankang`,`v_yunqi`,`yi`,`ji`,`luck_item`,`luck_color`,`addluck_way`) values(".$user_db_row['user_id'].",$v_caiyun,$v_shiye,$v_jiankang,$v_yunqi,$yi, $ji,$luck_item,$luck_color,$addluck_way)";
+			$db_query = "insert into user_luck(`user_id`,`v_caiyun`,`v_shiye`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`ji3_0`,`ji3_1`,`luck_item`,`luck_color`,`addluck_way`) values(".$user_db_row['user_id'].",$v_caiyun,$v_shiye,$v_jiankang,$v_yunqi,$yi0_0, $yi0_1, $yi1_0, $yi1_1, $yi2_0, $yi2_1, $ji1_0, $ji1_1, $ji2_0, $ji2_1, $ji3_0, $ji3_1, $luck_item,$luck_color,$addluck_way)";
 
 			if (!$db_handle->query($db_query))
    		    {
@@ -223,7 +236,7 @@
 		}
 		else
 		{
-			$db_query = "update user_luck set v_caiyun=$v_caiyun, v_shiye=$v_shiye, v_jiankang=$v_jiankang, v_yunqi=$v_yunqi, yi=$yi, ji=$ji, luck_item=$luck_item, luck_color=$luck_color, addluck_way=$addluck_way where user_id=".$user_db_row['user_id'];
+			$db_query = "update user_luck set v_caiyun=$v_caiyun, v_shiye=$v_shiye, v_jiankang=$v_jiankang, v_yunqi=$v_yunqi, yi0_0=$yi0_0, yi0_1=$yi0_1, yi1_0=$yi1_0, yi1_1=$yi1_1, yi2_0=$yi2_0, yi2_1=$yi2_1, ji0_0=$ji0_0, ji0_1=$ji0_1, ji1_0=$ji1_0, ji1_1=$ji1_1, ji2_0=$ji2_0, ji2_1=$ji2_1, luck_item=$luck_item, luck_color=$luck_color, addluck_way=$addluck_way where user_id=".$user_db_row['user_id'];
 
 			if (!$db_handle->query($db_query))
    		    {

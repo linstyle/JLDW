@@ -46,9 +46,6 @@
 
 	//获得用户的运气数据模型
 	get_user_luck($user_luck_db_row, $user_db_row);
-
-	$a=array("a"=>"Dog","b"=>"Cat","c"=>"Horse");
-	print_r(array_rand($a,2));
 ?>
 
 <!--
@@ -57,7 +54,7 @@
 <hr size=1 style="margin-bottom:10px;color: #C0C0C0;border-style:dotted;width:100%">
 
 <!-- content -->
-<table width="200" border="0" cellspacing="3" cellpadding="0">
+<table width="220" border="0" cellspacing="3" cellpadding="0">
 	<tr> 
 		<td>财运 </td> 
 		<td>
@@ -119,11 +116,118 @@
 	</tr>
 
 	<tr height="20">
+	</tr>
 
+	<tr> 
+		<td>宜：     </td> 
+		<td>
+			<?php
+				global $user_luck_db_row;
+				global $init_yiji0_rows;
+
+				$yi0_0 = $user_luck_db_row['yi0_0'];
+				$yi0_0_chinese = $init_yiji0_rows[$yi0_0];
+
+				$yi0_1 = $user_luck_db_row['yi0_1'];
+				$yi0_1_chinese = $init_yiji0_rows[$yi0_1];
+
+				echo "$yi0_0_chinese, $yi0_1_chinese";
+			?>			
+		</td> 
+	</tr>
+	<tr> 
+		<td></td> 
+		<td>
+			<?php
+				global $user_luck_db_row;
+				global $init_yiji1_rows;
+
+				$yi1_0 = $user_luck_db_row['yi1_0'];
+				$yi1_0_chinese = $init_yiji1_rows[$yi1_0];
+
+				$yi1_1 = $user_luck_db_row['yi1_1'];
+				$yi1_1_chinese = $init_yiji1_rows[$yi1_1];
+
+				echo "$yi1_0_chinese, $yi1_1_chinese";
+			?>			
+		</td> 
+	</tr>
+	<tr> 
+		<td></td> 
+		<td>
+			<?php
+				global $user_luck_db_row;
+				global $init_yiji2_rows;
+
+				$yi2_0 = $user_luck_db_row['yi2_0'];
+				$yi2_0_chinese = $init_yiji2_rows[$yi2_0];
+
+				$yi2_1 = $user_luck_db_row['yi2_1'];
+				$yi2_1_chinese = $init_yiji2_rows[$yi2_1];
+
+				echo "$yi2_0_chinese, $yi2_1_chinese";
+			?>			
+		</td> 
+	</tr>
+
+	<tr height="20">
+	</tr>
+
+	<tr> 
+		<td>忌：     </td> 
+		<td>
+			<?php
+				global $user_luck_db_row;
+				global $init_yiji0_rows;
+
+				$ji0_0 = $user_luck_db_row['ji0_0'];
+				$ji0_0_chinese = $init_yiji0_rows[$ji0_0];
+
+				$ji0_1 = $user_luck_db_row['ji0_1'];
+				$ji0_1_chinese = $init_yiji0_rows[$ji0_1];
+
+				echo "$ji0_0_chinese, $ji0_1_chinese";
+			?>			
+		</td> 
+	</tr>
+	<tr> 
+		<td></td> 
+		<td>
+			<?php
+				global $user_luck_db_row;
+				global $init_yiji1_rows;
+
+				$ji1_0 = $user_luck_db_row['ji1_0'];
+				$ji1_0_chinese = $init_yiji1_rows[$ji1_0];
+
+				$ji1_1 = $user_luck_db_row['ji1_1'];
+				$ji1_1_chinese = $init_yiji1_rows[$ji1_1];
+
+				echo "$ji1_0_chinese, $ji1_1_chinese";
+			?>			
+		</td> 
+	</tr>
+	<tr> 
+		<td></td> 
+		<td>
+			<?php
+				global $user_luck_db_row;
+				global $init_yiji2_rows;
+
+				$ji2_0 = $user_luck_db_row['ji2_0'];
+				$ji2_0_chinese = $init_yiji2_rows[$ji2_0];
+
+				$ji2_1 = $user_luck_db_row['ji2_1'];
+				$ji2_1_chinese = $init_yiji2_rows[$ji2_1];
+
+				echo "$ji2_0_chinese, $ji2_1_chinese";
+			?>			
+		</td> 
 	</tr>
 </table> 
 
 <?php
+/*
 	global $user_luck_db_row, $init_yi_rows;
 	$yi = $user_luck_db_row['yi'];
 	$yi_chinese = $init_yi_rows[$yi];
@@ -133,6 +237,7 @@
 	$ji = $user_luck_db_row['ji'];
 	$ji_chinese = $init_ji_rows[$ji];
 	echo "<div style=\"text-align:center;\"><span style=font-weight:bold>忌</span> $ji_chinese</div>";
+*/
 ?>
 
 <div style="height:20"></div>
