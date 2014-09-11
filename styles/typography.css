@@ -16,11 +16,25 @@ p{
 	line-height:20px
 } 
 
-#layHead {
-    text-align:center;
+#layHeadFram
+{
+
+	width: 200px;	
+	margin: auto; 
+}
+
+#layHeadFont {
+	text-align:center;
+	font-weight:bold;
 	font-size:18px;
 	line-height:25px;
 	font-family:"微软雅黑";
+	margin-bottom:10px;
+}
+
+#layHeadSub {
+	color:#0000ff;
+	margin-left:30px;
 }
 
 #layDottedLine{

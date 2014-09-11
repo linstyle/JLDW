@@ -38,23 +38,42 @@
 	$today_m = (int)date('m');
 	$today_d = (int)date('d');
 	$today_date = $today_y."年".$today_m."月".$today_d."日";
-
+/*
 	echo "<div id=\"layHead\">运气小屋门牌号 $fish_number  </div>";
 	echo "<div style=\"text-align:center;color:#838383\">$fish_level_chinese  $today_date</div>";
+*/	
+	echo "<div style=\"width: 230px;margin:auto;margin-bottom:6px;\">";
 
+	echo "<div style=\"font-weight:bold;font-size:18px;margin-bottom:12px;text-align:center;\">锦鲤大王今天宜/忌指南 </div>";
+	echo "<div style=\"text-align:right;color:#0000ff;\">$today_date</div>";
+	
+	echo "</div>";
 	update_todayluck_id($user_db_row);
 
 	//获得用户的运气数据模型
 	get_user_luck($user_luck_db_row, $user_db_row);
 ?>
 
-<!--
-<div style="padding:0 0 0 10px"><button class="r-btn">运势</button></div>
--->
 <hr size=1 style="margin-bottom:10px;color: #C0C0C0;border-style:dotted;width:100%">
 
+<div style="text-align: center;">
+<select style="margin-bottom:5px; width:220;" name=here onchange="location.href=this.options[this.selectedIndex].value">
+	<option value="http://www.163.com">白羊座</option>
+	<option value="jinniu">金牛座</option>
+	<option value="shuangzi">双子座</option>
+	<option value="juxie">巨蟹座</option>
+	<option value="shizi">狮子座</option>
+	<option value="chunv">处女座</option>
+	<option value="tianping">天枰座</option>
+	<option value="tianxie">天蝎座</option>
+	<option value="sheshou">射手座</option>
+	<option value="mojie">魔羯座</option>
+	<option value="shuiping">水瓶座</option>
+	<option value="shuangyu">双鱼座</option>
+</select>
+</div>
 <!-- content -->
-<table width="220" border="0" cellspacing="3" cellpadding="0">
+<table width=220 border="0" cellspacing="3" cellpadding="0">
 	<tr> 
 		<td>财运 </td> 
 		<td>
@@ -226,48 +245,72 @@
 	</tr>
 </table> 
 
-<?php
-/*
-	global $user_luck_db_row, $init_yi_rows;
-	$yi = $user_luck_db_row['yi'];
-	$yi_chinese = $init_yi_rows[$yi];
-
-	echo "<div style=\"text-align:center;\"><span style=font-weight:bold>宜</span> $yi_chinese</div>";
-
-	$ji = $user_luck_db_row['ji'];
-	$ji_chinese = $init_ji_rows[$ji];
-	echo "<div style=\"text-align:center;\"><span style=font-weight:bold>忌</span> $ji_chinese</div>";
-*/
-?>
-
 <div style="height:20"></div>
 
 <?php
+/*
 	global $user_luck_db_row, $init_luck_item_rows;
 	$luck_item = $user_luck_db_row['luck_item'];
 	$luck_item_chinese = $init_luck_item_rows[$luck_item];
 
-	echo "<div style=\"text-align:center;\"><span style=font-weight:bold>幸运物</span> $luck_item_chinese</div>";
+	echo "<div style=\"text-align:center;\"><span style=font-weight:bold>幸运物品</span> $luck_item_chinese</div>";
 
 	$luck_color = $user_luck_db_row['luck_color'];
 	$luck_color_chinese = $init_luck_color_rows[$luck_color];
-	echo "<div style=\"text-align:center;\"><span style=font-weight:bold>幸运色 </span>$luck_color_chinese </div>";
+	echo "<div style=\"text-align:center;\"><span style=font-weight:bold>幸运颜色 </span>$luck_color_chinese </div>";
+	*/
 ?>
 
-<div style="height:20"></div>
 
 <?php
+/*
 	global $user_luck_db_row, $init_addluck_way_rows;
 	$addluck_way = $user_luck_db_row['addluck_way'];
 	$addluck_way_chinese = $init_addluck_way_rows[$addluck_way];
 
-	echo "<div style=\"text-align:center;\">增加明日运气方式: $addluck_way_chinese</div>";
+	echo "<div style=\"text-align:center;\">增运方式: $addluck_way_chinese</div>";
+	*/
 ?>
 
+<table width=220 border="0" cellspacing="3" cellpadding="0">
+	<tr>
+		<td>幸运物品:</td>
+		<td>
+		<?php
+			global $user_luck_db_row, $init_luck_item_rows;
+			$luck_item = $user_luck_db_row['luck_item'];
+			$luck_item_chinese = $init_luck_item_rows[$luck_item];
+			echo "$luck_item_chinese";
+		?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>幸运颜色:</td>
+		<td>
+		<?php
+			$luck_color = $user_luck_db_row['luck_color'];
+			$luck_color_chinese = $init_luck_color_rows[$luck_color];
+			echo "$luck_color_chinese";
+		?>
+		</td>
+	<tr>
+
+	<tr>
+		<td>增运方式:</td>
+		<td>
+		<?php
+			global $user_luck_db_row, $init_addluck_way_rows;
+			$addluck_way = $user_luck_db_row['addluck_way'];
+			$addluck_way_chinese = $init_addluck_way_rows[$addluck_way];
+
+			echo "$addluck_way_chinese";
+		?>
+		</td>
+	<tr>
+</table>
 
 
-
-</div>
  
 <!-- bottom -->
 <div id="layFoot">愿望什么的就交给锦鲤们把，你努力就好。握鳍:)  </br>新浪微博 @锦鲤大王 微信号：JinLiDaWang</div>
