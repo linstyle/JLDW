@@ -4,6 +4,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>锦鲤大王</title>
+
 <link rel="stylesheet" type="text/css" media="screen" href="styles/basic.css" />
 </head>
 
@@ -17,23 +18,18 @@
 	create_user($user_id, $user_db_row);
 	$fish_number = 1;
 	$fish_level = 0;
-	if( !$user_db_row )
-	{
-		echo "说，你是通过哪个渠道溜进来的小金鱼？没找到你的记录哦，快快向大王微博私信报道这个错误吧";
-		exit;
-	}
 	$fish_number = $user_db_row['fish_number'];
 	$fish_level = $user_db_row['level'];
 
 	//echo "上回登陆时间:".$user_db_row['lastlogintime'];
-
+/*
 	get_template_level($fish_level, $level_db_row);
 	$fish_level_chinese = "来历不明的小金鱼";
 	if( $level_db_row )
 	{
 		$fish_level_chinese = stripslashes($level_db_row['chinese']);
 	}
-
+*/
 	$today_y = date('y')+2000;
 	$today_m = (int)date('m');
 	$today_d = (int)date('d');
@@ -44,7 +40,7 @@
 */	
 	echo "<div style=\"width: 230px;margin:auto;margin-bottom:6px;\">";
 
-	echo "<div style=\"font-weight:bold;font-size:18px;margin-bottom:12px;text-align:center;\">锦鲤大王今天宜/忌指南 </div>";
+	echo "<div style=\"font-weight:bold;font-size:18px;margin-bottom:12px;margin-top:5px;text-align:center;\">锦鲤大王宜/忌指南 </div>";
 	echo "<div style=\"text-align:right;color:#0000ff;\">$today_date</div>";
 	
 	echo "</div>";
@@ -57,21 +53,120 @@
 <hr size=1 style="margin-bottom:10px;color: #C0C0C0;border-style:dotted;width:100%">
 
 <div style="text-align: center;">
-<select style="margin-bottom:5px; width:220;" name=here onchange="location.href=this.options[this.selectedIndex].value">
-	<option value="http://www.163.com">白羊座</option>
-	<option value="jinniu">金牛座</option>
-	<option value="shuangzi">双子座</option>
-	<option value="juxie">巨蟹座</option>
-	<option value="shizi">狮子座</option>
-	<option value="chunv">处女座</option>
-	<option value="tianping">天枰座</option>
-	<option value="tianxie">天蝎座</option>
-	<option value="sheshou">射手座</option>
-	<option value="mojie">魔羯座</option>
-	<option value="shuiping">水瓶座</option>
-	<option value="shuangyu">双鱼座</option>
+<select style="margin-bottom:5px; width:220;" id=sel_xz onchange="location.href=this.options[this.selectedIndex].value">
+  <?php
+  	global $user_id;
+  	if(0==$user_id)
+  	{
+  		echo"<option value=\"?id=0\" selected=\"true\">白羊座</option>";
+  	}
+  	else
+  	{
+  		echo "<option value=\"?id=0\" >白羊座</option>";
+  	}
+  	
+  	if(1==$user_id)
+  	{
+  		echo"<option value=\"?id=1\" selected=\"true\">金牛座</option>";
+  	}
+  	else
+  	{
+  		echo "<option value=\"?id=1\" >金牛座</option>";
+  	}
+  	
+  	if(2==$user_id)
+  	{
+  		echo"<option value=\"?id=2\" selected=\"true\">双子座</option>";
+  	}
+  	else
+  	{
+  		echo "<option value=\"?id=2\" >双子座</option>";
+  	}
+  	
+  	if(3==$user_id)
+  	{
+  		echo"<option value=\"?id=3\" selected=\"true\">巨蟹座</option>";
+  	}
+  	else
+  	{
+  		echo "<option value=\"?id=3\" >巨蟹座</option>";
+  	}
+  	
+  	if(4==$user_id)
+  	{
+  		echo"<option value=\"?id=4\" selected=\"true\">狮子座</option>";
+  	}
+  	else
+  	{
+  		echo "<option value=\"?id=4\" >狮子座</option>";
+  	}
+  	
+  	if(5==$user_id)
+  	{
+  		echo"<option value=\"?id=5\" selected=\"true\">处女座</option>";
+  	}
+  	else
+  	{
+  		echo "<option value=\"?id=5\" >处女座</option>";
+  	}
+  	
+  	if(6==$user_id)
+  	{
+  		echo"<option value=\"?id=6\" selected=\"true\">天枰座</option>";
+  	}
+  	else
+  	{
+  		echo "<option value=\"?id=6\" >天枰座</option>";
+  	}  	 
+  	
+  	if(7==$user_id)
+  	{
+  		echo"<option value=\"?id=7\" selected=\"true\">天蝎座</option>";
+  	}
+  	else
+  	{
+  		echo "<option value=\"?id=7\" >天蝎座</option>";
+  	}
+  	
+  	if(8==$user_id)
+  	{
+  		echo"<option value=\"?id=8\" selected=\"true\">射手座</option>";
+  	}
+  	else
+  	{
+  		echo "<option value=\"?id=8\" >射手座</option>";
+  	}    	
+  	
+  	if(9==$user_id)
+  	{
+  		echo"<option value=\"?id=9\" selected=\"true\">魔羯座</option>";
+  	}
+  	else
+  	{
+  		echo "<option value=\"?id=9\" >魔羯座</option>";
+  	}
+  	
+  	if(10==$user_id)
+  	{
+  		echo"<option value=\"?id=10\" selected=\"true\">水瓶座</option>";
+  	}
+  	else
+  	{
+  		echo "<option value=\"?id=10\" >水瓶座</option>";
+  	}   
+  	
+  	if(11==$user_id)
+  	{
+  		echo"<option value=\"?id=11\" selected=\"true\">双鱼座</option>";
+  	}
+  	else
+  	{
+  		echo "<option value=\"?id=11\" >双鱼座</option>";
+  	}     	  	 	  	  	 	  	  	  	
+  ?>
 </select>
 </div>
+
 <!-- content -->
 <table width=220 border="0" cellspacing="3" cellpadding="0">
 	<tr> 
@@ -314,6 +409,9 @@
  
 <!-- bottom -->
 <div id="layFoot">愿望什么的就交给锦鲤们把，你努力就好。握鳍:)  </br>新浪微博 @锦鲤大王 微信号：JinLiDaWang</div>
+
+	<!--<script src="scripts/jldw.js"></script> -->
+	
 </body>
 
 </html>

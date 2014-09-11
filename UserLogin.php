@@ -119,6 +119,12 @@
 		$db_query = "SELECT * FROM USER WHERE user_id=".$user_id;
 		$db_result = $db_handle->query($db_query);
 		$user_db_row = $db_result->fetch_assoc();
+
+		if(!$user_db_row)
+		{
+			echo "咦咦咦，为什么没有这个数据？快快私信锦鲤大王去。。。";
+			exit;
+		}
 	}
 
 	function get_template_level($level_id, &$level_db_row)
@@ -222,10 +228,12 @@
 		$db_query = "SELECT * FROM user_luck WHERE user_id=".$user_db_row['user_id'];
 		$db_result = $db_handle->query($db_query);
 		$num_results = $db_result->num_rows;
+//debug
+//		echo "ttt:$db_query";
 
 		if(0==$num_results)
 		{
-			$db_query = "insert into user_luck(`user_id`,`v_caiyun`,`v_shiye`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`ji3_0`,`ji3_1`,`luck_item`,`luck_color`,`addluck_way`) values(".$user_db_row['user_id'].",$v_caiyun,$v_shiye,$v_jiankang,$v_yunqi,$yi0_0, $yi0_1, $yi1_0, $yi1_1, $yi2_0, $yi2_1, $ji1_0, $ji1_1, $ji2_0, $ji2_1, $ji3_0, $ji3_1, $luck_item,$luck_color,$addluck_way)";
+			$db_query = "insert into user_luck(`user_id`,`v_caiyun`,`v_shiye`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values(".$user_db_row['user_id'].",$v_caiyun,$v_shiye,$v_jiankang,$v_yunqi,$yi0_0, $yi0_1, $yi1_0, $yi1_1, $yi2_0, $yi2_1, $ji0_0, $ji0_1, $ji1_0, $ji1_1, $ji2_0, $ji2_1, $luck_item,$luck_color,$addluck_way)";
 
 			if (!$db_handle->query($db_query))
    		    {
