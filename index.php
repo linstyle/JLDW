@@ -368,6 +368,7 @@
 ?>
 
 <table width=220 border="0" cellspacing="3" cellpadding="0">
+	<!--
 	<tr>
 		<td>幸运物品:</td>
 		<td>
@@ -379,7 +380,7 @@
 		?>
 		</td>
 	</tr>
-
+  -->
 	<tr>
 		<td>幸运颜色:</td>
 		<td>
@@ -408,7 +409,11 @@
 
  
 <!-- bottom -->
-<div id="layFoot">愿望什么的就交给锦鲤们把，你努力就好。握鳍:)  </br>新浪微博 @锦鲤大王 微信号：JinLiDaWang</div>
+<div id="layFoot">愿望什么的就交给锦鲤们把，你努力就好。握鳍:)  </br>
+新浪微博 <a href="http://weibo.com/u/3641513235">@锦鲤大王</a> 
+微信号：<spn style="font-weight:bold">JinLiDaWang</spn>				</br>
+	部分数据信息收集来自网络
+</div>
 
 	<!--<script src="scripts/jldw.js"></script> -->
 	
