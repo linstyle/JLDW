@@ -40,8 +40,8 @@
 */	
 	echo "<div style=\"width: 230px;margin:auto;margin-bottom:6px;\">";
 
-	echo "<div style=\"font-weight:bold;font-size:18px;margin-bottom:12px;margin-top:5px;text-align:center;\">锦鲤大王宜/忌指南 </div>";
-	echo "<div style=\"text-align:right;color:#0000ff;\">$today_date</div>";
+	echo "<div style=\"font-weight:bold;font-size:18px;color:0xffffff;margin-bottom:12px;margin-top:5px;text-align:center;\">锦鲤大王每日指南</div>";
+	echo "<div style=\"text-align:right;;\">$today_date</div>";
 	
 	echo "</div>";
 	update_todayluck_id($user_db_row);
@@ -170,7 +170,7 @@
 <!-- content -->
 <table width=220 border="0" cellspacing="3" cellpadding="0">
 	<tr> 
-		<td>财运 </td> 
+		<td>财运</td> 
 		<td>
 			<div class="Bar"> 
 				<?php 
@@ -200,7 +200,7 @@
 	</tr>
 
 	<tr> 
-		<td>健康  </td> 
+		<td>健康 </td> 
 		<td>
 			<div class="Bar"> 
 				<?php 
@@ -215,7 +215,7 @@
 	</tr>
 
 	<tr> 
-		<td>运气     </td> 
+		<td>运气 </td> 
 		<td>
 			<div class="Bar"> 
 				<?php 
@@ -233,8 +233,8 @@
 	</tr>
 
 	<tr> 
-		<td>宜：     </td> 
-		<td>
+		<td style="color:#33CCFF">宜：     </td> 
+		<td >
 			<?php
 				global $user_luck_db_row;
 				global $init_yiji0_rows;
@@ -288,7 +288,7 @@
 	</tr>
 
 	<tr> 
-		<td>忌：     </td> 
+		<td style="color:#CCCCCC">忌：     </td> 
 		<td>
 			<?php
 				global $user_luck_db_row;
