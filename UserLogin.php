@@ -1,7 +1,7 @@
 <?php
 
 	//db
-	@$db_handle = new mysqli('localhost', 'root', '123456', 'jldw');
+	@$db_handle = new mysqli('localhost', 'root', '19871001', 'jldw');
 	if( mysqli_connect_error() )
 	{
 		echo 'Error:Could not connect to database.Please try again later.';
@@ -116,7 +116,7 @@
 	{
 		global $db_handle;
 
-		$db_query = "SELECT * FROM USER WHERE user_id=".$user_id;
+		$db_query = "SELECT * FROM user WHERE user_id=".$user_id;
 		$db_result = $db_handle->query($db_query);
 		$user_db_row = $db_result->fetch_assoc();
 
@@ -156,7 +156,7 @@
 		
 		if( $today_time!=$last_logintime )
 		{
-			echo "time no eaual:$today_time,$last_logintime <br/>";
+			//echo "time no eaual:$today_time,$last_logintime <br/>";
 		}
 
 		reset_luck($user_db_row);
@@ -205,6 +205,7 @@
 		//开始随机
 		$v_caiyun = mt_rand(0,10);
 		$v_shiye = mt_rand(0,10);
+		$v_aiqing = mt_rand(0,10);
 		$v_jiankang = mt_rand(0,10);
 		$v_yunqi = mt_rand(0,10);
 
@@ -233,7 +234,7 @@
 
 		if(0==$num_results)
 		{
-			$db_query = "insert into user_luck(`user_id`,`v_caiyun`,`v_shiye`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values(".$user_db_row['user_id'].",$v_caiyun,$v_shiye,$v_jiankang,$v_yunqi,$yi0_0, $yi0_1, $yi1_0, $yi1_1, $yi2_0, $yi2_1, $ji0_0, $ji0_1, $ji1_0, $ji1_1, $ji2_0, $ji2_1, $luck_item,$luck_color,$addluck_way)";
+			$db_query = "insert into user_luck(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`, `v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values(".$user_db_row['user_id'].",$v_caiyun,$v_shiye,$v_aiqing, $v_jiankang,$v_yunqi,$yi0_0, $yi0_1, $yi1_0, $yi1_1, $yi2_0, $yi2_1, $ji0_0, $ji0_1, $ji1_0, $ji1_1, $ji2_0, $ji2_1, $luck_item,$luck_color,$addluck_way)";
 
 			if (!$db_handle->query($db_query))
    		    {
@@ -244,7 +245,7 @@
 		}
 		else
 		{
-			$db_query = "update user_luck set v_caiyun=$v_caiyun, v_shiye=$v_shiye, v_jiankang=$v_jiankang, v_yunqi=$v_yunqi, yi0_0=$yi0_0, yi0_1=$yi0_1, yi1_0=$yi1_0, yi1_1=$yi1_1, yi2_0=$yi2_0, yi2_1=$yi2_1, ji0_0=$ji0_0, ji0_1=$ji0_1, ji1_0=$ji1_0, ji1_1=$ji1_1, ji2_0=$ji2_0, ji2_1=$ji2_1, luck_item=$luck_item, luck_color=$luck_color, addluck_way=$addluck_way where user_id=".$user_db_row['user_id'];
+			$db_query = "update user_luck set v_caiyun=$v_caiyun, v_shiye=$v_shiye, v_aiqing=$v_aiqing, v_jiankang=$v_jiankang, v_yunqi=$v_yunqi, yi0_0=$yi0_0, yi0_1=$yi0_1, yi1_0=$yi1_0, yi1_1=$yi1_1, yi2_0=$yi2_0, yi2_1=$yi2_1, ji0_0=$ji0_0, ji0_1=$ji0_1, ji1_0=$ji1_0, ji1_1=$ji1_1, ji2_0=$ji2_0, ji2_1=$ji2_1, luck_item=$luck_item, luck_color=$luck_color, addluck_way=$addluck_way where user_id=".$user_db_row['user_id'];
 
 			if (!$db_handle->query($db_query))
    		    {

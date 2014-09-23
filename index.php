@@ -198,6 +198,21 @@
 			</div>
 		</td> 
 	</tr>
+	
+	<tr> 
+		<td>爱情  </td> 
+		<td>
+			<div class="Bar"> 
+				<?php 
+					global $user_luck_db_row;					
+					$v_aiqing_per = $user_luck_db_row['v_aiqing'] * 10;
+					$v_aiqing = $v_aiqing_per/10; 
+
+					echo "<div style=\"width:$v_aiqing_per%;\"> <span> $v_aiqing </span> </div>";
+				?>
+			</div>
+		</td> 
+	</tr>	
 
 	<tr> 
 		<td>健康 </td> 
@@ -381,6 +396,7 @@
 		</td>
 	</tr>
   -->
+  <!--
 	<tr>
 		<td>幸运颜色:</td>
 		<td>
@@ -391,7 +407,8 @@
 		?>
 		</td>
 	<tr>
-
+  -->
+  
 	<tr>
 		<td>增运方式:</td>
 		<td>
