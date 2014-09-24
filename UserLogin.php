@@ -154,6 +154,7 @@
 		//如果不一致，更新运气模板ID
 		$last_logintime = date('m-d', strtotime($last_logintime));
 		
+//		echo "debug:time no eaual:$today_time,$last_logintime <br/>";
 		if( $today_time!=$last_logintime )
 		{
 			//echo "time no eaual:$today_time,$last_logintime <br/>";
