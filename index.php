@@ -53,115 +53,115 @@
 <hr size=1 style="margin-bottom:10px;color: #C0C0C0;border-style:dotted;width:100%">
 
 <div style="text-align: center;">
-<select style="margin-bottom:5px; width:220;" id=sel_xz onchange="location.href=this.options[this.selectedIndex].value">
+选择生肖：<select style="margin-bottom:5px; width:152;" id=sel_xz onchange="location.href=this.options[this.selectedIndex].value">
   <?php
   	global $user_id;
   	if(0==$user_id)
   	{
-  		echo"<option value=\"?id=0\" selected=\"true\">白羊座</option>";
+  		echo"<option value=\"?id=0\" selected=\"true\">子[zi]鼠</option>";
   	}
   	else
   	{
-  		echo "<option value=\"?id=0\" >白羊座</option>";
+  		echo "<option value=\"?id=0\" >子[zi]鼠</option>";
   	}
   	
   	if(1==$user_id)
   	{
-  		echo"<option value=\"?id=1\" selected=\"true\">金牛座</option>";
+  		echo"<option value=\"?id=1\" selected=\"true\">丑[chǒu]牛</option>";
   	}
   	else
   	{
-  		echo "<option value=\"?id=1\" >金牛座</option>";
+  		echo "<option value=\"?id=1\" >丑[chǒu]牛</option>";
   	}
   	
   	if(2==$user_id)
   	{
-  		echo"<option value=\"?id=2\" selected=\"true\">双子座</option>";
+  		echo"<option value=\"?id=2\" selected=\"true\">寅[yín]虎</option>";
   	}
   	else
   	{
-  		echo "<option value=\"?id=2\" >双子座</option>";
+  		echo "<option value=\"?id=2\" >寅[yín]虎</option>";
   	}
   	
   	if(3==$user_id)
   	{
-  		echo"<option value=\"?id=3\" selected=\"true\">巨蟹座</option>";
+  		echo"<option value=\"?id=3\" selected=\"true\">卯[mǎo]兔</option>";
   	}
   	else
   	{
-  		echo "<option value=\"?id=3\" >巨蟹座</option>";
+  		echo "<option value=\"?id=3\" >卯[mǎo]兔</option>";
   	}
   	
   	if(4==$user_id)
   	{
-  		echo"<option value=\"?id=4\" selected=\"true\">狮子座</option>";
+  		echo"<option value=\"?id=4\" selected=\"true\">辰[chén]龙</option>";
   	}
   	else
   	{
-  		echo "<option value=\"?id=4\" >狮子座</option>";
+  		echo "<option value=\"?id=4\" >辰[chén]龙</option>";
   	}
   	
   	if(5==$user_id)
   	{
-  		echo"<option value=\"?id=5\" selected=\"true\">处女座</option>";
+  		echo"<option value=\"?id=5\" selected=\"true\">巳[sì]蛇</option>";
   	}
   	else
   	{
-  		echo "<option value=\"?id=5\" >处女座</option>";
+  		echo "<option value=\"?id=5\" >巳[sì]蛇</option>";
   	}
   	
   	if(6==$user_id)
   	{
-  		echo"<option value=\"?id=6\" selected=\"true\">天秤座</option>";
+  		echo"<option value=\"?id=6\" selected=\"true\">午[wǔ]马</option>";
   	}
   	else
   	{
-  		echo "<option value=\"?id=6\" >天秤座</option>";
+  		echo "<option value=\"?id=6\" >午[wǔ]马</option>";
   	}  	 
   	
   	if(7==$user_id)
   	{
-  		echo"<option value=\"?id=7\" selected=\"true\">天蝎座</option>";
+  		echo"<option value=\"?id=7\" selected=\"true\">未[wèi]羊</option>";
   	}
   	else
   	{
-  		echo "<option value=\"?id=7\" >天蝎座</option>";
+  		echo "<option value=\"?id=7\" >未[wèi]羊</option>";
   	}
   	
   	if(8==$user_id)
   	{
-  		echo"<option value=\"?id=8\" selected=\"true\">射手座</option>";
+  		echo"<option value=\"?id=8\" selected=\"true\">申[shēn]猴</option>";
   	}
   	else
   	{
-  		echo "<option value=\"?id=8\" >射手座</option>";
+  		echo "<option value=\"?id=8\" >申[shēn]猴</option>";
   	}    	
   	
   	if(9==$user_id)
   	{
-  		echo"<option value=\"?id=9\" selected=\"true\">魔羯座</option>";
+  		echo"<option value=\"?id=9\" selected=\"true\">酉[yǒu]鸡</option>";
   	}
   	else
   	{
-  		echo "<option value=\"?id=9\" >魔羯座</option>";
+  		echo "<option value=\"?id=9\" >酉[yǒu]鸡</option>";
   	}
   	
   	if(10==$user_id)
   	{
-  		echo"<option value=\"?id=10\" selected=\"true\">水瓶座</option>";
+  		echo"<option value=\"?id=10\" selected=\"true\">戌[xū]狗</option>";
   	}
   	else
   	{
-  		echo "<option value=\"?id=10\" >水瓶座</option>";
+  		echo "<option value=\"?id=10\" >戌[xū]狗</option>";
   	}   
   	
   	if(11==$user_id)
   	{
-  		echo"<option value=\"?id=11\" selected=\"true\">双鱼座</option>";
+  		echo"<option value=\"?id=11\" selected=\"true\">亥[hài]猪</option>";
   	}
   	else
   	{
-  		echo "<option value=\"?id=11\" >双鱼座</option>";
+  		echo "<option value=\"?id=11\" >亥[hài]猪</option>";
   	}     	  	 	  	  	 	  	  	  	
   ?>
 </select>
