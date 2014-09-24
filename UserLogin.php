@@ -157,9 +157,10 @@
 		if( $today_time!=$last_logintime )
 		{
 			//echo "time no eaual:$today_time,$last_logintime <br/>";
+			reset_luck($user_db_row);
 		}
 
-		reset_luck($user_db_row);
+		
 
 	//	echo "time today_time:".$today_time."<br/>";
 	//	echo "time last_logintime:".$last_logintime."<br/>";

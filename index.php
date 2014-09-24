@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>锦鲤大王</title>
+<title>锦鲤大王生活指南</title>
 
 <link rel="stylesheet" type="text/css" media="screen" href="styles/basic.css" />
 </head>
@@ -112,11 +112,11 @@
   	
   	if(6==$user_id)
   	{
-  		echo"<option value=\"?id=6\" selected=\"true\">天枰座</option>";
+  		echo"<option value=\"?id=6\" selected=\"true\">天秤座</option>";
   	}
   	else
   	{
-  		echo "<option value=\"?id=6\" >天枰座</option>";
+  		echo "<option value=\"?id=6\" >天秤座</option>";
   	}  	 
   	
   	if(7==$user_id)
@@ -433,7 +433,11 @@
 </div>
 
 	<!--<script src="scripts/jldw.js"></script> -->
-	
+	<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5fd2b65ab47448896ed3dabf5a7298f1' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
 </body>
 
 </html>

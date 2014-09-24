@@ -270,18 +270,18 @@ CREATE TABLE `user` (
 
 /*Data for the table `user` */
 
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (0,0,1,0,1,'2014-09-23 23:50:28');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (1,1,2,11,1,'2014-09-23 22:15:25');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (2,2,3,12,2,'2014-09-23 22:15:23');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (3,3,3,11,NULL,'2014-09-11 23:28:28');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (4,4,4,11,NULL,'2014-09-23 22:13:01');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (5,5,5,11,NULL,'2014-09-23 22:15:26');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (0,0,1,0,1,'2014-09-25 00:00:03');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (1,1,2,11,1,'2014-09-25 00:00:05');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (2,2,3,12,2,'2014-09-24 11:06:03');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (3,3,3,11,NULL,'2014-09-24 11:06:01');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (4,4,4,11,NULL,'2014-09-24 11:06:00');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (5,5,5,11,NULL,'2014-09-24 11:05:59');
 insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (6,6,6,11,NULL,'2014-09-23 22:15:21');
 insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (7,7,7,11,NULL,'2014-09-23 17:49:23');
 insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (8,8,8,11,NULL,'2014-09-23 22:25:26');
 insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (9,9,9,11,NULL,'2014-09-23 22:15:19');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (10,10,10,11,NULL,'2014-09-23 22:15:17');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (11,11,11,11,NULL,'2014-09-23 22:15:16');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (10,10,10,11,NULL,'2014-09-24 11:06:06');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (11,11,11,11,NULL,'2014-09-24 11:06:04');
 
 /*Table structure for table `user_luck` */
 
@@ -314,18 +314,18 @@ CREATE TABLE `user_luck` (
 
 /*Data for the table `user_luck` */
 
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (0,0,6,5,5,9,1,4,10017,10024,50003,50010,13,15,10032,10057,50015,50017,20016,30004,40009);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (1,10,2,1,0,8,16,26,10001,10026,50001,50010,38,39,10043,10071,50014,50029,20015,30001,40001);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (2,9,7,10,6,4,4,18,10012,10021,50007,50012,29,44,10024,10042,50014,50017,20019,30005,40001);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (3,6,9,NULL,4,8,4,5,10013,10017,50001,50002,8,12,10032,10034,50003,50005,20004,30004,40002);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (4,8,3,5,0,2,5,7,10010,10042,50001,50005,8,17,10052,10071,50013,50028,20035,30004,40001);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (5,4,5,4,9,0,16,22,10008,10053,50010,50011,25,26,10060,10064,50014,50019,20004,30007,40001);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (0,2,8,3,7,5,2,8,10003,10004,50004,50014,26,32,10012,10064,50015,50018,20005,30001,40002);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (1,9,8,6,1,4,1,9,10052,10058,50003,50008,21,33,10064,10075,50014,50024,20008,30001,40006);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (2,7,0,10,5,10,18,24,10035,10043,50012,50017,26,30,10047,10076,50024,50026,20030,30007,40006);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (3,1,9,4,2,2,19,21,10009,10012,50004,50005,30,33,10026,10060,50007,50014,20014,30003,40009);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (4,10,7,10,2,6,22,24,10007,10029,50007,50010,35,37,10036,10074,50012,50023,20034,30006,40007);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (5,7,10,3,8,1,1,7,10025,10027,50004,50009,27,41,10047,10060,50018,50020,20010,30003,40003);
 insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (6,2,8,10,8,10,5,7,10010,10042,50001,50005,8,17,10052,10071,50013,50028,20035,30004,40001);
 insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (7,0,10,NULL,4,8,5,6,10050,10068,50007,50017,11,19,10074,10076,50019,50020,20022,30004,40002);
 insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (8,8,5,9,7,10,6,21,10016,10023,50011,50015,23,41,10036,10049,50018,50022,20011,30005,40001);
 insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (9,1,6,8,0,8,3,37,10002,10004,50004,50016,38,45,10021,10039,50022,50028,20033,30007,40002);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (10,2,3,6,10,10,6,11,10003,10030,50003,50010,17,28,10040,10050,50019,50025,20007,30003,40001);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (11,0,2,10,9,1,27,29,10005,10010,50004,50014,38,39,10018,10035,50020,50021,20034,30001,40001);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (10,2,0,1,2,10,10,28,10015,10024,50004,50015,36,40,10045,10074,50016,50025,20005,30007,40007);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (11,9,3,1,9,4,7,29,10018,10033,50007,50011,31,36,10060,10064,50025,50028,20006,30007,40005);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
