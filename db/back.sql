@@ -727,6 +727,9 @@ insert  into `template_luck`(`id`,`chinese`) values (40006,'住处外绕三圈')
 insert  into `template_luck`(`id`,`chinese`) values (40007,'摇摇锦鲤大王风铃');
 insert  into `template_luck`(`id`,`chinese`) values (40008,'微博名加上\"锦鲤\"');
 insert  into `template_luck`(`id`,`chinese`) values (40009,'微博头像换成锦鲤');
+insert  into `template_luck`(`id`,`chinese`) values (40010,'向大王说个好消息');
+insert  into `template_luck`(`id`,`chinese`) values (40011,'向大王介绍个电影');
+insert  into `template_luck`(`id`,`chinese`) values (40012,'吼大王一下');
 insert  into `template_luck`(`id`,`chinese`) values (50001,'床上挖鼻孔');
 insert  into `template_luck`(`id`,`chinese`) values (50002,'吃饭听摇滚');
 insert  into `template_luck`(`id`,`chinese`) values (50003,'约会白富美');

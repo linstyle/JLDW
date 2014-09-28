@@ -51,7 +51,9 @@ insert  into `template_luck`(`id`,`chinese`) values (10205,'发送私信');
  
 
 
-
+insert  into `template_luck`(`id`,`chinese`) values (40010,'向大王说个好消息');
+insert  into `template_luck`(`id`,`chinese`) values (40011,'向大王介绍个电影');
+insert  into `template_luck`(`id`,`chinese`) values (40012,'吼大王一下');
 
 
 
