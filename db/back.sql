@@ -15,6 +15,26 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`jldw` /*!40100 DEFAULT CHARACTER SET ut
 
 USE `jldw`;
 
+/*Table structure for table `template_level` */
+
+DROP TABLE IF EXISTS `template_level`;
+
+CREATE TABLE `template_level` (
+  `level_id` int(11) NOT NULL,
+  `chinese` varchar(18) DEFAULT NULL,
+  PRIMARY KEY (`level_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `template_level` */
+
+insert  into `template_level`(`level_id`,`chinese`) values (0,'测试小金鱼');
+insert  into `template_level`(`level_id`,`chinese`) values (11,'小金鱼(1级)');
+insert  into `template_level`(`level_id`,`chinese`) values (12,'小金鱼(2级)');
+insert  into `template_level`(`level_id`,`chinese`) values (13,'小金鱼(3级)');
+insert  into `template_level`(`level_id`,`chinese`) values (14,'小锦鲤(1级)');
+insert  into `template_level`(`level_id`,`chinese`) values (15,'小锦鲤(2级)');
+insert  into `template_level`(`level_id`,`chinese`) values (16,'小锦鲤(3级)');
+
 /*Table structure for table `template_luck` */
 
 DROP TABLE IF EXISTS `template_luck`;
@@ -348,6 +368,124 @@ insert  into `template_luck`(`id`,`chinese`) values (10201,'逃课旷工');
 insert  into `template_luck`(`id`,`chinese`) values (10202,'替人受过');
 insert  into `template_luck`(`id`,`chinese`) values (10203,'幸灾乐祸');
 insert  into `template_luck`(`id`,`chinese`) values (10204,'修剪腋毛');
+insert  into `template_luck`(`id`,`chinese`) values (10205,'发送私信');
+insert  into `template_luck`(`id`,`chinese`) values (10206,'无片镜框');
+insert  into `template_luck`(`id`,`chinese`) values (10207,'吉他弹唱');
+insert  into `template_luck`(`id`,`chinese`) values (10208,'废除约定');
+insert  into `template_luck`(`id`,`chinese`) values (10209,'扫大家兴');
+insert  into `template_luck`(`id`,`chinese`) values (10210,'绿叶菜');
+insert  into `template_luck`(`id`,`chinese`) values (10211,'精装书');
+insert  into `template_luck`(`id`,`chinese`) values (10212,'转让门票');
+insert  into `template_luck`(`id`,`chinese`) values (10213,'言归于好');
+insert  into `template_luck`(`id`,`chinese`) values (10214,'自制点心');
+insert  into `template_luck`(`id`,`chinese`) values (10215,'频频回头');
+insert  into `template_luck`(`id`,`chinese`) values (10216,'瓷杯饮茶');
+insert  into `template_luck`(`id`,`chinese`) values (10217,'装大个儿');
+insert  into `template_luck`(`id`,`chinese`) values (10218,'宫保鸡丁');
+insert  into `template_luck`(`id`,`chinese`) values (10219,'牛奶泡脚');
+insert  into `template_luck`(`id`,`chinese`) values (10220,'自修忍术');
+insert  into `template_luck`(`id`,`chinese`) values (10221,'倒计时');
+insert  into `template_luck`(`id`,`chinese`) values (10222,'在家加班');
+insert  into `template_luck`(`id`,`chinese`) values (10223,'粉色封皮');
+insert  into `template_luck`(`id`,`chinese`) values (10224,'替人缴费');
+insert  into `template_luck`(`id`,`chinese`) values (10225,'地方小吃');
+insert  into `template_luck`(`id`,`chinese`) values (10226,'加班餐');
+insert  into `template_luck`(`id`,`chinese`) values (10227,'彩色头饰');
+insert  into `template_luck`(`id`,`chinese`) values (10228,'右手开门');
+insert  into `template_luck`(`id`,`chinese`) values (10229,'冲服馒头');
+insert  into `template_luck`(`id`,`chinese`) values (10230,'抛售股票');
+insert  into `template_luck`(`id`,`chinese`) values (10231,'暴力拔牙');
+insert  into `template_luck`(`id`,`chinese`) values (10232,'吞吞吐吐');
+insert  into `template_luck`(`id`,`chinese`) values (10233,'接近胖子');
+insert  into `template_luck`(`id`,`chinese`) values (10234,'以貌娶人');
+insert  into `template_luck`(`id`,`chinese`) values (10235,'冷水刷牙');
+insert  into `template_luck`(`id`,`chinese`) values (10236,'手部运动');
+insert  into `template_luck`(`id`,`chinese`) values (10237,'被迫相亲');
+insert  into `template_luck`(`id`,`chinese`) values (10238,'转发段子');
+insert  into `template_luck`(`id`,`chinese`) values (10239,'分摊房费');
+insert  into `template_luck`(`id`,`chinese`) values (10240,'洗鸳鸯浴');
+insert  into `template_luck`(`id`,`chinese`) values (10241,'不识抬举');
+insert  into `template_luck`(`id`,`chinese`) values (10242,'高调分手');
+insert  into `template_luck`(`id`,`chinese`) values (10243,'肉色内衣');
+insert  into `template_luck`(`id`,`chinese`) values (10244,'尿速过快');
+insert  into `template_luck`(`id`,`chinese`) values (10245,'独自落泪');
+insert  into `template_luck`(`id`,`chinese`) values (10246,'发放福利');
+insert  into `template_luck`(`id`,`chinese`) values (10247,'充当损友');
+insert  into `template_luck`(`id`,`chinese`) values (10248,'恢复更新');
+insert  into `template_luck`(`id`,`chinese`) values (10249,'跨国通讯');
+insert  into `template_luck`(`id`,`chinese`) values (10250,'方便面');
+insert  into `template_luck`(`id`,`chinese`) values (10251,'修理家居');
+insert  into `template_luck`(`id`,`chinese`) values (10252,'粤语点菜');
+insert  into `template_luck`(`id`,`chinese`) values (10253,'粤语点菜');
+insert  into `template_luck`(`id`,`chinese`) values (10254,'约见EX');
+insert  into `template_luck`(`id`,`chinese`) values (10255,'浓稠饮品');
+insert  into `template_luck`(`id`,`chinese`) values (10256,'索要发票');
+insert  into `template_luck`(`id`,`chinese`) values (10257,'分泌体液');
+insert  into `template_luck`(`id`,`chinese`) values (10258,'手动磨白');
+insert  into `template_luck`(`id`,`chinese`) values (10259,'大幅甩臂');
+insert  into `template_luck`(`id`,`chinese`) values (10260,'整理简历');
+insert  into `template_luck`(`id`,`chinese`) values (10261,'电话催款');
+insert  into `template_luck`(`id`,`chinese`) values (10262,'约见客户');
+insert  into `template_luck`(`id`,`chinese`) values (10263,'主动加班');
+insert  into `template_luck`(`id`,`chinese`) values (10264,'嘲笑胖子');
+insert  into `template_luck`(`id`,`chinese`) values (10265,'挑逗男神');
+insert  into `template_luck`(`id`,`chinese`) values (10266,'装疯卖傻');
+insert  into `template_luck`(`id`,`chinese`) values (10267,'持续拖延');
+insert  into `template_luck`(`id`,`chinese`) values (10268,'上头条');
+insert  into `template_luck`(`id`,`chinese`) values (10269,'千鸟格');
+insert  into `template_luck`(`id`,`chinese`) values (10270,'采购坚果');
+insert  into `template_luck`(`id`,`chinese`) values (10271,'倒行十步');
+insert  into `template_luck`(`id`,`chinese`) values (10272,'转卖手机');
+insert  into `template_luck`(`id`,`chinese`) values (10273,'皮质短裤');
+insert  into `template_luck`(`id`,`chinese`) values (10274,'公仇私了');
+insert  into `template_luck`(`id`,`chinese`) values (10275,'转借饭卡');
+insert  into `template_luck`(`id`,`chinese`) values (10276,'双面打印');
+insert  into `template_luck`(`id`,`chinese`) values (10277,'苦肉计');
+insert  into `template_luck`(`id`,`chinese`) values (10278,'烧香拜金');
+insert  into `template_luck`(`id`,`chinese`) values (10279,'涉外广播');
+insert  into `template_luck`(`id`,`chinese`) values (10280,'积攒人品');
+insert  into `template_luck`(`id`,`chinese`) values (10281,'保健品');
+insert  into `template_luck`(`id`,`chinese`) values (10282,'当街朗诵');
+insert  into `template_luck`(`id`,`chinese`) values (10283,'拒绝加薪');
+insert  into `template_luck`(`id`,`chinese`) values (10284,'友情转发');
+insert  into `template_luck`(`id`,`chinese`) values (10285,'日语交谈');
+insert  into `template_luck`(`id`,`chinese`) values (10286,'抢先结账');
+insert  into `template_luck`(`id`,`chinese`) values (10287,'转移财产');
+insert  into `template_luck`(`id`,`chinese`) values (10288,'假装糊涂');
+insert  into `template_luck`(`id`,`chinese`) values (10289,'关爱备胎');
+insert  into `template_luck`(`id`,`chinese`) values (10290,'持续发胖');
+insert  into `template_luck`(`id`,`chinese`) values (10291,'二郎腿');
+insert  into `template_luck`(`id`,`chinese`) values (10292,'深夜发吃');
+insert  into `template_luck`(`id`,`chinese`) values (10293,'各种无聊');
+insert  into `template_luck`(`id`,`chinese`) values (10294,'申请加薪');
+insert  into `template_luck`(`id`,`chinese`) values (10295,'添置家具');
+insert  into `template_luck`(`id`,`chinese`) values (10296,'随机点赞');
+insert  into `template_luck`(`id`,`chinese`) values (10297,'英文沟通');
+insert  into `template_luck`(`id`,`chinese`) values (10298,'蓝色头像');
+insert  into `template_luck`(`id`,`chinese`) values (10299,'糖墩儿');
+insert  into `template_luck`(`id`,`chinese`) values (10300,'对焦不准');
+insert  into `template_luck`(`id`,`chinese`) values (10301,'内药外敷');
+insert  into `template_luck`(`id`,`chinese`) values (10302,'预约伴娘');
+insert  into `template_luck`(`id`,`chinese`) values (10303,'张臂飞跑');
+insert  into `template_luck`(`id`,`chinese`) values (10304,'辣白菜');
+insert  into `template_luck`(`id`,`chinese`) values (10305,'浅色毛衣');
+insert  into `template_luck`(`id`,`chinese`) values (10306,'当面验货');
+insert  into `template_luck`(`id`,`chinese`) values (10307,'消炎药');
+insert  into `template_luck`(`id`,`chinese`) values (10308,'更换厨具');
+insert  into `template_luck`(`id`,`chinese`) values (10309,'上门提亲');
+insert  into `template_luck`(`id`,`chinese`) values (10310,'赠送彩票');
+insert  into `template_luck`(`id`,`chinese`) values (10311,'不痛不痒');
+insert  into `template_luck`(`id`,`chinese`) values (10312,'翻篇儿');
+insert  into `template_luck`(`id`,`chinese`) values (10313,'胡吃海塞');
+insert  into `template_luck`(`id`,`chinese`) values (10314,'跨年炮');
+insert  into `template_luck`(`id`,`chinese`) values (10315,'感谢挫折');
+insert  into `template_luck`(`id`,`chinese`) values (10316,'收买岳母');
+insert  into `template_luck`(`id`,`chinese`) values (10317,'南方水果');
+insert  into `template_luck`(`id`,`chinese`) values (10318,'软件升级');
+insert  into `template_luck`(`id`,`chinese`) values (10319,'合影自拍');
+insert  into `template_luck`(`id`,`chinese`) values (10320,'丢弃旧物');
+insert  into `template_luck`(`id`,`chinese`) values (10321,'明年再说');
+insert  into `template_luck`(`id`,`chinese`) values (10322,'长微博');
 insert  into `template_luck`(`id`,`chinese`) values (20001,'锦鲤转运链');
 insert  into `template_luck`(`id`,`chinese`) values (20002,'红色手机壳');
 insert  into `template_luck`(`id`,`chinese`) values (20003,'黑曜石手链');
@@ -771,6 +909,80 @@ insert  into `template_luck`(`id`,`chinese`) values (50179,'发表过继感言')
 insert  into `template_luck`(`id`,`chinese`) values (50180,'出恭不出力');
 insert  into `template_luck`(`id`,`chinese`) values (50181,'与程序员约会');
 insert  into `template_luck`(`id`,`chinese`) values (50182,'拿骚情当浪漫');
+
+/*Table structure for table `user` */
+
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE `user` (
+  `user_id` bigint(20) NOT NULL,
+  `wx_id` bigint(20) DEFAULT NULL,
+  `fish_number` int(20) NOT NULL AUTO_INCREMENT,
+  `level` int(11) DEFAULT NULL,
+  `todayluck_id` int(11) DEFAULT NULL,
+  `lastlogintime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`user_id`,`fish_number`),
+  KEY `user_number` (`fish_number`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+/*Data for the table `user` */
+
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (0,0,1,0,1,'2014-09-28 23:09:44');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (1,1,2,11,1,'2014-09-28 22:40:17');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (2,2,3,12,2,'2014-09-28 23:00:23');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (3,3,3,11,NULL,'2014-09-28 22:38:38');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (4,4,4,11,NULL,'2014-09-28 23:09:50');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (5,5,5,11,NULL,'2014-09-28 23:09:12');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (6,6,6,11,NULL,'2014-09-28 22:32:03');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (7,7,7,11,NULL,'2014-09-28 22:32:38');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (8,8,8,11,NULL,'2014-09-28 23:08:36');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (9,9,9,11,NULL,'2014-09-28 23:07:13');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (10,10,10,11,NULL,'2014-09-28 22:56:07');
+insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (11,11,11,11,NULL,'2014-09-28 23:04:16');
+
+/*Table structure for table `user_luck` */
+
+DROP TABLE IF EXISTS `user_luck`;
+
+CREATE TABLE `user_luck` (
+  `user_id` bigint(20) NOT NULL,
+  `v_caiyun` int(11) DEFAULT NULL,
+  `v_shiye` int(11) DEFAULT NULL,
+  `v_aiqing` int(11) DEFAULT NULL,
+  `v_jiankang` int(11) DEFAULT NULL,
+  `v_yunqi` int(11) DEFAULT NULL,
+  `yi0_0` int(11) DEFAULT NULL,
+  `yi0_1` int(11) DEFAULT NULL,
+  `yi1_0` int(11) DEFAULT NULL,
+  `yi1_1` int(11) DEFAULT NULL,
+  `yi2_0` int(11) DEFAULT NULL,
+  `yi2_1` int(11) DEFAULT NULL,
+  `ji0_0` int(11) DEFAULT NULL,
+  `ji0_1` int(11) DEFAULT NULL,
+  `ji1_0` int(11) DEFAULT NULL,
+  `ji1_1` int(11) DEFAULT NULL,
+  `ji2_0` int(11) DEFAULT NULL,
+  `ji2_1` int(11) DEFAULT NULL,
+  `luck_item` int(11) DEFAULT NULL,
+  `luck_color` int(11) DEFAULT NULL,
+  `addluck_way` int(11) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `user_luck` */
+
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (0,6,5,6,3,7,6,49,10023,10038,50035,50043,56,58,10053,10070,50118,50127,20218,30001,40001);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (1,3,8,4,1,2,35,72,10028,10031,50006,50012,96,98,10041,10061,50098,50143,20196,30002,40008);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (2,3,0,9,1,5,101,102,10003,10010,50021,50026,106,111,10025,10066,50107,50110,20214,30001,40009);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (3,7,5,7,1,0,29,30,10002,10013,50020,50042,65,104,10027,10064,50085,50143,20090,30005,40009);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (4,2,5,2,7,6,8,18,10022,10036,50005,50076,34,97,10038,10070,50130,50137,20123,30003,40004);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (5,6,8,9,3,4,44,60,10043,10052,50006,50011,71,82,10064,10069,50100,50114,20077,30003,40001);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (6,0,2,0,10,2,4,19,10009,10044,50013,50026,27,101,10045,10046,50054,50138,20212,30005,40003);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (7,2,4,5,1,8,26,41,10001,10005,50044,50095,64,104,10006,10045,50138,50161,20047,30002,40006);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (8,8,8,8,8,0,5,6,10028,10031,50002,50059,38,57,10070,10073,50071,50151,20196,30002,40002);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (9,3,9,7,4,6,51,62,10005,10022,50027,50077,104,111,10024,10042,50132,50139,20184,30001,40007);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (10,6,0,2,5,5,50,85,10005,10058,50040,50056,102,104,10066,10072,50060,50161,20115,30007,40006);
+insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (11,9,10,9,6,5,12,15,10015,10048,50024,50144,62,87,10072,10074,50156,50157,20043,30004,40003);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
