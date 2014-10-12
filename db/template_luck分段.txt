@@ -28,19 +28,40 @@
 
 
 【两个字】
-
+强吻 面条 民乐 正装 收债 带伞 蹭饭 远足 
 
 
 【三到四个字】
+喝浓茶 冲动求婚 滴眼液 胡乱许愿 液体蚊香 露各种沟 疯狂刷卡 增大毛孔 下蹲运动 强行分红 观光电梯 翻墙搜索 爆粗口 突然造访 电吹风 更改密码 连环画 收拾厨房 捡硬币 水果冰棍 申请年假 分享愿望 
+推掉饭局 浅色凉鞋 推迟会议 网购自取 管教备胎 深呼吸 拒绝红包 送人玫瑰 前扣内衣 带气饮料 揉捏室友 
+随意翻书 分享小吃 追捧烂片 质疑领导 记录梦境 冒充结巴 爱心泛滥 
 
  
 【五-七个字】
+关爱左撇子 借用充电器 与脑残粉对骂 冷落寂寞女邻居 搞好妻妾关系 望夫成龙下猛药 深夜陪怨妇聊天 讹摔倒老太太钱 洗澡时间过长 街边不看腿 自制三明治 替下属埋单 招惹中年妇女 和大长腿做朋友 虚构姐弟恋 向男友介绍闺蜜 对射手座呵呵 转移暗恋目标 给少女指点迷津 at三位好友 
 
- 
- 
+insert  into `template_luck`(`id`,`chinese`) values (50286,'关爱左撇子');
+insert  into `template_luck`(`id`,`chinese`) values (50287,'借用充电器');
+insert  into `template_luck`(`id`,`chinese`) values (50288,'与脑残粉对骂');
+insert  into `template_luck`(`id`,`chinese`) values (50289,'冷落寂寞女邻居');
+insert  into `template_luck`(`id`,`chinese`) values (50290,'搞好妻妾关系');
+insert  into `template_luck`(`id`,`chinese`) values (50291,'望夫成龙下猛药');
+insert  into `template_luck`(`id`,`chinese`) values (50292,'深夜陪怨妇聊天');
+insert  into `template_luck`(`id`,`chinese`) values (50293,'讹摔倒老太太钱');
+insert  into `template_luck`(`id`,`chinese`) values (50294,'洗澡时间过长');
+insert  into `template_luck`(`id`,`chinese`) values (50295,'街边不看腿');
+insert  into `template_luck`(`id`,`chinese`) values (50296,'自制三明治');
+insert  into `template_luck`(`id`,`chinese`) values (50297,'替下属埋单');
+insert  into `template_luck`(`id`,`chinese`) values (50298,'招惹中年妇女');
+insert  into `template_luck`(`id`,`chinese`) values (50299,'和大长腿做朋友');
+insert  into `template_luck`(`id`,`chinese`) values (50300,'虚构姐弟恋');
+insert  into `template_luck`(`id`,`chinese`) values (50301,'向男友介绍闺蜜');
+insert  into `template_luck`(`id`,`chinese`) values (50302,'对射手座呵呵');
+insert  into `template_luck`(`id`,`chinese`) values (50303,'转移暗恋目标');
+insert  into `template_luck`(`id`,`chinese`) values (50304,'给少女指点迷津');
+insert  into `template_luck`(`id`,`chinese`) values (50305,'at三位好友');
 
-#青年老黄历#2013年7月10日，星期三，农历六月初三。干支：癸巳年，己未月，丁丑日。五行：涧下水，破执位。冲：冲羊(辛未)煞东。宜蒸食，宜回收旧内衣，宜与的哥约会，宜频频提裤，宜为同事背黑锅，宜交配。忌踩水，忌磨叽，忌投票，忌躺着阅读，忌卖萌争宠，忌摧残均码衣服。
-
+#青年老黄历#2013年6月28日，星期五，农历五月廿一。干支：癸巳年，戊午月，乙丑日。五行：海中金，危执位。冲：冲羊（己未）煞东。宜回首来路，宜质疑领导，宜记录梦境，宜冒充结巴，宜给少女指点迷津，宜交配。忌香菜，忌爱心泛滥，忌持续便秘，忌at三位好友，忌与出租车师傅交谈。
 
 
 
