@@ -1,1416 +1,1565 @@
-/*
-SQLyog Community Edition- MySQL GUI v7.15 
-MySQL - 5.5.23-log : Database - jldw
-*********************************************************************
-*/
+-- phpMyAdmin SQL Dump
+-- version 4.2.7.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: 2014-10-25 23:48:12
+-- 服务器版本： 5.6.20
+-- PHP Version: 5.5.15
 
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
-/*!40101 SET SQL_MODE=''*/;
-
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`jldw` /*!40100 DEFAULT CHARACTER SET utf8 */;
-
+--
+-- Database: `jldw`
+--
+CREATE DATABASE IF NOT EXISTS `jldw` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `jldw`;
 
-/*Table structure for table `template_level` */
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `template_level`
+--
 
 DROP TABLE IF EXISTS `template_level`;
-
-CREATE TABLE `template_level` (
+CREATE TABLE IF NOT EXISTS `template_level` (
   `level_id` int(11) NOT NULL,
-  `chinese` varchar(18) DEFAULT NULL,
-  PRIMARY KEY (`level_id`)
+  `chinese` varchar(18) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-/*Data for the table `template_level` */
+--
+-- 转存表中的数据 `template_level`
+--
 
-insert  into `template_level`(`level_id`,`chinese`) values (0,'测试小金鱼');
-insert  into `template_level`(`level_id`,`chinese`) values (11,'小金鱼(1级)');
-insert  into `template_level`(`level_id`,`chinese`) values (12,'小金鱼(2级)');
-insert  into `template_level`(`level_id`,`chinese`) values (13,'小金鱼(3级)');
-insert  into `template_level`(`level_id`,`chinese`) values (14,'小锦鲤(1级)');
-insert  into `template_level`(`level_id`,`chinese`) values (15,'小锦鲤(2级)');
-insert  into `template_level`(`level_id`,`chinese`) values (16,'小锦鲤(3级)');
+INSERT INTO `template_level` (`level_id`, `chinese`) VALUES
+(0, '测试小金鱼'),
+(11, '小金鱼(1级)'),
+(12, '小金鱼(2级)'),
+(13, '小金鱼(3级)'),
+(14, '小锦鲤(1级)'),
+(15, '小锦鲤(2级)'),
+(16, '小锦鲤(3级)');
 
-/*Table structure for table `template_luck` */
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `template_luck`
+--
 
 DROP TABLE IF EXISTS `template_luck`;
-
-CREATE TABLE `template_luck` (
+CREATE TABLE IF NOT EXISTS `template_luck` (
   `id` int(11) NOT NULL,
-  `chinese` varchar(20) NOT NULL,
-  PRIMARY KEY (`id`,`chinese`)
+  `chinese` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-/*Data for the table `template_luck` */
+--
+-- 转存表中的数据 `template_luck`
+--
 
-insert  into `template_luck`(`id`,`chinese`) values (1,'日剧');
-insert  into `template_luck`(`id`,`chinese`) values (2,'告别');
-insert  into `template_luck`(`id`,`chinese`) values (3,'排骨');
-insert  into `template_luck`(`id`,`chinese`) values (4,'交配');
-insert  into `template_luck`(`id`,`chinese`) values (5,'登QQ');
-insert  into `template_luck`(`id`,`chinese`) values (6,'逛街');
-insert  into `template_luck`(`id`,`chinese`) values (7,'吊带');
-insert  into `template_luck`(`id`,`chinese`) values (8,'早起');
-insert  into `template_luck`(`id`,`chinese`) values (9,'休假');
-insert  into `template_luck`(`id`,`chinese`) values (10,'洗车');
-insert  into `template_luck`(`id`,`chinese`) values (11,'撸串');
-insert  into `template_luck`(`id`,`chinese`) values (12,'热茶');
-insert  into `template_luck`(`id`,`chinese`) values (13,'冷门');
-insert  into `template_luck`(`id`,`chinese`) values (14,'打卡');
-insert  into `template_luck`(`id`,`chinese`) values (15,'甜食');
-insert  into `template_luck`(`id`,`chinese`) values (16,'肉粽');
-insert  into `template_luck`(`id`,`chinese`) values (17,'想念');
-insert  into `template_luck`(`id`,`chinese`) values (18,'划屏');
-insert  into `template_luck`(`id`,`chinese`) values (19,'晨吐');
-insert  into `template_luck`(`id`,`chinese`) values (20,'失踪');
-insert  into `template_luck`(`id`,`chinese`) values (21,'放弃');
-insert  into `template_luck`(`id`,`chinese`) values (22,'开会');
-insert  into `template_luck`(`id`,`chinese`) values (23,'充电');
-insert  into `template_luck`(`id`,`chinese`) values (24,'庆生');
-insert  into `template_luck`(`id`,`chinese`) values (25,'借书');
-insert  into `template_luck`(`id`,`chinese`) values (26,'水饺');
-insert  into `template_luck`(`id`,`chinese`) values (27,'玩笑');
-insert  into `template_luck`(`id`,`chinese`) values (28,'闭眼');
-insert  into `template_luck`(`id`,`chinese`) values (29,'喝大');
-insert  into `template_luck`(`id`,`chinese`) values (30,'观星');
-insert  into `template_luck`(`id`,`chinese`) values (31,'丝袜');
-insert  into `template_luck`(`id`,`chinese`) values (32,'翻脸');
-insert  into `template_luck`(`id`,`chinese`) values (33,'花生');
-insert  into `template_luck`(`id`,`chinese`) values (34,'鼓掌');
-insert  into `template_luck`(`id`,`chinese`) values (35,'借宿');
-insert  into `template_luck`(`id`,`chinese`) values (36,'鲜奶');
-insert  into `template_luck`(`id`,`chinese`) values (37,'催稿');
-insert  into `template_luck`(`id`,`chinese`) values (38,'换座');
-insert  into `template_luck`(`id`,`chinese`) values (39,'摇头');
-insert  into `template_luck`(`id`,`chinese`) values (40,'摆胯');
-insert  into `template_luck`(`id`,`chinese`) values (41,'零钱');
-insert  into `template_luck`(`id`,`chinese`) values (42,'广播');
-insert  into `template_luck`(`id`,`chinese`) values (43,'吃面');
-insert  into `template_luck`(`id`,`chinese`) values (44,'握手');
-insert  into `template_luck`(`id`,`chinese`) values (45,'香菜');
-insert  into `template_luck`(`id`,`chinese`) values (46,'补课');
-insert  into `template_luck`(`id`,`chinese`) values (47,'汤');
-insert  into `template_luck`(`id`,`chinese`) values (48,'马甲');
-insert  into `template_luck`(`id`,`chinese`) values (49,'话唠');
-insert  into `template_luck`(`id`,`chinese`) values (50,'玩牌');
-insert  into `template_luck`(`id`,`chinese`) values (51,'蒙面');
-insert  into `template_luck`(`id`,`chinese`) values (52,'豆浆');
-insert  into `template_luck`(`id`,`chinese`) values (53,'面点');
-insert  into `template_luck`(`id`,`chinese`) values (54,'泡面');
-insert  into `template_luck`(`id`,`chinese`) values (55,'Kindle');
-insert  into `template_luck`(`id`,`chinese`) values (56,'拼车');
-insert  into `template_luck`(`id`,`chinese`) values (57,'出差');
-insert  into `template_luck`(`id`,`chinese`) values (58,'拔牙');
-insert  into `template_luck`(`id`,`chinese`) values (59,'健身');
-insert  into `template_luck`(`id`,`chinese`) values (60,'喂奶');
-insert  into `template_luck`(`id`,`chinese`) values (61,'请客');
-insert  into `template_luck`(`id`,`chinese`) values (62,'口罩');
-insert  into `template_luck`(`id`,`chinese`) values (63,'飞吻');
-insert  into `template_luck`(`id`,`chinese`) values (64,'棉拖');
-insert  into `template_luck`(`id`,`chinese`) values (65,'赤膊');
-insert  into `template_luck`(`id`,`chinese`) values (66,'理发');
-insert  into `template_luck`(`id`,`chinese`) values (67,'裁衣');
-insert  into `template_luck`(`id`,`chinese`) values (68,'告状');
-insert  into `template_luck`(`id`,`chinese`) values (69,'要账');
-insert  into `template_luck`(`id`,`chinese`) values (70,'PostRock');
-insert  into `template_luck`(`id`,`chinese`) values (71,'剔牙');
-insert  into `template_luck`(`id`,`chinese`) values (72,'晨练');
-insert  into `template_luck`(`id`,`chinese`) values (73,'费电');
-insert  into `template_luck`(`id`,`chinese`) values (74,'送礼');
-insert  into `template_luck`(`id`,`chinese`) values (75,'裸睡');
-insert  into `template_luck`(`id`,`chinese`) values (76,'健身');
-insert  into `template_luck`(`id`,`chinese`) values (77,'辞职');
-insert  into `template_luck`(`id`,`chinese`) values (78,'自拍');
-insert  into `template_luck`(`id`,`chinese`) values (79,'潮湿');
-insert  into `template_luck`(`id`,`chinese`) values (80,'搬家');
-insert  into `template_luck`(`id`,`chinese`) values (81,'白菜');
-insert  into `template_luck`(`id`,`chinese`) values (82,'便秘');
-insert  into `template_luck`(`id`,`chinese`) values (83,'早退');
-insert  into `template_luck`(`id`,`chinese`) values (84,'办证');
-insert  into `template_luck`(`id`,`chinese`) values (85,'废话');
-insert  into `template_luck`(`id`,`chinese`) values (86,'喝汤');
-insert  into `template_luck`(`id`,`chinese`) values (87,'抽奖');
-insert  into `template_luck`(`id`,`chinese`) values (88,'逃单');
-insert  into `template_luck`(`id`,`chinese`) values (89,'验血');
-insert  into `template_luck`(`id`,`chinese`) values (90,'煎蛋');
-insert  into `template_luck`(`id`,`chinese`) values (91,'冲饮');
-insert  into `template_luck`(`id`,`chinese`) values (92,'耳语');
-insert  into `template_luck`(`id`,`chinese`) values (93,'黄瓜');
-insert  into `template_luck`(`id`,`chinese`) values (94,'望天');
-insert  into `template_luck`(`id`,`chinese`) values (95,'坐浴');
-insert  into `template_luck`(`id`,`chinese`) values (96,'午睡');
-insert  into `template_luck`(`id`,`chinese`) values (97,'嗜睡');
-insert  into `template_luck`(`id`,`chinese`) values (98,'独饮');
-insert  into `template_luck`(`id`,`chinese`) values (99,'憋尿');
-insert  into `template_luck`(`id`,`chinese`) values (100,'肉包');
-insert  into `template_luck`(`id`,`chinese`) values (101,'自黑');
-insert  into `template_luck`(`id`,`chinese`) values (102,'超车');
-insert  into `template_luck`(`id`,`chinese`) values (103,'花椒');
-insert  into `template_luck`(`id`,`chinese`) values (104,'洋人');
-insert  into `template_luck`(`id`,`chinese`) values (105,'叛逃');
-insert  into `template_luck`(`id`,`chinese`) values (106,'扑克');
-insert  into `template_luck`(`id`,`chinese`) values (107,'闲聊');
-insert  into `template_luck`(`id`,`chinese`) values (108,'展望');
-insert  into `template_luck`(`id`,`chinese`) values (109,'计划');
-insert  into `template_luck`(`id`,`chinese`) values (110,'失恋');
-insert  into `template_luck`(`id`,`chinese`) values (111,'总结');
-insert  into `template_luck`(`id`,`chinese`) values (112,'酸奶');
-insert  into `template_luck`(`id`,`chinese`) values (113,'拔眉');
-insert  into `template_luck`(`id`,`chinese`) values (114,'马尾');
-insert  into `template_luck`(`id`,`chinese`) values (115,'槟榔');
-insert  into `template_luck`(`id`,`chinese`) values (116,'潜伏');
-insert  into `template_luck`(`id`,`chinese`) values (117,'绕远');
-insert  into `template_luck`(`id`,`chinese`) values (118,'暴走');
-insert  into `template_luck`(`id`,`chinese`) values (119,'烤肉');
-insert  into `template_luck`(`id`,`chinese`) values (120,'浇花');
-insert  into `template_luck`(`id`,`chinese`) values (121,'数独');
-insert  into `template_luck`(`id`,`chinese`) values (122,'帽衫');
-insert  into `template_luck`(`id`,`chinese`) values (123,'晨澡');
-insert  into `template_luck`(`id`,`chinese`) values (124,'海淘');
-insert  into `template_luck`(`id`,`chinese`) values (125,'擦地');
-insert  into `template_luck`(`id`,`chinese`) values (126,'还债');
-insert  into `template_luck`(`id`,`chinese`) values (127,'汉堡');
-insert  into `template_luck`(`id`,`chinese`) values (128,'手绘');
-insert  into `template_luck`(`id`,`chinese`) values (129,'话梅');
-insert  into `template_luck`(`id`,`chinese`) values (130,'抢购');
-insert  into `template_luck`(`id`,`chinese`) values (131,'猜拳');
-insert  into `template_luck`(`id`,`chinese`) values (132,'歪头');
-insert  into `template_luck`(`id`,`chinese`) values (133,'群发');
-insert  into `template_luck`(`id`,`chinese`) values (134,'奶糖');
-insert  into `template_luck`(`id`,`chinese`) values (135,'熬粥');
-insert  into `template_luck`(`id`,`chinese`) values (136,'喂鱼');
-insert  into `template_luck`(`id`,`chinese`) values (137,'肉饼');
-insert  into `template_luck`(`id`,`chinese`) values (138,'火锅');
-insert  into `template_luck`(`id`,`chinese`) values (139,'棋牌');
-insert  into `template_luck`(`id`,`chinese`) values (140,'饥渴');
-insert  into `template_luck`(`id`,`chinese`) values (141,'左手');
-insert  into `template_luck`(`id`,`chinese`) values (142,'白肉');
-insert  into `template_luck`(`id`,`chinese`) values (143,'报销');
-insert  into `template_luck`(`id`,`chinese`) values (144,'上班');
-insert  into `template_luck`(`id`,`chinese`) values (145,'平躺');
-insert  into `template_luck`(`id`,`chinese`) values (146,'卖怂');
-insert  into `template_luck`(`id`,`chinese`) values (147,'凉拖');
-insert  into `template_luck`(`id`,`chinese`) values (148,'素颜');
-insert  into `template_luck`(`id`,`chinese`) values (149,'夜路');
-insert  into `template_luck`(`id`,`chinese`) values (150,'豆瓣');
-insert  into `template_luck`(`id`,`chinese`) values (151,'彩妆');
-insert  into `template_luck`(`id`,`chinese`) values (152,'煲汤');
-insert  into `template_luck`(`id`,`chinese`) values (153,'追责');
-insert  into `template_luck`(`id`,`chinese`) values (154,'报名');
-insert  into `template_luck`(`id`,`chinese`) values (155,'兼职');
-insert  into `template_luck`(`id`,`chinese`) values (156,'果冻');
-insert  into `template_luck`(`id`,`chinese`) values (157,'染发');
-insert  into `template_luck`(`id`,`chinese`) values (158,'求图');
-insert  into `template_luck`(`id`,`chinese`) values (159,'炸鸡');
-insert  into `template_luck`(`id`,`chinese`) values (160,'辣食');
-insert  into `template_luck`(`id`,`chinese`) values (161,'单飞');
-insert  into `template_luck`(`id`,`chinese`) values (162,'踢毽');
-insert  into `template_luck`(`id`,`chinese`) values (163,'哭穷');
-insert  into `template_luck`(`id`,`chinese`) values (164,'戏曲');
-insert  into `template_luck`(`id`,`chinese`) values (165,'面基');
-insert  into `template_luck`(`id`,`chinese`) values (166,'比惨');
-insert  into `template_luck`(`id`,`chinese`) values (167,'爆吧');
-insert  into `template_luck`(`id`,`chinese`) values (168,'翻唱');
-insert  into `template_luck`(`id`,`chinese`) values (169,'飞行');
-insert  into `template_luck`(`id`,`chinese`) values (170,'冰块');
-insert  into `template_luck`(`id`,`chinese`) values (171,'唱歌');
-insert  into `template_luck`(`id`,`chinese`) values (172,'逃班');
-insert  into `template_luck`(`id`,`chinese`) values (173,'饼干');
-insert  into `template_luck`(`id`,`chinese`) values (174,'手软');
-insert  into `template_luck`(`id`,`chinese`) values (175,'卖车');
-insert  into `template_luck`(`id`,`chinese`) values (176,'领带');
-insert  into `template_luck`(`id`,`chinese`) values (177,'借火');
-insert  into `template_luck`(`id`,`chinese`) values (178,'尿频');
-insert  into `template_luck`(`id`,`chinese`) values (179,'冲剂');
-insert  into `template_luck`(`id`,`chinese`) values (180,'麻将');
-insert  into `template_luck`(`id`,`chinese`) values (181,'寿司');
-insert  into `template_luck`(`id`,`chinese`) values (182,'索吻');
-insert  into `template_luck`(`id`,`chinese`) values (183,'美剧');
-insert  into `template_luck`(`id`,`chinese`) values (184,'果汁');
-insert  into `template_luck`(`id`,`chinese`) values (185,'钢笔');
-insert  into `template_luck`(`id`,`chinese`) values (186,'踩水');
-insert  into `template_luck`(`id`,`chinese`) values (187,'磨叽');
-insert  into `template_luck`(`id`,`chinese`) values (188,'强吻');
-insert  into `template_luck`(`id`,`chinese`) values (189,'面条');
-insert  into `template_luck`(`id`,`chinese`) values (190,'民乐');
-insert  into `template_luck`(`id`,`chinese`) values (191,'正装');
-insert  into `template_luck`(`id`,`chinese`) values (192,'收债');
-insert  into `template_luck`(`id`,`chinese`) values (193,'带伞');
-insert  into `template_luck`(`id`,`chinese`) values (194,'蹭饭');
-insert  into `template_luck`(`id`,`chinese`) values (195,'远足');
-insert  into `template_luck`(`id`,`chinese`) values (196,'露背');
-insert  into `template_luck`(`id`,`chinese`) values (197,'退货');
-insert  into `template_luck`(`id`,`chinese`) values (198,'剃须');
-insert  into `template_luck`(`id`,`chinese`) values (199,'雨伞');
-insert  into `template_luck`(`id`,`chinese`) values (200,'练琴');
-insert  into `template_luck`(`id`,`chinese`) values (201,'点钞');
-insert  into `template_luck`(`id`,`chinese`) values (202,'仰视');
-insert  into `template_luck`(`id`,`chinese`) values (203,'问路');
-insert  into `template_luck`(`id`,`chinese`) values (204,'远足');
-insert  into `template_luck`(`id`,`chinese`) values (205,'醒酒');
-insert  into `template_luck`(`id`,`chinese`) values (206,'疗伤');
-insert  into `template_luck`(`id`,`chinese`) values (207,'花茶');
-insert  into `template_luck`(`id`,`chinese`) values (208,'返工');
-insert  into `template_luck`(`id`,`chinese`) values (209,'蛋糕');
-insert  into `template_luck`(`id`,`chinese`) values (210,'催搞');
-insert  into `template_luck`(`id`,`chinese`) values (211,'挑错');
-insert  into `template_luck`(`id`,`chinese`) values (212,'涂鸦');
-insert  into `template_luck`(`id`,`chinese`) values (213,'热饮');
-insert  into `template_luck`(`id`,`chinese`) values (214,'店庆');
-insert  into `template_luck`(`id`,`chinese`) values (215,'习武');
-insert  into `template_luck`(`id`,`chinese`) values (216,'修图');
-insert  into `template_luck`(`id`,`chinese`) values (217,'抖腿');
-insert  into `template_luck`(`id`,`chinese`) values (218,'干洗');
-insert  into `template_luck`(`id`,`chinese`) values (219,'对账');
-insert  into `template_luck`(`id`,`chinese`) values (225,'放荡');
-insert  into `template_luck`(`id`,`chinese`) values (226,'出游');
-insert  into `template_luck`(`id`,`chinese`) values (227,'自虐');
-insert  into `template_luck`(`id`,`chinese`) values (228,'油条');
-insert  into `template_luck`(`id`,`chinese`) values (229,'话痨');
-insert  into `template_luck`(`id`,`chinese`) values (230,'早孕');
-insert  into `template_luck`(`id`,`chinese`) values (231,'撕书');
-insert  into `template_luck`(`id`,`chinese`) values (232,'厌旧');
-insert  into `template_luck`(`id`,`chinese`) values (233,'风筝');
-insert  into `template_luck`(`id`,`chinese`) values (234,'选C');
-insert  into `template_luck`(`id`,`chinese`) values (235,'肉汤');
-insert  into `template_luck`(`id`,`chinese`) values (236,'爬高');
-insert  into `template_luck`(`id`,`chinese`) values (237,'独食');
-insert  into `template_luck`(`id`,`chinese`) values (238,'买烟');
-insert  into `template_luck`(`id`,`chinese`) values (239,'就医');
-insert  into `template_luck`(`id`,`chinese`) values (240,'拒载');
-insert  into `template_luck`(`id`,`chinese`) values (241,'励志');
-insert  into `template_luck`(`id`,`chinese`) values (242,'认错');
-insert  into `template_luck`(`id`,`chinese`) values (243,'摆谱');
-insert  into `template_luck`(`id`,`chinese`) values (244,'聚会');
-insert  into `template_luck`(`id`,`chinese`) values (245,'蛋塔');
-insert  into `template_luck`(`id`,`chinese`) values (246,'呕吐');
-insert  into `template_luck`(`id`,`chinese`) values (10001,'吐槽评论');
-insert  into `template_luck`(`id`,`chinese`) values (10002,'冷落友妻');
-insert  into `template_luck`(`id`,`chinese`) values (10003,'存车要票');
-insert  into `template_luck`(`id`,`chinese`) values (10004,'分赃不均');
-insert  into `template_luck`(`id`,`chinese`) values (10005,'晚上遛狗');
-insert  into `template_luck`(`id`,`chinese`) values (10006,'日本料理');
-insert  into `template_luck`(`id`,`chinese`) values (10007,'拉黑前男');
-insert  into `template_luck`(`id`,`chinese`) values (10008,'借位拍照');
-insert  into `template_luck`(`id`,`chinese`) values (10009,'以身饲蚊');
-insert  into `template_luck`(`id`,`chinese`) values (10010,'小鸟依人');
-insert  into `template_luck`(`id`,`chinese`) values (10011,'批量下AV');
-insert  into `template_luck`(`id`,`chinese`) values (10012,'发好人卡');
-insert  into `template_luck`(`id`,`chinese`) values (10013,'检查卫生');
-insert  into `template_luck`(`id`,`chinese`) values (10014,'捆绑销售');
-insert  into `template_luck`(`id`,`chinese`) values (10015,'打卡甜食');
-insert  into `template_luck`(`id`,`chinese`) values (10016,'主动求虐');
-insert  into `template_luck`(`id`,`chinese`) values (10017,'讨教技法');
-insert  into `template_luck`(`id`,`chinese`) values (10018,'废除合约');
-insert  into `template_luck`(`id`,`chinese`) values (10019,'车站接人');
-insert  into `template_luck`(`id`,`chinese`) values (10020,'主动交配');
-insert  into `template_luck`(`id`,`chinese`) values (10021,'刷朋友圈');
-insert  into `template_luck`(`id`,`chinese`) values (10022,'以腿服人');
-insert  into `template_luck`(`id`,`chinese`) values (10023,'过生日');
-insert  into `template_luck`(`id`,`chinese`) values (10024,'意外怀孕');
-insert  into `template_luck`(`id`,`chinese`) values (10025,'奔赴南方');
-insert  into `template_luck`(`id`,`chinese`) values (10026,'绷B热裤');
-insert  into `template_luck`(`id`,`chinese`) values (10027,'带病求亲');
-insert  into `template_luck`(`id`,`chinese`) values (10028,'赌球赖账');
-insert  into `template_luck`(`id`,`chinese`) values (10029,'诚恳挽留');
-insert  into `template_luck`(`id`,`chinese`) values (10030,'捆绑销售');
-insert  into `template_luck`(`id`,`chinese`) values (10031,'晚餐节食');
-insert  into `template_luck`(`id`,`chinese`) values (10032,'冷落友妻');
-insert  into `template_luck`(`id`,`chinese`) values (10033,'蓝色球衣');
-insert  into `template_luck`(`id`,`chinese`) values (10034,'多人混浴');
-insert  into `template_luck`(`id`,`chinese`) values (10035,'冷落友妻');
-insert  into `template_luck`(`id`,`chinese`) values (10036,'物理降温');
-insert  into `template_luck`(`id`,`chinese`) values (10037,'自曝隐疾');
-insert  into `template_luck`(`id`,`chinese`) values (10038,'借位拍照');
-insert  into `template_luck`(`id`,`chinese`) values (10039,'哄骗表姐');
-insert  into `template_luck`(`id`,`chinese`) values (10040,'存车要票');
-insert  into `template_luck`(`id`,`chinese`) values (10041,'难以入睡');
-insert  into `template_luck`(`id`,`chinese`) values (10042,'婚前焦虑');
-insert  into `template_luck`(`id`,`chinese`) values (10043,'传播八卦');
-insert  into `template_luck`(`id`,`chinese`) values (10044,'准备考试');
-insert  into `template_luck`(`id`,`chinese`) values (10045,'打车APP');
-insert  into `template_luck`(`id`,`chinese`) values (10046,'填报销单');
-insert  into `template_luck`(`id`,`chinese`) values (10047,'歧视二逼');
-insert  into `template_luck`(`id`,`chinese`) values (10048,'小鸟依人');
-insert  into `template_luck`(`id`,`chinese`) values (10049,'日本料理');
-insert  into `template_luck`(`id`,`chinese`) values (10050,'主动求虐');
-insert  into `template_luck`(`id`,`chinese`) values (10051,'擦洗家具');
-insert  into `template_luck`(`id`,`chinese`) values (10052,'好人卡');
-insert  into `template_luck`(`id`,`chinese`) values (10053,'嘴硬心软');
-insert  into `template_luck`(`id`,`chinese`) values (10054,'过膝靴');
-insert  into `template_luck`(`id`,`chinese`) values (10055,'三方声明');
-insert  into `template_luck`(`id`,`chinese`) values (10056,'暴打领导');
-insert  into `template_luck`(`id`,`chinese`) values (10057,'赞美ex');
-insert  into `template_luck`(`id`,`chinese`) values (10058,'代人道歉');
-insert  into `template_luck`(`id`,`chinese`) values (10059,'无框眼镜');
-insert  into `template_luck`(`id`,`chinese`) values (10060,'拒绝表白');
-insert  into `template_luck`(`id`,`chinese`) values (10061,'生吃番茄');
-insert  into `template_luck`(`id`,`chinese`) values (10062,'打折票');
-insert  into `template_luck`(`id`,`chinese`) values (10063,'iPhone拍照');
-insert  into `template_luck`(`id`,`chinese`) values (10064,'事后烟');
-insert  into `template_luck`(`id`,`chinese`) values (10065,'微信发图');
-insert  into `template_luck`(`id`,`chinese`) values (10066,'方言沟通');
-insert  into `template_luck`(`id`,`chinese`) values (10067,'频繁小解');
-insert  into `template_luck`(`id`,`chinese`) values (10068,'修身T恤');
-insert  into `template_luck`(`id`,`chinese`) values (10069,'倒骑转椅');
-insert  into `template_luck`(`id`,`chinese`) values (10070,'换零钱');
-insert  into `template_luck`(`id`,`chinese`) values (10071,'饭后烟');
-insert  into `template_luck`(`id`,`chinese`) values (10072,'勃然大撸');
-insert  into `template_luck`(`id`,`chinese`) values (10073,'金属筷子');
-insert  into `template_luck`(`id`,`chinese`) values (10074,'后知后觉');
-insert  into `template_luck`(`id`,`chinese`) values (10075,'卷发棒');
-insert  into `template_luck`(`id`,`chinese`) values (10076,'各种咒语');
-insert  into `template_luck`(`id`,`chinese`) values (10077,'晒太阳');
-insert  into `template_luck`(`id`,`chinese`) values (10078,'半躺半坐');
-insert  into `template_luck`(`id`,`chinese`) values (10079,'自我批评');
-insert  into `template_luck`(`id`,`chinese`) values (10080,'突破禁区');
-insert  into `template_luck`(`id`,`chinese`) values (10081,'电子合同');
-insert  into `template_luck`(`id`,`chinese`) values (10082,'收敛毛孔');
-insert  into `template_luck`(`id`,`chinese`) values (10083,'格子衬衣');
-insert  into `template_luck`(`id`,`chinese`) values (10084,'超出预算');
-insert  into `template_luck`(`id`,`chinese`) values (10085,'考验软肋');
-insert  into `template_luck`(`id`,`chinese`) values (10086,'跑步机');
-insert  into `template_luck`(`id`,`chinese`) values (10087,'马克杯');
-insert  into `template_luck`(`id`,`chinese`) values (10088,'侧脸自拍');
-insert  into `template_luck`(`id`,`chinese`) values (10089,'装孙子');
-insert  into `template_luck`(`id`,`chinese`) values (10090,'热泪盈眶');
-insert  into `template_luck`(`id`,`chinese`) values (10091,'收取硬币');
-insert  into `template_luck`(`id`,`chinese`) values (10092,'中式快餐');
-insert  into `template_luck`(`id`,`chinese`) values (10093,'问候EX');
-insert  into `template_luck`(`id`,`chinese`) values (10094,'卡通口罩');
-insert  into `template_luck`(`id`,`chinese`) values (10095,'电动牙刷');
-insert  into `template_luck`(`id`,`chinese`) values (10096,'英文邮件');
-insert  into `template_luck`(`id`,`chinese`) values (10097,'毛绒玩具');
-insert  into `template_luck`(`id`,`chinese`) values (10098,'测量体温');
-insert  into `template_luck`(`id`,`chinese`) values (10099,'扩张毛孔');
-insert  into `template_luck`(`id`,`chinese`) values (10100,'电话采访');
-insert  into `template_luck`(`id`,`chinese`) values (10101,'公交卡');
-insert  into `template_luck`(`id`,`chinese`) values (10102,'横条衫');
-insert  into `template_luck`(`id`,`chinese`) values (10103,'紫色食物');
-insert  into `template_luck`(`id`,`chinese`) values (10104,'会上瞌睡');
-insert  into `template_luck`(`id`,`chinese`) values (10105,'午餐破费');
-insert  into `template_luck`(`id`,`chinese`) values (10106,'捎口信');
-insert  into `template_luck`(`id`,`chinese`) values (10107,'冷水洗澡');
-insert  into `template_luck`(`id`,`chinese`) values (10108,'网上转账');
-insert  into `template_luck`(`id`,`chinese`) values (10109,'败坏床品');
-insert  into `template_luck`(`id`,`chinese`) values (10110,'大口呼吸');
-insert  into `template_luck`(`id`,`chinese`) values (10111,'微信表白');
-insert  into `template_luck`(`id`,`chinese`) values (10112,'修剪鬓角');
-insert  into `template_luck`(`id`,`chinese`) values (10113,'吞食异物');
-insert  into `template_luck`(`id`,`chinese`) values (10114,'谈论网游');
-insert  into `template_luck`(`id`,`chinese`) values (10115,'不熟充熟');
-insert  into `template_luck`(`id`,`chinese`) values (10116,'检索番号');
-insert  into `template_luck`(`id`,`chinese`) values (10117,'冤冤相抱');
-insert  into `template_luck`(`id`,`chinese`) values (10118,'拖延症');
-insert  into `template_luck`(`id`,`chinese`) values (10119,'关爱门卫');
-insert  into `template_luck`(`id`,`chinese`) values (10120,'移动电源');
-insert  into `template_luck`(`id`,`chinese`) values (10121,'鸳鸯锅');
-insert  into `template_luck`(`id`,`chinese`) values (10122,'QQ隐身');
-insert  into `template_luck`(`id`,`chinese`) values (10123,'迁就伴侣');
-insert  into `template_luck`(`id`,`chinese`) values (10124,'拒绝包邮');
-insert  into `template_luck`(`id`,`chinese`) values (10125,'结伴面试');
-insert  into `template_luck`(`id`,`chinese`) values (10126,'折返路线');
-insert  into `template_luck`(`id`,`chinese`) values (10127,'购买厨具');
-insert  into `template_luck`(`id`,`chinese`) values (10128,'机打发票');
-insert  into `template_luck`(`id`,`chinese`) values (10129,'削铅笔');
-insert  into `template_luck`(`id`,`chinese`) values (10130,'噪音扰民');
-insert  into `template_luck`(`id`,`chinese`) values (10131,'废物利用');
-insert  into `template_luck`(`id`,`chinese`) values (10132,'拒绝求婚');
-insert  into `template_luck`(`id`,`chinese`) values (10133,'探望岳母');
-insert  into `template_luck`(`id`,`chinese`) values (10134,'露天用餐');
-insert  into `template_luck`(`id`,`chinese`) values (10135,'询问时间');
-insert  into `template_luck`(`id`,`chinese`) values (10136,'互道晚安');
-insert  into `template_luck`(`id`,`chinese`) values (10137,'乱中取胜');
-insert  into `template_luck`(`id`,`chinese`) values (10138,'相互取暖');
-insert  into `template_luck`(`id`,`chinese`) values (10139,'自创热点');
-insert  into `template_luck`(`id`,`chinese`) values (10140,'双手打字');
-insert  into `template_luck`(`id`,`chinese`) values (10141,'免费广告');
-insert  into `template_luck`(`id`,`chinese`) values (10142,'假装爱过');
-insert  into `template_luck`(`id`,`chinese`) values (10143,'自曝短处');
-insert  into `template_luck`(`id`,`chinese`) values (10144,'公开求偶');
-insert  into `template_luck`(`id`,`chinese`) values (10145,'虚惊一场');
-insert  into `template_luck`(`id`,`chinese`) values (10146,'互道晚安');
-insert  into `template_luck`(`id`,`chinese`) values (10147,'奇迹出现');
-insert  into `template_luck`(`id`,`chinese`) values (10148,'硬币消费');
-insert  into `template_luck`(`id`,`chinese`) values (10149,'互道晚安');
-insert  into `template_luck`(`id`,`chinese`) values (10150,'结伴午饭');
-insert  into `template_luck`(`id`,`chinese`) values (10151,'珍珠奶茶');
-insert  into `template_luck`(`id`,`chinese`) values (10152,'冲动投资');
-insert  into `template_luck`(`id`,`chinese`) values (10153,'听陈奕迅');
-insert  into `template_luck`(`id`,`chinese`) values (10154,'鱼缸换水');
-insert  into `template_luck`(`id`,`chinese`) values (10155,'推荐新人');
-insert  into `template_luck`(`id`,`chinese`) values (10156,'饥饿疗法');
-insert  into `template_luck`(`id`,`chinese`) values (10157,'职业规划');
-insert  into `template_luck`(`id`,`chinese`) values (10158,'随地下蹲');
-insert  into `template_luck`(`id`,`chinese`) values (10159,'释放酒量');
-insert  into `template_luck`(`id`,`chinese`) values (10160,'九字短信');
-insert  into `template_luck`(`id`,`chinese`) values (10161,'齐头发帘');
-insert  into `template_luck`(`id`,`chinese`) values (10162,'炫耀罩杯');
-insert  into `template_luck`(`id`,`chinese`) values (10163,'出大招');
-insert  into `template_luck`(`id`,`chinese`) values (10164,'拨打分机');
-insert  into `template_luck`(`id`,`chinese`) values (10165,'无痕内衣');
-insert  into `template_luck`(`id`,`chinese`) values (10166,'集体裸睡');
-insert  into `template_luck`(`id`,`chinese`) values (10167,'倒卖名片');
-insert  into `template_luck`(`id`,`chinese`) values (10168,'日出而嘬');
-insert  into `template_luck`(`id`,`chinese`) values (10169,'电话会议');
-insert  into `template_luck`(`id`,`chinese`) values (10170,'装聋作哑');
-insert  into `template_luck`(`id`,`chinese`) values (10171,'热门话题');
-insert  into `template_luck`(`id`,`chinese`) values (10172,'电梯夹头');
-insert  into `template_luck`(`id`,`chinese`) values (10173,'夜班尿床');
-insert  into `template_luck`(`id`,`chinese`) values (10174,'注意安全');
-insert  into `template_luck`(`id`,`chinese`) values (10175,'网络金融');
-insert  into `template_luck`(`id`,`chinese`) values (10176,'购买彩票');
-insert  into `template_luck`(`id`,`chinese`) values (10177,'反复赖床');
-insert  into `template_luck`(`id`,`chinese`) values (10178,'更换密码');
-insert  into `template_luck`(`id`,`chinese`) values (10179,'放狠话');
-insert  into `template_luck`(`id`,`chinese`) values (10180,'热带水果');
-insert  into `template_luck`(`id`,`chinese`) values (10181,'电磁炉');
-insert  into `template_luck`(`id`,`chinese`) values (10182,'调整手表');
-insert  into `template_luck`(`id`,`chinese`) values (10183,'代收快递');
-insert  into `template_luck`(`id`,`chinese`) values (10184,'拷贝文字');
-insert  into `template_luck`(`id`,`chinese`) values (10185,'准时到岗');
-insert  into `template_luck`(`id`,`chinese`) values (10186,'格子床单');
-insert  into `template_luck`(`id`,`chinese`) values (10187,'暴露年龄');
-insert  into `template_luck`(`id`,`chinese`) values (10188,'团购零食');
-insert  into `template_luck`(`id`,`chinese`) values (10189,'浇灌植物');
-insert  into `template_luck`(`id`,`chinese`) values (10190,'冲印照片');
-insert  into `template_luck`(`id`,`chinese`) values (10191,'厕所偷拍');
-insert  into `template_luck`(`id`,`chinese`) values (10192,'刮腿毛');
-insert  into `template_luck`(`id`,`chinese`) values (10193,'加湿器');
-insert  into `template_luck`(`id`,`chinese`) values (10194,'循环播放');
-insert  into `template_luck`(`id`,`chinese`) values (10195,'浴衣趴体');
-insert  into `template_luck`(`id`,`chinese`) values (10196,'软饭硬吃');
-insert  into `template_luck`(`id`,`chinese`) values (10197,'相互推诿');
-insert  into `template_luck`(`id`,`chinese`) values (10198,'坡跟鞋');
-insert  into `template_luck`(`id`,`chinese`) values (10199,'转移资产');
-insert  into `template_luck`(`id`,`chinese`) values (10200,'情侣套装');
-insert  into `template_luck`(`id`,`chinese`) values (10201,'逃课旷工');
-insert  into `template_luck`(`id`,`chinese`) values (10202,'替人受过');
-insert  into `template_luck`(`id`,`chinese`) values (10203,'幸灾乐祸');
-insert  into `template_luck`(`id`,`chinese`) values (10204,'修剪腋毛');
-insert  into `template_luck`(`id`,`chinese`) values (10205,'发送私信');
-insert  into `template_luck`(`id`,`chinese`) values (10206,'无片镜框');
-insert  into `template_luck`(`id`,`chinese`) values (10207,'吉他弹唱');
-insert  into `template_luck`(`id`,`chinese`) values (10208,'废除约定');
-insert  into `template_luck`(`id`,`chinese`) values (10209,'扫大家兴');
-insert  into `template_luck`(`id`,`chinese`) values (10210,'绿叶菜');
-insert  into `template_luck`(`id`,`chinese`) values (10211,'精装书');
-insert  into `template_luck`(`id`,`chinese`) values (10212,'转让门票');
-insert  into `template_luck`(`id`,`chinese`) values (10213,'言归于好');
-insert  into `template_luck`(`id`,`chinese`) values (10214,'自制点心');
-insert  into `template_luck`(`id`,`chinese`) values (10215,'频频回头');
-insert  into `template_luck`(`id`,`chinese`) values (10216,'瓷杯饮茶');
-insert  into `template_luck`(`id`,`chinese`) values (10217,'装大个儿');
-insert  into `template_luck`(`id`,`chinese`) values (10218,'宫保鸡丁');
-insert  into `template_luck`(`id`,`chinese`) values (10219,'牛奶泡脚');
-insert  into `template_luck`(`id`,`chinese`) values (10220,'自修忍术');
-insert  into `template_luck`(`id`,`chinese`) values (10221,'倒计时');
-insert  into `template_luck`(`id`,`chinese`) values (10222,'在家加班');
-insert  into `template_luck`(`id`,`chinese`) values (10223,'粉色封皮');
-insert  into `template_luck`(`id`,`chinese`) values (10224,'替人缴费');
-insert  into `template_luck`(`id`,`chinese`) values (10225,'地方小吃');
-insert  into `template_luck`(`id`,`chinese`) values (10226,'加班餐');
-insert  into `template_luck`(`id`,`chinese`) values (10227,'彩色头饰');
-insert  into `template_luck`(`id`,`chinese`) values (10228,'右手开门');
-insert  into `template_luck`(`id`,`chinese`) values (10229,'冲服馒头');
-insert  into `template_luck`(`id`,`chinese`) values (10230,'抛售股票');
-insert  into `template_luck`(`id`,`chinese`) values (10231,'暴力拔牙');
-insert  into `template_luck`(`id`,`chinese`) values (10232,'吞吞吐吐');
-insert  into `template_luck`(`id`,`chinese`) values (10233,'接近胖子');
-insert  into `template_luck`(`id`,`chinese`) values (10234,'以貌娶人');
-insert  into `template_luck`(`id`,`chinese`) values (10235,'冷水刷牙');
-insert  into `template_luck`(`id`,`chinese`) values (10236,'手部运动');
-insert  into `template_luck`(`id`,`chinese`) values (10237,'被迫相亲');
-insert  into `template_luck`(`id`,`chinese`) values (10238,'转发段子');
-insert  into `template_luck`(`id`,`chinese`) values (10239,'分摊房费');
-insert  into `template_luck`(`id`,`chinese`) values (10240,'洗鸳鸯浴');
-insert  into `template_luck`(`id`,`chinese`) values (10241,'不识抬举');
-insert  into `template_luck`(`id`,`chinese`) values (10242,'高调分手');
-insert  into `template_luck`(`id`,`chinese`) values (10243,'肉色内衣');
-insert  into `template_luck`(`id`,`chinese`) values (10244,'尿速过快');
-insert  into `template_luck`(`id`,`chinese`) values (10245,'独自落泪');
-insert  into `template_luck`(`id`,`chinese`) values (10246,'发放福利');
-insert  into `template_luck`(`id`,`chinese`) values (10247,'充当损友');
-insert  into `template_luck`(`id`,`chinese`) values (10248,'恢复更新');
-insert  into `template_luck`(`id`,`chinese`) values (10249,'跨国通讯');
-insert  into `template_luck`(`id`,`chinese`) values (10250,'方便面');
-insert  into `template_luck`(`id`,`chinese`) values (10251,'修理家居');
-insert  into `template_luck`(`id`,`chinese`) values (10252,'粤语点菜');
-insert  into `template_luck`(`id`,`chinese`) values (10253,'粤语点菜');
-insert  into `template_luck`(`id`,`chinese`) values (10254,'约见EX');
-insert  into `template_luck`(`id`,`chinese`) values (10255,'浓稠饮品');
-insert  into `template_luck`(`id`,`chinese`) values (10256,'索要发票');
-insert  into `template_luck`(`id`,`chinese`) values (10257,'分泌体液');
-insert  into `template_luck`(`id`,`chinese`) values (10258,'手动磨白');
-insert  into `template_luck`(`id`,`chinese`) values (10259,'大幅甩臂');
-insert  into `template_luck`(`id`,`chinese`) values (10260,'整理简历');
-insert  into `template_luck`(`id`,`chinese`) values (10261,'电话催款');
-insert  into `template_luck`(`id`,`chinese`) values (10262,'约见客户');
-insert  into `template_luck`(`id`,`chinese`) values (10263,'主动加班');
-insert  into `template_luck`(`id`,`chinese`) values (10264,'嘲笑胖子');
-insert  into `template_luck`(`id`,`chinese`) values (10265,'挑逗男神');
-insert  into `template_luck`(`id`,`chinese`) values (10266,'装疯卖傻');
-insert  into `template_luck`(`id`,`chinese`) values (10267,'持续拖延');
-insert  into `template_luck`(`id`,`chinese`) values (10268,'上头条');
-insert  into `template_luck`(`id`,`chinese`) values (10269,'千鸟格');
-insert  into `template_luck`(`id`,`chinese`) values (10270,'采购坚果');
-insert  into `template_luck`(`id`,`chinese`) values (10271,'倒行十步');
-insert  into `template_luck`(`id`,`chinese`) values (10272,'转卖手机');
-insert  into `template_luck`(`id`,`chinese`) values (10273,'皮质短裤');
-insert  into `template_luck`(`id`,`chinese`) values (10274,'公仇私了');
-insert  into `template_luck`(`id`,`chinese`) values (10275,'转借饭卡');
-insert  into `template_luck`(`id`,`chinese`) values (10276,'双面打印');
-insert  into `template_luck`(`id`,`chinese`) values (10277,'苦肉计');
-insert  into `template_luck`(`id`,`chinese`) values (10278,'烧香拜金');
-insert  into `template_luck`(`id`,`chinese`) values (10279,'涉外广播');
-insert  into `template_luck`(`id`,`chinese`) values (10280,'积攒人品');
-insert  into `template_luck`(`id`,`chinese`) values (10281,'保健品');
-insert  into `template_luck`(`id`,`chinese`) values (10282,'当街朗诵');
-insert  into `template_luck`(`id`,`chinese`) values (10283,'拒绝加薪');
-insert  into `template_luck`(`id`,`chinese`) values (10284,'友情转发');
-insert  into `template_luck`(`id`,`chinese`) values (10285,'日语交谈');
-insert  into `template_luck`(`id`,`chinese`) values (10286,'抢先结账');
-insert  into `template_luck`(`id`,`chinese`) values (10287,'转移财产');
-insert  into `template_luck`(`id`,`chinese`) values (10288,'假装糊涂');
-insert  into `template_luck`(`id`,`chinese`) values (10289,'关爱备胎');
-insert  into `template_luck`(`id`,`chinese`) values (10290,'持续发胖');
-insert  into `template_luck`(`id`,`chinese`) values (10291,'二郎腿');
-insert  into `template_luck`(`id`,`chinese`) values (10292,'深夜发吃');
-insert  into `template_luck`(`id`,`chinese`) values (10293,'各种无聊');
-insert  into `template_luck`(`id`,`chinese`) values (10294,'申请加薪');
-insert  into `template_luck`(`id`,`chinese`) values (10295,'添置家具');
-insert  into `template_luck`(`id`,`chinese`) values (10296,'随机点赞');
-insert  into `template_luck`(`id`,`chinese`) values (10297,'英文沟通');
-insert  into `template_luck`(`id`,`chinese`) values (10298,'蓝色头像');
-insert  into `template_luck`(`id`,`chinese`) values (10299,'糖墩儿');
-insert  into `template_luck`(`id`,`chinese`) values (10300,'对焦不准');
-insert  into `template_luck`(`id`,`chinese`) values (10301,'内药外敷');
-insert  into `template_luck`(`id`,`chinese`) values (10302,'预约伴娘');
-insert  into `template_luck`(`id`,`chinese`) values (10303,'张臂飞跑');
-insert  into `template_luck`(`id`,`chinese`) values (10304,'辣白菜');
-insert  into `template_luck`(`id`,`chinese`) values (10305,'浅色毛衣');
-insert  into `template_luck`(`id`,`chinese`) values (10306,'当面验货');
-insert  into `template_luck`(`id`,`chinese`) values (10307,'消炎药');
-insert  into `template_luck`(`id`,`chinese`) values (10308,'更换厨具');
-insert  into `template_luck`(`id`,`chinese`) values (10309,'上门提亲');
-insert  into `template_luck`(`id`,`chinese`) values (10310,'赠送彩票');
-insert  into `template_luck`(`id`,`chinese`) values (10311,'不痛不痒');
-insert  into `template_luck`(`id`,`chinese`) values (10312,'翻篇儿');
-insert  into `template_luck`(`id`,`chinese`) values (10313,'胡吃海塞');
-insert  into `template_luck`(`id`,`chinese`) values (10314,'跨年炮');
-insert  into `template_luck`(`id`,`chinese`) values (10315,'感谢挫折');
-insert  into `template_luck`(`id`,`chinese`) values (10316,'收买岳母');
-insert  into `template_luck`(`id`,`chinese`) values (10317,'南方水果');
-insert  into `template_luck`(`id`,`chinese`) values (10318,'软件升级');
-insert  into `template_luck`(`id`,`chinese`) values (10319,'合影自拍');
-insert  into `template_luck`(`id`,`chinese`) values (10320,'丢弃旧物');
-insert  into `template_luck`(`id`,`chinese`) values (10321,'明年再说');
-insert  into `template_luck`(`id`,`chinese`) values (10322,'长微博');
-insert  into `template_luck`(`id`,`chinese`) values (10323,'挥霍青春');
-insert  into `template_luck`(`id`,`chinese`) values (10324,'合伙睡眠');
-insert  into `template_luck`(`id`,`chinese`) values (10325,'皮质外套');
-insert  into `template_luck`(`id`,`chinese`) values (10326,'自找凌辱');
-insert  into `template_luck`(`id`,`chinese`) values (10327,'小额理财');
-insert  into `template_luck`(`id`,`chinese`) values (10328,'方言民谣');
-insert  into `template_luck`(`id`,`chinese`) values (10329,'不懂就问');
-insert  into `template_luck`(`id`,`chinese`) values (10330,'头脑风暴');
-insert  into `template_luck`(`id`,`chinese`) values (10331,'微波炉');
-insert  into `template_luck`(`id`,`chinese`) values (10332,'进口食品');
-insert  into `template_luck`(`id`,`chinese`) values (10333,'奉承红人');
-insert  into `template_luck`(`id`,`chinese`) values (10334,'迟到早退');
-insert  into `template_luck`(`id`,`chinese`) values (10335,'知耻不勇');
-insert  into `template_luck`(`id`,`chinese`) values (10336,'更新app');
-insert  into `template_luck`(`id`,`chinese`) values (10337,'梳马尾');
-insert  into `template_luck`(`id`,`chinese`) values (10338,'独自进餐');
-insert  into `template_luck`(`id`,`chinese`) values (10339,'柠檬水');
-insert  into `template_luck`(`id`,`chinese`) values (10340,'业内八卦');
-insert  into `template_luck`(`id`,`chinese`) values (10341,'隐瞒收入');
-insert  into `template_luck`(`id`,`chinese`) values (10342,'换电池');
-insert  into `template_luck`(`id`,`chinese`) values (10343,'无糖配方');
-insert  into `template_luck`(`id`,`chinese`) values (10344,'睡沙发');
-insert  into `template_luck`(`id`,`chinese`) values (10345,'八卦老板');
-insert  into `template_luck`(`id`,`chinese`) values (10346,'微软雅黑');
-insert  into `template_luck`(`id`,`chinese`) values (10347,'早睡早起');
-insert  into `template_luck`(`id`,`chinese`) values (10348,'保持理智');
-insert  into `template_luck`(`id`,`chinese`) values (10349,'乱认男神');
-insert  into `template_luck`(`id`,`chinese`) values (10350,'退格键');
-insert  into `template_luck`(`id`,`chinese`) values (10351,'仿人签名');
-insert  into `template_luck`(`id`,`chinese`) values (10352,'拥吻取暖');
-insert  into `template_luck`(`id`,`chinese`) values (10353,'追忆备胎');
-insert  into `template_luck`(`id`,`chinese`) values (10354,'青春小说');
-insert  into `template_luck`(`id`,`chinese`) values (10355,'背包挂件');
-insert  into `template_luck`(`id`,`chinese`) values (10356,'外套撞衫');
-insert  into `template_luck`(`id`,`chinese`) values (10357,'戴假发');
-insert  into `template_luck`(`id`,`chinese`) values (10358,'双肩背包');
-insert  into `template_luck`(`id`,`chinese`) values (10359,'各种迟到');
-insert  into `template_luck`(`id`,`chinese`) values (10360,'自爆食量');
-insert  into `template_luck`(`id`,`chinese`) values (10361,'选择恐惧');
-insert  into `template_luck`(`id`,`chinese`) values (10362,'鼠标右键');
-insert  into `template_luck`(`id`,`chinese`) values (10363,'男性付账');
-insert  into `template_luck`(`id`,`chinese`) values (10364,'侧卧入睡');
-insert  into `template_luck`(`id`,`chinese`) values (10365,'请人喝茶');
-insert  into `template_luck`(`id`,`chinese`) values (10366,'翘班幽会');
-insert  into `template_luck`(`id`,`chinese`) values (10367,'步行回家');
-insert  into `template_luck`(`id`,`chinese`) values (10368,'观影午睡');
-insert  into `template_luck`(`id`,`chinese`) values (10369,'过气还魂');
-insert  into `template_luck`(`id`,`chinese`) values (10370,'逞强延时');
-insert  into `template_luck`(`id`,`chinese`) values (10371,'芝麻烧饼');
-insert  into `template_luck`(`id`,`chinese`) values (10372,'代签快递');
-insert  into `template_luck`(`id`,`chinese`) values (10373,'反复洗手');
-insert  into `template_luck`(`id`,`chinese`) values (10374,'手机转账');
-insert  into `template_luck`(`id`,`chinese`) values (10375,'漱口水');
-insert  into `template_luck`(`id`,`chinese`) values (10376,'彩色外套');
-insert  into `template_luck`(`id`,`chinese`) values (10377,'车载广播');
-insert  into `template_luck`(`id`,`chinese`) values (10378,'独自在家');
-insert  into `template_luck`(`id`,`chinese`) values (10379,'开窗吸霾');
-insert  into `template_luck`(`id`,`chinese`) values (10380,'预约病假');
-insert  into `template_luck`(`id`,`chinese`) values (10381,'指甲刀');
-insert  into `template_luck`(`id`,`chinese`) values (10382,'微信鸡汤');
-insert  into `template_luck`(`id`,`chinese`) values (10383,'孝敬领导');
-insert  into `template_luck`(`id`,`chinese`) values (10384,'分发福利');
-insert  into `template_luck`(`id`,`chinese`) values (10385,'脱衣检查');
-insert  into `template_luck`(`id`,`chinese`) values (10386,'舌吻成瘾');
-insert  into `template_luck`(`id`,`chinese`) values (10387,'外国人');
-insert  into `template_luck`(`id`,`chinese`) values (10388,'分食柚子');
-insert  into `template_luck`(`id`,`chinese`) values (10389,'追打同桌');
-insert  into `template_luck`(`id`,`chinese`) values (10390,'奉承人');
-insert  into `template_luck`(`id`,`chinese`) values (10391,'浅色甲油');
-insert  into `template_luck`(`id`,`chinese`) values (10392,'靠门而立');
-insert  into `template_luck`(`id`,`chinese`) values (10393,'多肉植物');
-insert  into `template_luck`(`id`,`chinese`) values (10394,'宁舌不弯');
-insert  into `template_luck`(`id`,`chinese`) values (10395,'掰腕子');
-insert  into `template_luck`(`id`,`chinese`) values (10396,'多喝水');
-insert  into `template_luck`(`id`,`chinese`) values (10397,'代拔胡须');
-insert  into `template_luck`(`id`,`chinese`) values (10398,'灰衬衣');
-insert  into `template_luck`(`id`,`chinese`) values (10399,'不粘锅');
-insert  into `template_luck`(`id`,`chinese`) values (10400,'提及情敌');
-insert  into `template_luck`(`id`,`chinese`) values (10401,'自曝把柄');
-insert  into `template_luck`(`id`,`chinese`) values (10402,'反咬一口');
-insert  into `template_luck`(`id`,`chinese`) values (10403,'蓝色衣物');
-insert  into `template_luck`(`id`,`chinese`) values (10404,'继续服药');
-insert  into `template_luck`(`id`,`chinese`) values (10405,'毅然分手');
-insert  into `template_luck`(`id`,`chinese`) values (10406,'方言交谈');
-insert  into `template_luck`(`id`,`chinese`) values (10407,'触碰菊花');
-insert  into `template_luck`(`id`,`chinese`) values (10408,'白色耳机');
-insert  into `template_luck`(`id`,`chinese`) values (10409,'用力吮吸');
-insert  into `template_luck`(`id`,`chinese`) values (10410,'秀下限');
-insert  into `template_luck`(`id`,`chinese`) values (10411,'橙色衣物');
-insert  into `template_luck`(`id`,`chinese`) values (10412,'自我催眠');
-insert  into `template_luck`(`id`,`chinese`) values (10413,'多管闲事');
-insert  into `template_luck`(`id`,`chinese`) values (10414,'回笼觉');
-insert  into `template_luck`(`id`,`chinese`) values (10415,'更换发型');
-insert  into `template_luck`(`id`,`chinese`) values (10416,'删除邮件');
-insert  into `template_luck`(`id`,`chinese`) values (10417,'跟风参赛');
-insert  into `template_luck`(`id`,`chinese`) values (10418,'绿秋裤');
-insert  into `template_luck`(`id`,`chinese`) values (10419,'追忆宿醉');
-insert  into `template_luck`(`id`,`chinese`) values (10420,'分批相亲');
-insert  into `template_luck`(`id`,`chinese`) values (10421,'玻璃瓶');
-insert  into `template_luck`(`id`,`chinese`) values (10422,'厕内阅读');
-insert  into `template_luck`(`id`,`chinese`) values (10423,'攻受联萌');
-insert  into `template_luck`(`id`,`chinese`) values (10424,'远路求医');
-insert  into `template_luck`(`id`,`chinese`) values (10425,'偏袒前妻');
-insert  into `template_luck`(`id`,`chinese`) values (10426,'以命逼婚');
-insert  into `template_luck`(`id`,`chinese`) values (10427,'抢桃花');
-insert  into `template_luck`(`id`,`chinese`) values (10428,'搭顺路车');
-insert  into `template_luck`(`id`,`chinese`) values (10429,'临时加班');
-insert  into `template_luck`(`id`,`chinese`) values (10430,'故意装傻');
-insert  into `template_luck`(`id`,`chinese`) values (10431,'炫耀哥大');
-insert  into `template_luck`(`id`,`chinese`) values (10432,'逆风而行');
-insert  into `template_luck`(`id`,`chinese`) values (10433,'排队等吃');
-insert  into `template_luck`(`id`,`chinese`) values (10434,'假装感动');
-insert  into `template_luck`(`id`,`chinese`) values (10435,'靠近河边');
-insert  into `template_luck`(`id`,`chinese`) values (10436,'逃避家务');
-insert  into `template_luck`(`id`,`chinese`) values (10437,'咖啡加糖');
-insert  into `template_luck`(`id`,`chinese`) values (10438,'抽查手机');
-insert  into `template_luck`(`id`,`chinese`) values (10439,'锻炼演技');
-insert  into `template_luck`(`id`,`chinese`) values (10440,'即兴失眠');
-insert  into `template_luck`(`id`,`chinese`) values (10441,'蓝牙鼠标');
-insert  into `template_luck`(`id`,`chinese`) values (10442,'羽绒服装');
-insert  into `template_luck`(`id`,`chinese`) values (10443,'删除文件');
-insert  into `template_luck`(`id`,`chinese`) values (10444,'手洗内衣');
-insert  into `template_luck`(`id`,`chinese`) values (10445,'勇斗奇葩');
-insert  into `template_luck`(`id`,`chinese`) values (10446,'施发暗器');
-insert  into `template_luck`(`id`,`chinese`) values (10447,'同性深吻');
-insert  into `template_luck`(`id`,`chinese`) values (10448,'兄妹相认');
-insert  into `template_luck`(`id`,`chinese`) values (10449,'脱离组织');
-insert  into `template_luck`(`id`,`chinese`) values (10450,'日本电影');
-insert  into `template_luck`(`id`,`chinese`) values (10451,'自取其乳');
-insert  into `template_luck`(`id`,`chinese`) values (10452,'上午大便');
-insert  into `template_luck`(`id`,`chinese`) values (10453,'温暖故人');
-insert  into `template_luck`(`id`,`chinese`) values (10454,'秀才艺');
-insert  into `template_luck`(`id`,`chinese`) values (10455,'修剪刘海');
-insert  into `template_luck`(`id`,`chinese`) values (10456,'公开恋情');
-insert  into `template_luck`(`id`,`chinese`) values (10457,'彩条牙膏');
-insert  into `template_luck`(`id`,`chinese`) values (10458,'遮遮掩掩');
-insert  into `template_luck`(`id`,`chinese`) values (10459,'回访学长');
-insert  into `template_luck`(`id`,`chinese`) values (10460,'逢场作戏');
-insert  into `template_luck`(`id`,`chinese`) values (10461,'为友做托');
-insert  into `template_luck`(`id`,`chinese`) values (10462,'平锅煎炒');
-insert  into `template_luck`(`id`,`chinese`) values (10463,'说漏嘴');
-insert  into `template_luck`(`id`,`chinese`) values (10464,'代金券');
-insert  into `template_luck`(`id`,`chinese`) values (10465,'有氧运动');
-insert  into `template_luck`(`id`,`chinese`) values (10466,'当硬不硬');
-insert  into `template_luck`(`id`,`chinese`) values (10467,'冒充领导');
-insert  into `template_luck`(`id`,`chinese`) values (10468,'执迷不悟');
-insert  into `template_luck`(`id`,`chinese`) values (10469,'怒穿秋裤');
-insert  into `template_luck`(`id`,`chinese`) values (10470,'戏弄备胎');
-insert  into `template_luck`(`id`,`chinese`) values (10471,'网盘下载');
-insert  into `template_luck`(`id`,`chinese`) values (10472,'收发邮件');
-insert  into `template_luck`(`id`,`chinese`) values (10473,'手机拍照');
-insert  into `template_luck`(`id`,`chinese`) values (10474,'指桑骂槐');
-insert  into `template_luck`(`id`,`chinese`) values (10475,'单曲循环');
-insert  into `template_luck`(`id`,`chinese`) values (10476,'清理床下');
-insert  into `template_luck`(`id`,`chinese`) values (10477,'手撕发票');
-insert  into `template_luck`(`id`,`chinese`) values (10478,'便利店');
-insert  into `template_luck`(`id`,`chinese`) values (10479,'棒打鸳鸯');
-insert  into `template_luck`(`id`,`chinese`) values (10480,'保留包装');
-insert  into `template_luck`(`id`,`chinese`) values (10481,'秀名片');
-insert  into `template_luck`(`id`,`chinese`) values (10482,'调戏卖家');
-insert  into `template_luck`(`id`,`chinese`) values (10483,'赠人余香');
-insert  into `template_luck`(`id`,`chinese`) values (10484,'饭后散步');
-insert  into `template_luck`(`id`,`chinese`) values (10485,'约请胖友');
-insert  into `template_luck`(`id`,`chinese`) values (10486,'温水冲服');
-insert  into `template_luck`(`id`,`chinese`) values (10487,'人肉快递');
-insert  into `template_luck`(`id`,`chinese`) values (10488,'右手带表');
-insert  into `template_luck`(`id`,`chinese`) values (10489,'背靠墙');
-insert  into `template_luck`(`id`,`chinese`) values (10490,'逃避相亲');
-insert  into `template_luck`(`id`,`chinese`) values (10491,'楼道哼歌');
-insert  into `template_luck`(`id`,`chinese`) values (10492,'宣布出柜');
-insert  into `template_luck`(`id`,`chinese`) values (10493,'夺门而出');
-insert  into `template_luck`(`id`,`chinese`) values (10494,'取消关注');
-insert  into `template_luck`(`id`,`chinese`) values (10495,'怀疑人生');
-insert  into `template_luck`(`id`,`chinese`) values (10496,'功能饮料');
-insert  into `template_luck`(`id`,`chinese`) values (10497,'炫富比穷');
-insert  into `template_luck`(`id`,`chinese`) values (10498,'土法避孕');
-insert  into `template_luck`(`id`,`chinese`) values (10499,'橙色食品');
-insert  into `template_luck`(`id`,`chinese`) values (10500,'独自下棋');
-insert  into `template_luck`(`id`,`chinese`) values (10501,'互赞伯父');
-insert  into `template_luck`(`id`,`chinese`) values (10502,'金属外壳');
-insert  into `template_luck`(`id`,`chinese`) values (10503,'挑战底线');
-insert  into `template_luck`(`id`,`chinese`) values (10504,'互赠名片');
-insert  into `template_luck`(`id`,`chinese`) values (10505,'清真餐馆');
-insert  into `template_luck`(`id`,`chinese`) values (10506,'向人哭诉');
-insert  into `template_luck`(`id`,`chinese`) values (10507,'帮人起名');
-insert  into `template_luck`(`id`,`chinese`) values (10508,'冲动分手');
-insert  into `template_luck`(`id`,`chinese`) values (10509,'小包纸巾');
-insert  into `template_luck`(`id`,`chinese`) values (10510,'黑色内裤');
-insert  into `template_luck`(`id`,`chinese`) values (10511,'格子服装');
-insert  into `template_luck`(`id`,`chinese`) values (10512,'代人充电');
-insert  into `template_luck`(`id`,`chinese`) values (10513,'疯狂点赞');
-insert  into `template_luck`(`id`,`chinese`) values (10514,'反应慢');
-insert  into `template_luck`(`id`,`chinese`) values (10515,'放生伴侣');
-insert  into `template_luck`(`id`,`chinese`) values (10516,'打飞机');
-insert  into `template_luck`(`id`,`chinese`) values (10517,'咬吸管');
-insert  into `template_luck`(`id`,`chinese`) values (10518,'激光除毛');
-insert  into `template_luck`(`id`,`chinese`) values (10519,'综艺节目');
-insert  into `template_luck`(`id`,`chinese`) values (10520,'英文慢歌');
-insert  into `template_luck`(`id`,`chinese`) values (10521,'与猫对视');
-insert  into `template_luck`(`id`,`chinese`) values (10522,'视频快进');
-insert  into `template_luck`(`id`,`chinese`) values (10523,'鸳鸯锅');
-insert  into `template_luck`(`id`,`chinese`) values (10524,'下载app');
-insert  into `template_luck`(`id`,`chinese`) values (10525,'KTV合唱');
-insert  into `template_luck`(`id`,`chinese`) values (10526,'关爱下属');
-insert  into `template_luck`(`id`,`chinese`) values (10527,'复制粘贴');
-insert  into `template_luck`(`id`,`chinese`) values (10528,'帮人搬家');
-insert  into `template_luck`(`id`,`chinese`) values (10529,'饭后剔牙');
-insert  into `template_luck`(`id`,`chinese`) values (10530,'乌龙茶');
-insert  into `template_luck`(`id`,`chinese`) values (10531,'光膀子');
-insert  into `template_luck`(`id`,`chinese`) values (10532,'在线升级');
-insert  into `template_luck`(`id`,`chinese`) values (10533,'雨中小跑');
-insert  into `template_luck`(`id`,`chinese`) values (10534,'拒绝肉偿');
-insert  into `template_luck`(`id`,`chinese`) values (10535,'携手淋雨');
-insert  into `template_luck`(`id`,`chinese`) values (10536,'韩语歌曲');
-insert  into `template_luck`(`id`,`chinese`) values (10537,'裸露额头');
-insert  into `template_luck`(`id`,`chinese`) values (10538,'注视乳沟');
-insert  into `template_luck`(`id`,`chinese`) values (10539,'阳台午睡');
-insert  into `template_luck`(`id`,`chinese`) values (10540,'故意馋人');
-insert  into `template_luck`(`id`,`chinese`) values (10541,'追忆初吻');
-insert  into `template_luck`(`id`,`chinese`) values (10542,'擤鼻涕');
-insert  into `template_luck`(`id`,`chinese`) values (10543,'陌生旅伴');
-insert  into `template_luck`(`id`,`chinese`) values (10544,'笑点诡异');
-insert  into `template_luck`(`id`,`chinese`) values (10545,'提前出发');
-insert  into `template_luck`(`id`,`chinese`) values (10546,'制造盲点');
-insert  into `template_luck`(`id`,`chinese`) values (10547,'赠人丝袜');
-insert  into `template_luck`(`id`,`chinese`) values (10548,'奖励屌丝');
-insert  into `template_luck`(`id`,`chinese`) values (10549,'豆制品');
-insert  into `template_luck`(`id`,`chinese`) values (10550,'抢风头');
-insert  into `template_luck`(`id`,`chinese`) values (10551,'招揽合租');
-insert  into `template_luck`(`id`,`chinese`) values (10551,'频繁提臀');
-insert  into `template_luck`(`id`,`chinese`) values (10552,'光想着吃');
-insert  into `template_luck`(`id`,`chinese`) values (10552,'戺矷㱛夛');
-insert  into `template_luck`(`id`,`chinese`) values (10553,'同情坏蛋');
-insert  into `template_luck`(`id`,`chinese`) values (10554,'无语飘过');
-insert  into `template_luck`(`id`,`chinese`) values (10555,'霸占公款');
-insert  into `template_luck`(`id`,`chinese`) values (10556,'充当肉盾');
-insert  into `template_luck`(`id`,`chinese`) values (10557,'异常热情');
-insert  into `template_luck`(`id`,`chinese`) values (10558,'不欢而散');
-insert  into `template_luck`(`id`,`chinese`) values (10559,'绿色指甲');
-insert  into `template_luck`(`id`,`chinese`) values (10560,'错过班车');
-insert  into `template_luck`(`id`,`chinese`) values (10561,'廉价早点');
-insert  into `template_luck`(`id`,`chinese`) values (10562,'交换名片');
-insert  into `template_luck`(`id`,`chinese`) values (10563,'五笔输入');
-insert  into `template_luck`(`id`,`chinese`) values (10564,'朗读情书');
-insert  into `template_luck`(`id`,`chinese`) values (10565,'彩框眼镜');
-insert  into `template_luck`(`id`,`chinese`) values (10566,'省略一餐');
-insert  into `template_luck`(`id`,`chinese`) values (10567,'混合饮料');
-insert  into `template_luck`(`id`,`chinese`) values (10568,'人来疯');
-insert  into `template_luck`(`id`,`chinese`) values (10569,'回娘家');
-insert  into `template_luck`(`id`,`chinese`) values (10570,'探究乳源');
-insert  into `template_luck`(`id`,`chinese`) values (10571,'冲动辞职');
-insert  into `template_luck`(`id`,`chinese`) values (10572,'背后夸人');
-insert  into `template_luck`(`id`,`chinese`) values (10573,'自贬身价');
-insert  into `template_luck`(`id`,`chinese`) values (10574,'水果削皮');
-insert  into `template_luck`(`id`,`chinese`) values (10575,'缴年费');
-insert  into `template_luck`(`id`,`chinese`) values (10576,'替人约炮');
-insert  into `template_luck`(`id`,`chinese`) values (10577,'英文缩写');
-insert  into `template_luck`(`id`,`chinese`) values (10578,'分享视频');
-insert  into `template_luck`(`id`,`chinese`) values (10579,'手机群聊');
-insert  into `template_luck`(`id`,`chinese`) values (10580,'中医中药');
-insert  into `template_luck`(`id`,`chinese`) values (10581,'修理拉链');
-insert  into `template_luck`(`id`,`chinese`) values (10582,'目测腿长');
-insert  into `template_luck`(`id`,`chinese`) values (10583,'念旧情儿');
-insert  into `template_luck`(`id`,`chinese`) values (10584,'频频提裤');
-insert  into `template_luck`(`id`,`chinese`) values (10585,'躺着阅读');
-insert  into `template_luck`(`id`,`chinese`) values (10586,'卖萌争宠');
-insert  into `template_luck`(`id`,`chinese`) values (10587,'喝浓茶');
-insert  into `template_luck`(`id`,`chinese`) values (10588,'冲动求婚');
-insert  into `template_luck`(`id`,`chinese`) values (10589,'滴眼液');
-insert  into `template_luck`(`id`,`chinese`) values (10590,'胡乱许愿');
-insert  into `template_luck`(`id`,`chinese`) values (10591,'液体蚊香');
-insert  into `template_luck`(`id`,`chinese`) values (10592,'露各种沟');
-insert  into `template_luck`(`id`,`chinese`) values (10593,'疯狂刷卡');
-insert  into `template_luck`(`id`,`chinese`) values (10594,'增大毛孔');
-insert  into `template_luck`(`id`,`chinese`) values (10595,'下蹲运动');
-insert  into `template_luck`(`id`,`chinese`) values (10596,'强行分红');
-insert  into `template_luck`(`id`,`chinese`) values (10597,'观光电梯');
-insert  into `template_luck`(`id`,`chinese`) values (10598,'翻墙搜索');
-insert  into `template_luck`(`id`,`chinese`) values (10599,'爆粗口');
-insert  into `template_luck`(`id`,`chinese`) values (10600,'突然造访');
-insert  into `template_luck`(`id`,`chinese`) values (10601,'电吹风');
-insert  into `template_luck`(`id`,`chinese`) values (10602,'更改密码');
-insert  into `template_luck`(`id`,`chinese`) values (10603,'连环画');
-insert  into `template_luck`(`id`,`chinese`) values (10604,'收拾厨房');
-insert  into `template_luck`(`id`,`chinese`) values (10605,'捡硬币');
-insert  into `template_luck`(`id`,`chinese`) values (10606,'水果冰棍');
-insert  into `template_luck`(`id`,`chinese`) values (10607,'申请年假');
-insert  into `template_luck`(`id`,`chinese`) values (10608,'分享愿望');
-insert  into `template_luck`(`id`,`chinese`) values (10609,'推掉饭局');
-insert  into `template_luck`(`id`,`chinese`) values (10610,'浅色凉鞋');
-insert  into `template_luck`(`id`,`chinese`) values (10611,'推迟会议');
-insert  into `template_luck`(`id`,`chinese`) values (10612,'网购自取');
-insert  into `template_luck`(`id`,`chinese`) values (10613,'管教备胎');
-insert  into `template_luck`(`id`,`chinese`) values (10614,'深呼吸');
-insert  into `template_luck`(`id`,`chinese`) values (10615,'拒绝红包');
-insert  into `template_luck`(`id`,`chinese`) values (10616,'送人玫瑰');
-insert  into `template_luck`(`id`,`chinese`) values (10617,'前扣内衣');
-insert  into `template_luck`(`id`,`chinese`) values (10618,'带气饮料');
-insert  into `template_luck`(`id`,`chinese`) values (10619,'揉捏室友');
-insert  into `template_luck`(`id`,`chinese`) values (10620,'随意翻书');
-insert  into `template_luck`(`id`,`chinese`) values (10621,'分享小吃');
-insert  into `template_luck`(`id`,`chinese`) values (10622,'追捧烂片');
-insert  into `template_luck`(`id`,`chinese`) values (10623,'质疑领导');
-insert  into `template_luck`(`id`,`chinese`) values (10624,'记录梦境');
-insert  into `template_luck`(`id`,`chinese`) values (10625,'冒充结巴');
-insert  into `template_luck`(`id`,`chinese`) values (10626,'爱心泛滥');
-insert  into `template_luck`(`id`,`chinese`) values (10627,'频繁摇头');
-insert  into `template_luck`(`id`,`chinese`) values (10628,'中西混搭');
-insert  into `template_luck`(`id`,`chinese`) values (10629,'哄抬智商');
-insert  into `template_luck`(`id`,`chinese`) values (10630,'各种飞机');
-insert  into `template_luck`(`id`,`chinese`) values (10631,'进口烟');
-insert  into `template_luck`(`id`,`chinese`) values (10632,'民族风');
-insert  into `template_luck`(`id`,`chinese`) values (10633,'合撑伞');
-insert  into `template_luck`(`id`,`chinese`) values (10634,'捂脸跑开');
-insert  into `template_luck`(`id`,`chinese`) values (10635,'水产品');
-insert  into `template_luck`(`id`,`chinese`) values (10636,'在外过夜');
-insert  into `template_luck`(`id`,`chinese`) values (10637,'母性大发');
-insert  into `template_luck`(`id`,`chinese`) values (10638,'老虎菜');
-insert  into `template_luck`(`id`,`chinese`) values (10639,'母女逛街');
-insert  into `template_luck`(`id`,`chinese`) values (10640,'吓到尿');
-insert  into `template_luck`(`id`,`chinese`) values (10641,'右键另存');
-insert  into `template_luck`(`id`,`chinese`) values (10642,'无线遥控');
-insert  into `template_luck`(`id`,`chinese`) values (10643,'相互投食');
-insert  into `template_luck`(`id`,`chinese`) values (10644,'出售废品');
-insert  into `template_luck`(`id`,`chinese`) values (10645,'啃骨头');
-insert  into `template_luck`(`id`,`chinese`) values (10646,'肥水外流');
-insert  into `template_luck`(`id`,`chinese`) values (10647,'睡觉磨牙');
-insert  into `template_luck`(`id`,`chinese`) values (10648,'调戏娘炮');
-insert  into `template_luck`(`id`,`chinese`) values (10649,'忘记买票');
-insert  into `template_luck`(`id`,`chinese`) values (10650,'客串男友');
-insert  into `template_luck`(`id`,`chinese`) values (10651,'当街叫卖');
-insert  into `template_luck`(`id`,`chinese`) values (10652,'内部解决');
-insert  into `template_luck`(`id`,`chinese`) values (10653,'换位思考');
-insert  into `template_luck`(`id`,`chinese`) values (10654,'拒接电话');
-insert  into `template_luck`(`id`,`chinese`) values (10655,'拼插玩具');
-insert  into `template_luck`(`id`,`chinese`) values (10656,'相互润唇');
-insert  into `template_luck`(`id`,`chinese`) values (10657,'心灵鸡汤');
-insert  into `template_luck`(`id`,`chinese`) values (10658,'皮质饰品');
-insert  into `template_luck`(`id`,`chinese`) values (10659,'约而不炮');
-insert  into `template_luck`(`id`,`chinese`) values (10660,'四处乱走');
-insert  into `template_luck`(`id`,`chinese`) values (10661,'花式接吻');
-insert  into `template_luck`(`id`,`chinese`) values (10662,'现金消费');
-insert  into `template_luck`(`id`,`chinese`) values (10663,'触摸胸部');
-insert  into `template_luck`(`id`,`chinese`) values (10664,'互掏耳屎');
-insert  into `template_luck`(`id`,`chinese`) values (10665,'午后放歌');
-insert  into `template_luck`(`id`,`chinese`) values (10666,'颜文字');
-insert  into `template_luck`(`id`,`chinese`) values (10667,'人字拖');
-insert  into `template_luck`(`id`,`chinese`) values (10668,'独自夜跑');
-insert  into `template_luck`(`id`,`chinese`) values (10669,'更换床单');
-insert  into `template_luck`(`id`,`chinese`) values (10670,'对瓶吹');
-insert  into `template_luck`(`id`,`chinese`) values (10671,'韩式烧烤');
-insert  into `template_luck`(`id`,`chinese`) values (10672,'客串男友');
-insert  into `template_luck`(`id`,`chinese`) values (10673,'客串男友');
-insert  into `template_luck`(`id`,`chinese`) values (10674,'韩式烧烤');
-insert  into `template_luck`(`id`,`chinese`) values (10675,'邮寄包裹');
-insert  into `template_luck`(`id`,`chinese`) values (10676,'远赴饭局');
-insert  into `template_luck`(`id`,`chinese`) values (10677,'找别扭');
-insert  into `template_luck`(`id`,`chinese`) values (10678,'离别赠炮');
-insert  into `template_luck`(`id`,`chinese`) values (10679,'单手打字');
-insert  into `template_luck`(`id`,`chinese`) values (10680,'光脚走路');
-insert  into `template_luck`(`id`,`chinese`) values (10681,'踊跃报名');
-insert  into `template_luck`(`id`,`chinese`) values (10682,'歧视大PP');
-insert  into `template_luck`(`id`,`chinese`) values (10683,'快餐外卖');
-insert  into `template_luck`(`id`,`chinese`) values (10698,'速冻食品');
-insert  into `template_luck`(`id`,`chinese`) values (10699,'看电视');
-insert  into `template_luck`(`id`,`chinese`) values (10700,'按时服药');
-insert  into `template_luck`(`id`,`chinese`) values (10701,'红色衣物');
-insert  into `template_luck`(`id`,`chinese`) values (10702,'观看演出');
-insert  into `template_luck`(`id`,`chinese`) values (10703,'白T恤');
-insert  into `template_luck`(`id`,`chinese`) values (10704,'延迟送货');
-insert  into `template_luck`(`id`,`chinese`) values (10705,'驾车向西');
-insert  into `template_luck`(`id`,`chinese`) values (10706,'收喜帖');
-insert  into `template_luck`(`id`,`chinese`) values (10707,'爱咋咋地');
-insert  into `template_luck`(`id`,`chinese`) values (10708,'会见老乡');
-insert  into `template_luck`(`id`,`chinese`) values (10709,'街边摊');
-insert  into `template_luck`(`id`,`chinese`) values (10710,'借钱请客');
-insert  into `template_luck`(`id`,`chinese`) values (10711,'借钱请客');
-insert  into `template_luck`(`id`,`chinese`) values (10712,'管教男友');
-insert  into `template_luck`(`id`,`chinese`) values (10713,'长途电话');
-insert  into `template_luck`(`id`,`chinese`) values (10714,'偏右一点');
-insert  into `template_luck`(`id`,`chinese`) values (10715,'庄严滚粗');
-insert  into `template_luck`(`id`,`chinese`) values (10716,'立领polo');
-insert  into `template_luck`(`id`,`chinese`) values (10717,'中途退票');
-insert  into `template_luck`(`id`,`chinese`) values (10718,'开冰箱');
-insert  into `template_luck`(`id`,`chinese`) values (10719,'隐形眼镜');
-insert  into `template_luck`(`id`,`chinese`) values (10720,'当众训话');
-insert  into `template_luck`(`id`,`chinese`) values (10721,'友好对骂');
-insert  into `template_luck`(`id`,`chinese`) values (10722,'奶声奶气');
-insert  into `template_luck`(`id`,`chinese`) values (10723,'吐口水');
-insert  into `template_luck`(`id`,`chinese`) values (10724,'人肉泻火');
-insert  into `template_luck`(`id`,`chinese`) values (10725,'顶撞大V');
-insert  into `template_luck`(`id`,`chinese`) values (10726,'老头衫');
-insert  into `template_luck`(`id`,`chinese`) values (10727,'裸体相对');
-insert  into `template_luck`(`id`,`chinese`) values (10728,'买水果');
-insert  into `template_luck`(`id`,`chinese`) values (10729,'临时约饭');
-insert  into `template_luck`(`id`,`chinese`) values (10730,'穿袜子');
-insert  into `template_luck`(`id`,`chinese`) values (10731,'送红包');
-insert  into `template_luck`(`id`,`chinese`) values (10732,'欢送基友');
-insert  into `template_luck`(`id`,`chinese`) values (10733,'激吻庆生');
-insert  into `template_luck`(`id`,`chinese`) values (10734,'参与促销');
-insert  into `template_luck`(`id`,`chinese`) values (10735,'更换备胎');
-insert  into `template_luck`(`id`,`chinese`) values (20001,'锦鲤转运链');
-insert  into `template_luck`(`id`,`chinese`) values (20002,'红色手机壳');
-insert  into `template_luck`(`id`,`chinese`) values (20003,'黑曜石手链');
-insert  into `template_luck`(`id`,`chinese`) values (30001,'红色');
-insert  into `template_luck`(`id`,`chinese`) values (30002,'蓝色');
-insert  into `template_luck`(`id`,`chinese`) values (30003,'紫色');
-insert  into `template_luck`(`id`,`chinese`) values (30004,'橙色');
-insert  into `template_luck`(`id`,`chinese`) values (30005,'绿色');
-insert  into `template_luck`(`id`,`chinese`) values (30006,'青色');
-insert  into `template_luck`(`id`,`chinese`) values (30007,'黑色');
-insert  into `template_luck`(`id`,`chinese`) values (40001,'转发锦鲤微博两次');
-insert  into `template_luck`(`id`,`chinese`) values (40002,'给乞讨者1块钱');
-insert  into `template_luck`(`id`,`chinese`) values (40003,'发个自拍@ 大王');
-insert  into `template_luck`(`id`,`chinese`) values (40004,'语音向大王问好');
-insert  into `template_luck`(`id`,`chinese`) values (40005,'分享此页到朋友圈');
-insert  into `template_luck`(`id`,`chinese`) values (40006,'住处外绕三圈');
-insert  into `template_luck`(`id`,`chinese`) values (40007,'摇摇锦鲤大王风铃');
-insert  into `template_luck`(`id`,`chinese`) values (40008,'微博名加上\"锦鲤\"');
-insert  into `template_luck`(`id`,`chinese`) values (40009,'微博头像换成锦鲤');
-insert  into `template_luck`(`id`,`chinese`) values (40010,'向大王说个好消息');
-insert  into `template_luck`(`id`,`chinese`) values (40011,'向大王介绍个电影');
-insert  into `template_luck`(`id`,`chinese`) values (40012,'吼大王一下');
-insert  into `template_luck`(`id`,`chinese`) values (50001,'床上挖鼻孔');
-insert  into `template_luck`(`id`,`chinese`) values (50002,'吃饭听摇滚');
-insert  into `template_luck`(`id`,`chinese`) values (50003,'约会白富美');
-insert  into `template_luck`(`id`,`chinese`) values (50004,'中英文混杂');
-insert  into `template_luck`(`id`,`chinese`) values (50005,'吐槽评论员');
-insert  into `template_luck`(`id`,`chinese`) values (50006,'拉黑前男友');
-insert  into `template_luck`(`id`,`chinese`) values (50007,'婚后不焦虑');
-insert  into `template_luck`(`id`,`chinese`) values (50008,'批量下载AV');
-insert  into `template_luck`(`id`,`chinese`) values (50009,'晚七点前遛狗');
-insert  into `template_luck`(`id`,`chinese`) values (50010,'转移集体财产');
-insert  into `template_luck`(`id`,`chinese`) values (50011,'睁眼说瞎话');
-insert  into `template_luck`(`id`,`chinese`) values (50012,'关爱待产女性');
-insert  into `template_luck`(`id`,`chinese`) values (50013,'打印私人文件');
-insert  into `template_luck`(`id`,`chinese`) values (50014,'开关百叶窗');
-insert  into `template_luck`(`id`,`chinese`) values (50015,'下载限免应用');
-insert  into `template_luck`(`id`,`chinese`) values (50016,'为女上司看手相');
-insert  into `template_luck`(`id`,`chinese`) values (50017,'夸人身材好');
-insert  into `template_luck`(`id`,`chinese`) values (50018,'无诚意促销');
-insert  into `template_luck`(`id`,`chinese`) values (50019,'怒斥不良老板');
-insert  into `template_luck`(`id`,`chinese`) values (50020,'嘲笑处男处女');
-insert  into `template_luck`(`id`,`chinese`) values (50021,'亲吻左撇子');
-insert  into `template_luck`(`id`,`chinese`) values (50022,'影院吃爆米花');
-insert  into `template_luck`(`id`,`chinese`) values (50023,'提防男下属');
-insert  into `template_luck`(`id`,`chinese`) values (50024,'转让初夜权');
-insert  into `template_luck`(`id`,`chinese`) values (50025,'跨国朋友圈');
-insert  into `template_luck`(`id`,`chinese`) values (50026,'鸡头巴脑汤');
-insert  into `template_luck`(`id`,`chinese`) values (50027,'午后开始工作');
-insert  into `template_luck`(`id`,`chinese`) values (50028,'与傻逼交谈');
-insert  into `template_luck`(`id`,`chinese`) values (50029,'暴露数学功底');
-insert  into `template_luck`(`id`,`chinese`) values (50030,'大面积啄伤');
-insert  into `template_luck`(`id`,`chinese`) values (50031,'萝卜就热茶');
-insert  into `template_luck`(`id`,`chinese`) values (50032,'白内衣配黑袜子');
-insert  into `template_luck`(`id`,`chinese`) values (50033,'刷新朋友圈');
-insert  into `template_luck`(`id`,`chinese`) values (50034,'听风就是雨');
-insert  into `template_luck`(`id`,`chinese`) values (50035,'俄罗斯方块');
-insert  into `template_luck`(`id`,`chinese`) values (50036,'关爱大脸女性');
-insert  into `template_luck`(`id`,`chinese`) values (50037,'修改矢量图');
-insert  into `template_luck`(`id`,`chinese`) values (50038,'无病乱投票');
-insert  into `template_luck`(`id`,`chinese`) values (50039,'偷窥接吻情侣');
-insert  into `template_luck`(`id`,`chinese`) values (50040,'删垃圾短信');
-insert  into `template_luck`(`id`,`chinese`) values (50041,'晚11点后吸烟');
-insert  into `template_luck`(`id`,`chinese`) values (50042,'饼卷臭豆腐');
-insert  into `template_luck`(`id`,`chinese`) values (50043,'抢丈母娘貂儿');
-insert  into `template_luck`(`id`,`chinese`) values (50044,'无限期等人');
-insert  into `template_luck`(`id`,`chinese`) values (50045,'追打夹腿男');
-insert  into `template_luck`(`id`,`chinese`) values (50046,'更新暗恋对象');
-insert  into `template_luck`(`id`,`chinese`) values (50047,'下载电子书');
-insert  into `template_luck`(`id`,`chinese`) values (50048,'六人以上会议');
-insert  into `template_luck`(`id`,`chinese`) values (50049,'删除上网记录');
-insert  into `template_luck`(`id`,`chinese`) values (50050,'勾引白羊座');
-insert  into `template_luck`(`id`,`chinese`) values (50051,'勾引金牛座');
-insert  into `template_luck`(`id`,`chinese`) values (50052,'勾引双子座');
-insert  into `template_luck`(`id`,`chinese`) values (50053,'勾引巨蟹座');
-insert  into `template_luck`(`id`,`chinese`) values (50054,'勾引狮子座');
-insert  into `template_luck`(`id`,`chinese`) values (50055,'勾引处女座');
-insert  into `template_luck`(`id`,`chinese`) values (50056,'勾引天秤座');
-insert  into `template_luck`(`id`,`chinese`) values (50057,'勾引天蝎座');
-insert  into `template_luck`(`id`,`chinese`) values (50058,'勾引射手座');
-insert  into `template_luck`(`id`,`chinese`) values (50059,'勾引魔羯座');
-insert  into `template_luck`(`id`,`chinese`) values (50060,'勾引水瓶座');
-insert  into `template_luck`(`id`,`chinese`) values (50061,'勾引双鱼座');
-insert  into `template_luck`(`id`,`chinese`) values (50062,'轻黑白羊座');
-insert  into `template_luck`(`id`,`chinese`) values (50063,'轻黑金牛座');
-insert  into `template_luck`(`id`,`chinese`) values (50064,'轻黑双子座');
-insert  into `template_luck`(`id`,`chinese`) values (50065,'轻黑巨蟹座');
-insert  into `template_luck`(`id`,`chinese`) values (50066,'轻黑狮子座');
-insert  into `template_luck`(`id`,`chinese`) values (50067,'轻黑处女座');
-insert  into `template_luck`(`id`,`chinese`) values (50068,'轻黑天秤座');
-insert  into `template_luck`(`id`,`chinese`) values (50069,'轻黑天蝎座');
-insert  into `template_luck`(`id`,`chinese`) values (50070,'轻黑射手座');
-insert  into `template_luck`(`id`,`chinese`) values (50071,'轻黑魔羯座');
-insert  into `template_luck`(`id`,`chinese`) values (50072,'轻黑水瓶座');
-insert  into `template_luck`(`id`,`chinese`) values (50073,'轻黑双鱼座');
-insert  into `template_luck`(`id`,`chinese`) values (50074,'巴结白羊座');
-insert  into `template_luck`(`id`,`chinese`) values (50075,'巴结金牛座');
-insert  into `template_luck`(`id`,`chinese`) values (50076,'巴结双子座');
-insert  into `template_luck`(`id`,`chinese`) values (50077,'巴结巨蟹座');
-insert  into `template_luck`(`id`,`chinese`) values (50078,'巴结狮子座');
-insert  into `template_luck`(`id`,`chinese`) values (50079,'巴结处女座');
-insert  into `template_luck`(`id`,`chinese`) values (50080,'巴结天秤座');
-insert  into `template_luck`(`id`,`chinese`) values (50081,'巴结天蝎座');
-insert  into `template_luck`(`id`,`chinese`) values (50082,'巴结射手座');
-insert  into `template_luck`(`id`,`chinese`) values (50083,'巴结魔羯座');
-insert  into `template_luck`(`id`,`chinese`) values (50084,'巴结水瓶座');
-insert  into `template_luck`(`id`,`chinese`) values (50085,'巴结双鱼座');
-insert  into `template_luck`(`id`,`chinese`) values (50086,'转基因食品');
-insert  into `template_luck`(`id`,`chinese`) values (50087,'阅读长微博');
-insert  into `template_luck`(`id`,`chinese`) values (50088,'散播假八卦');
-insert  into `template_luck`(`id`,`chinese`) values (50089,'公交车站抽烟');
-insert  into `template_luck`(`id`,`chinese`) values (50090,'尝试新餐馆');
-insert  into `template_luck`(`id`,`chinese`) values (50091,'晒出黑名单');
-insert  into `template_luck`(`id`,`chinese`) values (50092,'怒闯异性寝室');
-insert  into `template_luck`(`id`,`chinese`) values (50093,'清空购物车');
-insert  into `template_luck`(`id`,`chinese`) values (50094,'异性并排行走');
-insert  into `template_luck`(`id`,`chinese`) values (50095,'出借数据线');
-insert  into `template_luck`(`id`,`chinese`) values (50096,'排挤贫乳分子');
-insert  into `template_luck`(`id`,`chinese`) values (50097,'酒后吐真言');
-insert  into `template_luck`(`id`,`chinese`) values (50098,'扶老人过马路');
-insert  into `template_luck`(`id`,`chinese`) values (50099,'夸赞别人老公');
-insert  into `template_luck`(`id`,`chinese`) values (50100,'拨通不讲话');
-insert  into `template_luck`(`id`,`chinese`) values (50101,'鼓励大龄剩女');
-insert  into `template_luck`(`id`,`chinese`) values (50102,'预防相思病');
-insert  into `template_luck`(`id`,`chinese`) values (50103,'帮女同学叠被');
-insert  into `template_luck`(`id`,`chinese`) values (50104,'参与一切工作话题');
-insert  into `template_luck`(`id`,`chinese`) values (50105,'小包装纸巾');
-insert  into `template_luck`(`id`,`chinese`) values (50106,'烧烤类食品');
-insert  into `template_luck`(`id`,`chinese`) values (50107,'各类网络测试');
-insert  into `template_luck`(`id`,`chinese`) values (50108,'为父母做饭');
-insert  into `template_luck`(`id`,`chinese`) values (50109,'甘当人肉撒气筒');
-insert  into `template_luck`(`id`,`chinese`) values (50110,'故意不上床');
-insert  into `template_luck`(`id`,`chinese`) values (50111,'狂殴加薪同事');
-insert  into `template_luck`(`id`,`chinese`) values (50112,'关爱孕期妇女');
-insert  into `template_luck`(`id`,`chinese`) values (50113,'一次性打火机');
-insert  into `template_luck`(`id`,`chinese`) values (50114,'一贱犯众怒');
-insert  into `template_luck`(`id`,`chinese`) values (50115,'夸赞美食');
-insert  into `template_luck`(`id`,`chinese`) values (50116,'人工催乳');
-insert  into `template_luck`(`id`,`chinese`) values (50117,'绿色下装');
-insert  into `template_luck`(`id`,`chinese`) values (50118,'给老板起外号');
-insert  into `template_luck`(`id`,`chinese`) values (50119,'腐乳就可乐');
-insert  into `template_luck`(`id`,`chinese`) values (50120,'吞咽他人口水');
-insert  into `template_luck`(`id`,`chinese`) values (50121,'交换手机号');
-insert  into `template_luck`(`id`,`chinese`) values (50122,'检查伴侣手机');
-insert  into `template_luck`(`id`,`chinese`) values (50123,'抽打外国朋友');
-insert  into `template_luck`(`id`,`chinese`) values (50124,'携宠物出游');
-insert  into `template_luck`(`id`,`chinese`) values (50125,'互称肉麻昵称');
-insert  into `template_luck`(`id`,`chinese`) values (50126,'吃水果到撑');
-insert  into `template_luck`(`id`,`chinese`) values (50127,'翻脸不认人');
-insert  into `template_luck`(`id`,`chinese`) values (50128,'紧急避孕药');
-insert  into `template_luck`(`id`,`chinese`) values (50129,'电梯内放屁');
-insert  into `template_luck`(`id`,`chinese`) values (50130,'羊肉馅元宵');
-insert  into `template_luck`(`id`,`chinese`) values (50131,'索要包装袋');
-insert  into `template_luck`(`id`,`chinese`) values (50132,'催促快递员');
-insert  into `template_luck`(`id`,`chinese`) values (50133,'上缴年终奖');
-insert  into `template_luck`(`id`,`chinese`) values (50134,'冒领年终奖');
-insert  into `template_luck`(`id`,`chinese`) values (50135,'请嫂子喝酒');
-insert  into `template_luck`(`id`,`chinese`) values (50136,'招惹黑车司机');
-insert  into `template_luck`(`id`,`chinese`) values (50137,'举报长腿女青年');
-insert  into `template_luck`(`id`,`chinese`) values (50138,'使用二十元纸币');
-insert  into `template_luck`(`id`,`chinese`) values (50139,'拒绝参与意见');
-insert  into `template_luck`(`id`,`chinese`) values (50140,'没事儿瞎逗逼');
-insert  into `template_luck`(`id`,`chinese`) values (50141,'作好事不留名');
-insert  into `template_luck`(`id`,`chinese`) values (50142,'共用润唇膏');
-insert  into `template_luck`(`id`,`chinese`) values (50143,'乘车掏耳朵');
-insert  into `template_luck`(`id`,`chinese`) values (50144,'20页以上ppt');
-insert  into `template_luck`(`id`,`chinese`) values (50145,'与杭州人握手');
-insert  into `template_luck`(`id`,`chinese`) values (50146,'替同事格式硬盘');
-insert  into `template_luck`(`id`,`chinese`) values (50147,'骚扰女权主义者');
-insert  into `template_luck`(`id`,`chinese`) values (50148,'坐副驾驶位');
-insert  into `template_luck`(`id`,`chinese`) values (50149,'无纸化办公');
-insert  into `template_luck`(`id`,`chinese`) values (50150,'搭讪卧铺旅伴');
-insert  into `template_luck`(`id`,`chinese`) values (50151,'撩拨销售女同事');
-insert  into `template_luck`(`id`,`chinese`) values (50152,'转发猫狗图片');
-insert  into `template_luck`(`id`,`chinese`) values (50153,'拆穿妄想症');
-insert  into `template_luck`(`id`,`chinese`) values (50154,'勾引大头少女');
-insert  into `template_luck`(`id`,`chinese`) values (50155,'临时开个会');
-insert  into `template_luck`(`id`,`chinese`) values (50156,'拒绝领导奇怪要求');
-insert  into `template_luck`(`id`,`chinese`) values (50157,'出借充电器');
-insert  into `template_luck`(`id`,`chinese`) values (50158,'询问wifi密码');
-insert  into `template_luck`(`id`,`chinese`) values (50159,'光长岁数不长个');
-insert  into `template_luck`(`id`,`chinese`) values (50160,'假装有未来');
-insert  into `template_luck`(`id`,`chinese`) values (50161,'转角撞到墙');
-insert  into `template_luck`(`id`,`chinese`) values (50162,'粉红色内衣');
-insert  into `template_luck`(`id`,`chinese`) values (50163,'跪求喜当爹');
-insert  into `template_luck`(`id`,`chinese`) values (50164,'预定会议室');
-insert  into `template_luck`(`id`,`chinese`) values (50165,'保持正当不性关系');
-insert  into `template_luck`(`id`,`chinese`) values (50166,'争吃病号饭');
-insert  into `template_luck`(`id`,`chinese`) values (50167,'投食双眼皮儿');
-insert  into `template_luck`(`id`,`chinese`) values (50168,'为领导开脱');
-insert  into `template_luck`(`id`,`chinese`) values (50169,'婚内损失婚外补');
-insert  into `template_luck`(`id`,`chinese`) values (50170,'互签免睡合约');
-insert  into `template_luck`(`id`,`chinese`) values (50171,'代买卫生巾');
-insert  into `template_luck`(`id`,`chinese`) values (50172,'关爱文科生');
-insert  into `template_luck`(`id`,`chinese`) values (50173,'上午发微博');
-insert  into `template_luck`(`id`,`chinese`) values (50174,'交流粗口经验');
-insert  into `template_luck`(`id`,`chinese`) values (50175,'混合型香烟');
-insert  into `template_luck`(`id`,`chinese`) values (50176,'为红衣老人指路');
-insert  into `template_luck`(`id`,`chinese`) values (50177,'微信讨论工作');
-insert  into `template_luck`(`id`,`chinese`) values (50178,'带迷路麋鹿回家');
-insert  into `template_luck`(`id`,`chinese`) values (50179,'发表过继感言');
-insert  into `template_luck`(`id`,`chinese`) values (50180,'出恭不出力');
-insert  into `template_luck`(`id`,`chinese`) values (50181,'与程序员约会');
-insert  into `template_luck`(`id`,`chinese`) values (50182,'拿骚情当浪漫');
-insert  into `template_luck`(`id`,`chinese`) values (50183,'追女不成反类其犬');
-insert  into `template_luck`(`id`,`chinese`) values (50184,'公交换乘地铁');
-insert  into `template_luck`(`id`,`chinese`) values (50185,'分享情色网址');
-insert  into `template_luck`(`id`,`chinese`) values (50186,'发送偶数字短信');
-insert  into `template_luck`(`id`,`chinese`) values (50187,'信用卡还款');
-insert  into `template_luck`(`id`,`chinese`) values (50188,'拉黑催稿编辑');
-insert  into `template_luck`(`id`,`chinese`) values (50189,'讨教梦遗技法');
-insert  into `template_luck`(`id`,`chinese`) values (50190,'放任娘泡卖骚');
-insert  into `template_luck`(`id`,`chinese`) values (50191,'为科学祈祷');
-insert  into `template_luck`(`id`,`chinese`) values (50192,'推算预产期');
-insert  into `template_luck`(`id`,`chinese`) values (50193,'交往水蛇腰');
-insert  into `template_luck`(`id`,`chinese`) values (50194,'同情苦逼同事');
-insert  into `template_luck`(`id`,`chinese`) values (50195,'与女汉子摔跤');
-insert  into `template_luck`(`id`,`chinese`) values (50196,'私自命名小行星');
-insert  into `template_luck`(`id`,`chinese`) values (50197,'强搀交警过马路');
-insert  into `template_luck`(`id`,`chinese`) values (50198,'观看法制节目');
-insert  into `template_luck`(`id`,`chinese`) values (50199,'给胖姑娘让座');
-insert  into `template_luck`(`id`,`chinese`) values (50200,'过度刺激敏感区');
-insert  into `template_luck`(`id`,`chinese`) values (50201,'嘲笑尤文噗球');
-insert  into `template_luck`(`id`,`chinese`) values (50202,'拒接同事电话');
-insert  into `template_luck`(`id`,`chinese`) values (50203,'礼节性互粉');
-insert  into `template_luck`(`id`,`chinese`) values (50204,'颜文字和表情符');
-insert  into `template_luck`(`id`,`chinese`) values (50205,'炫耀假睫毛');
-insert  into `template_luck`(`id`,`chinese`) values (50206,'为同事背锅');
-insert  into `template_luck`(`id`,`chinese`) values (50207,'冒充人体艺术家');
-insert  into `template_luck`(`id`,`chinese`) values (50208,'扫描二维码');
-insert  into `template_luck`(`id`,`chinese`) values (50209,'惯用手用餐');
-insert  into `template_luck`(`id`,`chinese`) values (50210,'追究劈腿责任');
-insert  into `template_luck`(`id`,`chinese`) values (50211,'拨打骚友电话');
-insert  into `template_luck`(`id`,`chinese`) values (50212,'车载无线电');
-insert  into `template_luck`(`id`,`chinese`) values (50213,'冲动性消费');
-insert  into `template_luck`(`id`,`chinese`) values (50214,'拒绝大脸女性');
-insert  into `template_luck`(`id`,`chinese`) values (50215,'拒绝非礼要求');
-insert  into `template_luck`(`id`,`chinese`) values (50216,'搭救裸睡儿童');
-insert  into `template_luck`(`id`,`chinese`) values (50217,'破坏打卡机');
-insert  into `template_luck`(`id`,`chinese`) values (50218,'请前台吃饭');
-insert  into `template_luck`(`id`,`chinese`) values (50219,'问我去哪儿');
-insert  into `template_luck`(`id`,`chinese`) values (50220,'摄录私密视频');
-insert  into `template_luck`(`id`,`chinese`) values (50221,'重拾不良嗜好');
-insert  into `template_luck`(`id`,`chinese`) values (50222,'投食女学生');
-insert  into `template_luck`(`id`,`chinese`) values (50223,'赠送贴身衣物');
-insert  into `template_luck`(`id`,`chinese`) values (50224,'委托第三方');
-insert  into `template_luck`(`id`,`chinese`) values (50225,'帮人挂断电话');
-insert  into `template_luck`(`id`,`chinese`) values (50226,'开会不管饭');
-insert  into `template_luck`(`id`,`chinese`) values (50227,'散发好人卡');
-insert  into `template_luck`(`id`,`chinese`) values (50228,'请下属吃饭');
-insert  into `template_luck`(`id`,`chinese`) values (50229,'与胖子同床');
-insert  into `template_luck`(`id`,`chinese`) values (50230,'自行返回地球');
-insert  into `template_luck`(`id`,`chinese`) values (50231,'挑逗快递员');
-insert  into `template_luck`(`id`,`chinese`) values (50232,'国产电视剧');
-insert  into `template_luck`(`id`,`chinese`) values (50233,'暴露土豪身份');
-insert  into `template_luck`(`id`,`chinese`) values (50234,'与戴美瞳者对话');
-insert  into `template_luck`(`id`,`chinese`) values (50235,'预谋周末活动');
-insert  into `template_luck`(`id`,`chinese`) values (50236,'收容问题少女');
-insert  into `template_luck`(`id`,`chinese`) values (50237,'奢望小概率');
-insert  into `template_luck`(`id`,`chinese`) values (50238,'占用饭点儿谈事儿');
-insert  into `template_luck`(`id`,`chinese`) values (50239,'按价格排序');
-insert  into `template_luck`(`id`,`chinese`) values (50240,'提高工作效率');
-insert  into `template_luck`(`id`,`chinese`) values (50241,'废除考勤制度');
-insert  into `template_luck`(`id`,`chinese`) values (50242,'冒充情感专家');
-insert  into `template_luck`(`id`,`chinese`) values (50243,'约见中学同学');
-insert  into `template_luck`(`id`,`chinese`) values (50244,'预约美发师');
-insert  into `template_luck`(`id`,`chinese`) values (50245,'嘲笑女胖子');
-insert  into `template_luck`(`id`,`chinese`) values (50246,'清理朋友圈');
-insert  into `template_luck`(`id`,`chinese`) values (50247,'英文慢歌');
-insert  into `template_luck`(`id`,`chinese`) values (50248,'向男神表白');
-insert  into `template_luck`(`id`,`chinese`) values (50249,'关爱苦逼设计师');
-insert  into `template_luck`(`id`,`chinese`) values (50250,'虐杀小昆虫');
-insert  into `template_luck`(`id`,`chinese`) values (50251,'针刺伪球迷');
-insert  into `template_luck`(`id`,`chinese`) values (50252,'翻阅姑娘相册');
-insert  into `template_luck`(`id`,`chinese`) values (50253,'为同事点烟');
-insert  into `template_luck`(`id`,`chinese`) values (50254,'私自带外星人回家');
-insert  into `template_luck`(`id`,`chinese`) values (50255,'寻找同名者');
-insert  into `template_luck`(`id`,`chinese`) values (50256,'榴莲味拥吻');
-insert  into `template_luck`(`id`,`chinese`) values (50257,'绿色出租车');
-insert  into `template_luck`(`id`,`chinese`) values (50258,'长时间入厕');
-insert  into `template_luck`(`id`,`chinese`) values (50259,'请快递员吃糖');
-insert  into `template_luck`(`id`,`chinese`) values (50260,'冒充催奶师');
-insert  into `template_luck`(`id`,`chinese`) values (50261,'突然拥吻邻座同事');
-insert  into `template_luck`(`id`,`chinese`) values (50262,'相互点餐拒不结账');
-insert  into `template_luck`(`id`,`chinese`) values (50263,'忽略旧日弯伴');
-insert  into `template_luck`(`id`,`chinese`) values (50264,'多任务处理');
-insert  into `template_luck`(`id`,`chinese`) values (50265,'保存聊天记录');
-insert  into `template_luck`(`id`,`chinese`) values (50266,'拆除违章假睫毛');
-insert  into `template_luck`(`id`,`chinese`) values (50267,'调戏实习生');
-insert  into `template_luck`(`id`,`chinese`) values (50268,'小语种叫床');
-insert  into `template_luck`(`id`,`chinese`) values (50269,'在厕所刷微博');
-insert  into `template_luck`(`id`,`chinese`) values (50270,'为暗恋对象牵线');
-insert  into `template_luck`(`id`,`chinese`) values (50271,'与尖下巴打招呼');
-insert  into `template_luck`(`id`,`chinese`) values (50272,'向前任道歉');
-insert  into `template_luck`(`id`,`chinese`) values (50273,'入耳式耳机');
-insert  into `template_luck`(`id`,`chinese`) values (50274,'超越两厢车');
-insert  into `template_luck`(`id`,`chinese`) values (50275,'观测小行星');
-insert  into `template_luck`(`id`,`chinese`) values (50276,'恶意阻拦少女卖萌');
-insert  into `template_luck`(`id`,`chinese`) values (50277,'调戏细眼女生');
-insert  into `template_luck`(`id`,`chinese`) values (50278,'电梯内谈工作');
-insert  into `template_luck`(`id`,`chinese`) values (50279,'调整假期计划');
-insert  into `template_luck`(`id`,`chinese`) values (50280,'省略饭局直奔主题');
-insert  into `template_luck`(`id`,`chinese`) values (50281,'多任务处理');
-insert  into `template_luck`(`id`,`chinese`) values (50282,'回收旧内衣');
-insert  into `template_luck`(`id`,`chinese`) values (50283,'与的哥约会');
-insert  into `template_luck`(`id`,`chinese`) values (50284,'为同事背黑锅');
-insert  into `template_luck`(`id`,`chinese`) values (50285,'摧残均码衣服');
-insert  into `template_luck`(`id`,`chinese`) values (50286,'关爱左撇子');
-insert  into `template_luck`(`id`,`chinese`) values (50287,'借用充电器');
-insert  into `template_luck`(`id`,`chinese`) values (50288,'与脑残粉对骂');
-insert  into `template_luck`(`id`,`chinese`) values (50289,'冷落寂寞女邻居');
-insert  into `template_luck`(`id`,`chinese`) values (50290,'搞好妻妾关系');
-insert  into `template_luck`(`id`,`chinese`) values (50291,'望夫成龙下猛药');
-insert  into `template_luck`(`id`,`chinese`) values (50292,'深夜陪怨妇聊天');
-insert  into `template_luck`(`id`,`chinese`) values (50293,'讹摔倒老太太钱');
-insert  into `template_luck`(`id`,`chinese`) values (50294,'洗澡时间过长');
-insert  into `template_luck`(`id`,`chinese`) values (50295,'街边不看腿');
-insert  into `template_luck`(`id`,`chinese`) values (50296,'自制三明治');
-insert  into `template_luck`(`id`,`chinese`) values (50297,'替下属埋单');
-insert  into `template_luck`(`id`,`chinese`) values (50298,'招惹中年妇女');
-insert  into `template_luck`(`id`,`chinese`) values (50299,'和大长腿做朋友');
-insert  into `template_luck`(`id`,`chinese`) values (50300,'虚构姐弟恋');
-insert  into `template_luck`(`id`,`chinese`) values (50301,'向男友介绍闺蜜');
-insert  into `template_luck`(`id`,`chinese`) values (50302,'对射手座呵呵');
-insert  into `template_luck`(`id`,`chinese`) values (50303,'转移暗恋目标');
-insert  into `template_luck`(`id`,`chinese`) values (50304,'给少女指点迷津');
-insert  into `template_luck`(`id`,`chinese`) values (50305,'at三位好友');
-insert  into `template_luck`(`id`,`chinese`) values (50306,'原谅减肥癖患者');
-insert  into `template_luck`(`id`,`chinese`) values (50307,'大战喵星人');
-insert  into `template_luck`(`id`,`chinese`) values (50308,'阅读招生简章');
-insert  into `template_luck`(`id`,`chinese`) values (50309,'卫生间谈判');
-insert  into `template_luck`(`id`,`chinese`) values (50310,'实名求勾搭');
-insert  into `template_luck`(`id`,`chinese`) values (50311,'与东北人唠闲嗑');
-insert  into `template_luck`(`id`,`chinese`) values (50312,'与戴美瞳者对视');
-insert  into `template_luck`(`id`,`chinese`) values (50313,'参观博物馆');
-insert  into `template_luck`(`id`,`chinese`) values (50314,'光脚穿皮鞋');
-insert  into `template_luck`(`id`,`chinese`) values (50315,'自曝清凉照');
-insert  into `template_luck`(`id`,`chinese`) values (50316,'小金额刷卡');
-insert  into `template_luck`(`id`,`chinese`) values (50317,'冒充精英人群');
-insert  into `template_luck`(`id`,`chinese`) values (50318,'把物理老师捧上天');
-insert  into `template_luck`(`id`,`chinese`) values (50319,'告别自行车');
-insert  into `template_luck`(`id`,`chinese`) values (50320,'背着胖女友爱别人');
-insert  into `template_luck`(`id`,`chinese`) values (50321,'玩弄刘海妹');
-insert  into `template_luck`(`id`,`chinese`) values (50322,'咒骂交通状况');
-insert  into `template_luck`(`id`,`chinese`) values (50323,'谈论高考志愿');
-insert  into `template_luck`(`id`,`chinese`) values (50324,'重口味图片');
-insert  into `template_luck`(`id`,`chinese`) values (50325,'关注蓝V账号');
-insert  into `template_luck`(`id`,`chinese`) values (50326,'爆发母性光辉');
-insert  into `template_luck`(`id`,`chinese`) values (50327,'揪女士腿毛');
-insert  into `template_luck`(`id`,`chinese`) values (50328,'为女同事开脱');
-insert  into `template_luck`(`id`,`chinese`) values (50329,'拨打热线电话');
-insert  into `template_luck`(`id`,`chinese`) values (50330,'单方面宣布胜利');
-insert  into `template_luck`(`id`,`chinese`) values (50331,'购置数码产品');
-insert  into `template_luck`(`id`,`chinese`) values (50332,'揭批抠门朋友');
-insert  into `template_luck`(`id`,`chinese`) values (50333,'爱上一个不会嫁的人');
-insert  into `template_luck`(`id`,`chinese`) values (50334,'消费他人苦难');
-insert  into `template_luck`(`id`,`chinese`) values (50335,'凉面就热茶');
-insert  into `template_luck`(`id`,`chinese`) values (50336,'挑拨国际关系');
-insert  into `template_luck`(`id`,`chinese`) values (50337,'学习西方理论');
-insert  into `template_luck`(`id`,`chinese`) values (50338,'棒打鸳鸯蹼');
-insert  into `template_luck`(`id`,`chinese`) values (50339,'关怀异性下属');
-insert  into `template_luck`(`id`,`chinese`) values (50340,'争论南北方差异');
-insert  into `template_luck`(`id`,`chinese`) values (50341,'升职不请客');
-insert  into `template_luck`(`id`,`chinese`) values (50342,'求种变借种');
+INSERT INTO `template_luck` (`id`, `chinese`) VALUES
+(1, '日剧'),
+(2, '告别'),
+(3, '排骨'),
+(4, '交配'),
+(5, '登QQ'),
+(6, '逛街'),
+(7, '吊带'),
+(8, '早起'),
+(9, '休假'),
+(10, '洗车'),
+(11, '撸串'),
+(12, '热茶'),
+(13, '冷门'),
+(14, '打卡'),
+(15, '甜食'),
+(16, '肉粽'),
+(17, '想念'),
+(18, '划屏'),
+(19, '晨吐'),
+(20, '失踪'),
+(21, '放弃'),
+(22, '开会'),
+(23, '充电'),
+(24, '庆生'),
+(25, '借书'),
+(26, '水饺'),
+(27, '玩笑'),
+(28, '闭眼'),
+(29, '喝大'),
+(30, '观星'),
+(31, '丝袜'),
+(32, '翻脸'),
+(33, '花生'),
+(34, '鼓掌'),
+(35, '借宿'),
+(36, '鲜奶'),
+(37, '催稿'),
+(38, '换座'),
+(39, '摇头'),
+(40, '摆胯'),
+(41, '零钱'),
+(42, '广播'),
+(43, '吃面'),
+(44, '握手'),
+(45, '香菜'),
+(46, '补课'),
+(47, '汤'),
+(48, '马甲'),
+(49, '话唠'),
+(50, '玩牌'),
+(51, '蒙面'),
+(52, '豆浆'),
+(53, '面点'),
+(54, '泡面'),
+(55, 'Kindle'),
+(56, '拼车'),
+(57, '出差'),
+(58, '拔牙'),
+(59, '健身'),
+(60, '喂奶'),
+(61, '请客'),
+(62, '口罩'),
+(63, '飞吻'),
+(64, '棉拖'),
+(65, '赤膊'),
+(66, '理发'),
+(67, '裁衣'),
+(68, '告状'),
+(69, '要账'),
+(70, 'PostRock'),
+(71, '剔牙'),
+(72, '晨练'),
+(73, '费电'),
+(74, '送礼'),
+(75, '裸睡'),
+(76, '健身'),
+(77, '辞职'),
+(78, '自拍'),
+(79, '潮湿'),
+(80, '搬家'),
+(81, '白菜'),
+(82, '便秘'),
+(83, '早退'),
+(84, '办证'),
+(85, '废话'),
+(86, '喝汤'),
+(87, '抽奖'),
+(88, '逃单'),
+(89, '验血'),
+(90, '煎蛋'),
+(91, '冲饮'),
+(92, '耳语'),
+(93, '黄瓜'),
+(94, '望天'),
+(95, '坐浴'),
+(96, '午睡'),
+(97, '嗜睡'),
+(98, '独饮'),
+(99, '憋尿'),
+(100, '肉包'),
+(101, '自黑'),
+(102, '超车'),
+(103, '花椒'),
+(104, '洋人'),
+(105, '叛逃'),
+(106, '扑克'),
+(107, '闲聊'),
+(108, '展望'),
+(109, '计划'),
+(110, '失恋'),
+(111, '总结'),
+(112, '酸奶'),
+(113, '拔眉'),
+(114, '马尾'),
+(115, '槟榔'),
+(116, '潜伏'),
+(117, '绕远'),
+(118, '暴走'),
+(119, '烤肉'),
+(120, '浇花'),
+(121, '数独'),
+(122, '帽衫'),
+(123, '晨澡'),
+(124, '海淘'),
+(125, '擦地'),
+(126, '还债'),
+(127, '汉堡'),
+(128, '手绘'),
+(129, '话梅'),
+(130, '抢购'),
+(131, '猜拳'),
+(132, '歪头'),
+(133, '群发'),
+(134, '奶糖'),
+(135, '熬粥'),
+(136, '喂鱼'),
+(137, '肉饼'),
+(138, '火锅'),
+(139, '棋牌'),
+(140, '饥渴'),
+(141, '左手'),
+(142, '白肉'),
+(143, '报销'),
+(144, '上班'),
+(145, '平躺'),
+(146, '卖怂'),
+(147, '凉拖'),
+(148, '素颜'),
+(149, '夜路'),
+(150, '豆瓣'),
+(151, '彩妆'),
+(152, '煲汤'),
+(153, '追责'),
+(154, '报名'),
+(155, '兼职'),
+(156, '果冻'),
+(157, '染发'),
+(158, '求图'),
+(159, '炸鸡'),
+(160, '辣食'),
+(161, '单飞'),
+(162, '踢毽'),
+(163, '哭穷'),
+(164, '戏曲'),
+(165, '面基'),
+(166, '比惨'),
+(167, '爆吧'),
+(168, '翻唱'),
+(169, '飞行'),
+(170, '冰块'),
+(171, '唱歌'),
+(172, '逃班'),
+(173, '饼干'),
+(174, '手软'),
+(175, '卖车'),
+(176, '领带'),
+(177, '借火'),
+(178, '尿频'),
+(179, '冲剂'),
+(180, '麻将'),
+(181, '寿司'),
+(182, '索吻'),
+(183, '美剧'),
+(184, '果汁'),
+(185, '钢笔'),
+(186, '踩水'),
+(187, '磨叽'),
+(188, '强吻'),
+(189, '面条'),
+(190, '民乐'),
+(191, '正装'),
+(192, '收债'),
+(193, '带伞'),
+(194, '蹭饭'),
+(195, '远足'),
+(196, '露背'),
+(197, '退货'),
+(198, '剃须'),
+(199, '雨伞'),
+(200, '练琴'),
+(201, '点钞'),
+(202, '仰视'),
+(203, '问路'),
+(204, '远足'),
+(205, '醒酒'),
+(206, '疗伤'),
+(207, '花茶'),
+(208, '返工'),
+(209, '蛋糕'),
+(210, '催搞'),
+(211, '挑错'),
+(212, '涂鸦'),
+(213, '热饮'),
+(214, '店庆'),
+(215, '习武'),
+(216, '修图'),
+(217, '抖腿'),
+(218, '干洗'),
+(219, '对账'),
+(220, '清仓'),
+(221, '游泳'),
+(222, '选举'),
+(223, '软糖'),
+(224, '出汗'),
+(225, '放荡'),
+(226, '出游'),
+(227, '自虐'),
+(228, '油条'),
+(229, '话痨'),
+(230, '早孕'),
+(231, '撕书'),
+(232, '厌旧'),
+(233, '风筝'),
+(234, '选C'),
+(235, '肉汤'),
+(236, '爬高'),
+(237, '独食'),
+(238, '买烟'),
+(239, '就医'),
+(240, '拒载'),
+(241, '励志'),
+(242, '认错'),
+(243, '摆谱'),
+(244, '聚会'),
+(245, '蛋塔'),
+(246, '呕吐'),
+(247, '面食'),
+(248, '反驳'),
+(249, '催婚'),
+(250, '素馅'),
+(251, '游园'),
+(252, '捐款'),
+(253, '骨汤'),
+(254, '抢戏'),
+(255, '贪睡'),
+(256, '称重'),
+(257, '吹牛'),
+(258, '梦游'),
+(259, '网袜'),
+(260, '斜眼'),
+(261, '浓妆'),
+(262, '盟誓'),
+(263, '修眉'),
+(264, '发呆'),
+(10001, '吐槽评论'),
+(10002, '冷落友妻'),
+(10003, '存车要票'),
+(10004, '分赃不均'),
+(10005, '晚上遛狗'),
+(10006, '日本料理'),
+(10007, '拉黑前男'),
+(10008, '借位拍照'),
+(10009, '以身饲蚊'),
+(10010, '小鸟依人'),
+(10011, '批量下AV'),
+(10012, '发好人卡'),
+(10013, '检查卫生'),
+(10014, '捆绑销售'),
+(10015, '打卡甜食'),
+(10016, '主动求虐'),
+(10017, '讨教技法'),
+(10018, '废除合约'),
+(10019, '车站接人'),
+(10020, '主动交配'),
+(10021, '刷朋友圈'),
+(10022, '以腿服人'),
+(10023, '过生日'),
+(10024, '意外怀孕'),
+(10025, '奔赴南方'),
+(10026, '绷B热裤'),
+(10027, '带病求亲'),
+(10028, '赌球赖账'),
+(10029, '诚恳挽留'),
+(10030, '捆绑销售'),
+(10031, '晚餐节食'),
+(10032, '冷落友妻'),
+(10033, '蓝色球衣'),
+(10034, '多人混浴'),
+(10035, '冷落友妻'),
+(10036, '物理降温'),
+(10037, '自曝隐疾'),
+(10038, '借位拍照'),
+(10039, '哄骗表姐'),
+(10040, '存车要票'),
+(10041, '难以入睡'),
+(10042, '婚前焦虑'),
+(10043, '传播八卦'),
+(10044, '准备考试'),
+(10045, '打车APP'),
+(10046, '填报销单'),
+(10047, '歧视二逼'),
+(10048, '小鸟依人'),
+(10049, '日本料理'),
+(10050, '主动求虐'),
+(10051, '擦洗家具'),
+(10052, '好人卡'),
+(10053, '嘴硬心软'),
+(10054, '过膝靴'),
+(10055, '三方声明'),
+(10056, '暴打领导'),
+(10057, '赞美ex'),
+(10058, '代人道歉'),
+(10059, '无框眼镜'),
+(10060, '拒绝表白'),
+(10061, '生吃番茄'),
+(10062, '打折票'),
+(10063, 'iPhone拍照'),
+(10064, '事后烟'),
+(10065, '微信发图'),
+(10066, '方言沟通'),
+(10067, '频繁小解'),
+(10068, '修身T恤'),
+(10069, '倒骑转椅'),
+(10070, '换零钱'),
+(10071, '饭后烟'),
+(10072, '勃然大撸'),
+(10073, '金属筷子'),
+(10074, '后知后觉'),
+(10075, '卷发棒'),
+(10076, '各种咒语'),
+(10077, '晒太阳'),
+(10078, '半躺半坐'),
+(10079, '自我批评'),
+(10080, '突破禁区'),
+(10081, '电子合同'),
+(10082, '收敛毛孔'),
+(10083, '格子衬衣'),
+(10084, '超出预算'),
+(10085, '考验软肋'),
+(10086, '跑步机'),
+(10087, '马克杯'),
+(10088, '侧脸自拍'),
+(10089, '装孙子'),
+(10090, '热泪盈眶'),
+(10091, '收取硬币'),
+(10092, '中式快餐'),
+(10093, '问候EX'),
+(10094, '卡通口罩'),
+(10095, '电动牙刷'),
+(10096, '英文邮件'),
+(10097, '毛绒玩具'),
+(10098, '测量体温'),
+(10099, '扩张毛孔'),
+(10100, '电话采访'),
+(10101, '公交卡'),
+(10102, '横条衫'),
+(10103, '紫色食物'),
+(10104, '会上瞌睡'),
+(10105, '午餐破费'),
+(10106, '捎口信'),
+(10107, '冷水洗澡'),
+(10108, '网上转账'),
+(10109, '败坏床品'),
+(10110, '大口呼吸'),
+(10111, '微信表白'),
+(10112, '修剪鬓角'),
+(10113, '吞食异物'),
+(10114, '谈论网游'),
+(10115, '不熟充熟'),
+(10116, '检索番号'),
+(10117, '冤冤相抱'),
+(10118, '拖延症'),
+(10119, '关爱门卫'),
+(10120, '移动电源'),
+(10121, '鸳鸯锅'),
+(10122, 'QQ隐身'),
+(10123, '迁就伴侣'),
+(10124, '拒绝包邮'),
+(10125, '结伴面试'),
+(10126, '折返路线'),
+(10127, '购买厨具'),
+(10128, '机打发票'),
+(10129, '削铅笔'),
+(10130, '噪音扰民'),
+(10131, '废物利用'),
+(10132, '拒绝求婚'),
+(10133, '探望岳母'),
+(10134, '露天用餐'),
+(10135, '询问时间'),
+(10136, '互道晚安'),
+(10137, '乱中取胜'),
+(10138, '相互取暖'),
+(10139, '自创热点'),
+(10140, '双手打字'),
+(10141, '免费广告'),
+(10142, '假装爱过'),
+(10143, '自曝短处'),
+(10144, '公开求偶'),
+(10145, '虚惊一场'),
+(10146, '互道晚安'),
+(10147, '奇迹出现'),
+(10148, '硬币消费'),
+(10149, '互道晚安'),
+(10150, '结伴午饭'),
+(10151, '珍珠奶茶'),
+(10152, '冲动投资'),
+(10153, '听陈奕迅'),
+(10154, '鱼缸换水'),
+(10155, '推荐新人'),
+(10156, '饥饿疗法'),
+(10157, '职业规划'),
+(10158, '随地下蹲'),
+(10159, '释放酒量'),
+(10160, '九字短信'),
+(10161, '齐头发帘'),
+(10162, '炫耀罩杯'),
+(10163, '出大招'),
+(10164, '拨打分机'),
+(10165, '无痕内衣'),
+(10166, '集体裸睡'),
+(10167, '倒卖名片'),
+(10168, '日出而嘬'),
+(10169, '电话会议'),
+(10170, '装聋作哑'),
+(10171, '热门话题'),
+(10172, '电梯夹头'),
+(10173, '夜班尿床'),
+(10174, '注意安全'),
+(10175, '网络金融'),
+(10176, '购买彩票'),
+(10177, '反复赖床'),
+(10178, '更换密码'),
+(10179, '放狠话'),
+(10180, '热带水果'),
+(10181, '电磁炉'),
+(10182, '调整手表'),
+(10183, '代收快递'),
+(10184, '拷贝文字'),
+(10185, '准时到岗'),
+(10186, '格子床单'),
+(10187, '暴露年龄'),
+(10188, '团购零食'),
+(10189, '浇灌植物'),
+(10190, '冲印照片'),
+(10191, '厕所偷拍'),
+(10192, '刮腿毛'),
+(10193, '加湿器'),
+(10194, '循环播放'),
+(10195, '浴衣趴体'),
+(10196, '软饭硬吃'),
+(10197, '相互推诿'),
+(10198, '坡跟鞋'),
+(10199, '转移资产'),
+(10200, '情侣套装'),
+(10201, '逃课旷工'),
+(10202, '替人受过'),
+(10203, '幸灾乐祸'),
+(10204, '修剪腋毛'),
+(10205, '发送私信'),
+(10206, '无片镜框'),
+(10207, '吉他弹唱'),
+(10208, '废除约定'),
+(10209, '扫大家兴'),
+(10210, '绿叶菜'),
+(10211, '精装书'),
+(10212, '转让门票'),
+(10213, '言归于好'),
+(10214, '自制点心'),
+(10215, '频频回头'),
+(10216, '瓷杯饮茶'),
+(10217, '装大个儿'),
+(10218, '宫保鸡丁'),
+(10219, '牛奶泡脚'),
+(10220, '自修忍术'),
+(10221, '倒计时'),
+(10222, '在家加班'),
+(10223, '粉色封皮'),
+(10224, '替人缴费'),
+(10225, '地方小吃'),
+(10226, '加班餐'),
+(10227, '彩色头饰'),
+(10228, '右手开门'),
+(10229, '冲服馒头'),
+(10230, '抛售股票'),
+(10231, '暴力拔牙'),
+(10232, '吞吞吐吐'),
+(10233, '接近胖子'),
+(10234, '以貌娶人'),
+(10235, '冷水刷牙'),
+(10236, '手部运动'),
+(10237, '被迫相亲'),
+(10238, '转发段子'),
+(10239, '分摊房费'),
+(10240, '洗鸳鸯浴'),
+(10241, '不识抬举'),
+(10242, '高调分手'),
+(10243, '肉色内衣'),
+(10244, '尿速过快'),
+(10245, '独自落泪'),
+(10246, '发放福利'),
+(10247, '充当损友'),
+(10248, '恢复更新'),
+(10249, '跨国通讯'),
+(10250, '方便面'),
+(10251, '修理家居'),
+(10252, '粤语点菜'),
+(10253, '粤语点菜'),
+(10254, '约见EX'),
+(10255, '浓稠饮品'),
+(10256, '索要发票'),
+(10257, '分泌体液'),
+(10258, '手动磨白'),
+(10259, '大幅甩臂'),
+(10260, '整理简历'),
+(10261, '电话催款'),
+(10262, '约见客户'),
+(10263, '主动加班'),
+(10264, '嘲笑胖子'),
+(10265, '挑逗男神'),
+(10266, '装疯卖傻'),
+(10267, '持续拖延'),
+(10268, '上头条'),
+(10269, '千鸟格'),
+(10270, '采购坚果'),
+(10271, '倒行十步'),
+(10272, '转卖手机'),
+(10273, '皮质短裤'),
+(10274, '公仇私了'),
+(10275, '转借饭卡'),
+(10276, '双面打印'),
+(10277, '苦肉计'),
+(10278, '烧香拜金'),
+(10279, '涉外广播'),
+(10280, '积攒人品'),
+(10281, '保健品'),
+(10282, '当街朗诵'),
+(10283, '拒绝加薪'),
+(10284, '友情转发'),
+(10285, '日语交谈'),
+(10286, '抢先结账'),
+(10287, '转移财产'),
+(10288, '假装糊涂'),
+(10289, '关爱备胎'),
+(10290, '持续发胖'),
+(10291, '二郎腿'),
+(10292, '深夜发吃'),
+(10293, '各种无聊'),
+(10294, '申请加薪'),
+(10295, '添置家具'),
+(10296, '随机点赞'),
+(10297, '英文沟通'),
+(10298, '蓝色头像'),
+(10299, '糖墩儿'),
+(10300, '对焦不准'),
+(10301, '内药外敷'),
+(10302, '预约伴娘'),
+(10303, '张臂飞跑'),
+(10304, '辣白菜'),
+(10305, '浅色毛衣'),
+(10306, '当面验货'),
+(10307, '消炎药'),
+(10308, '更换厨具'),
+(10309, '上门提亲'),
+(10310, '赠送彩票'),
+(10311, '不痛不痒'),
+(10312, '翻篇儿'),
+(10313, '胡吃海塞'),
+(10314, '跨年炮'),
+(10315, '感谢挫折'),
+(10316, '收买岳母'),
+(10317, '南方水果'),
+(10318, '软件升级'),
+(10319, '合影自拍'),
+(10320, '丢弃旧物'),
+(10321, '明年再说'),
+(10322, '长微博'),
+(10323, '挥霍青春'),
+(10324, '合伙睡眠'),
+(10325, '皮质外套'),
+(10326, '自找凌辱'),
+(10327, '小额理财'),
+(10328, '方言民谣'),
+(10329, '不懂就问'),
+(10330, '头脑风暴'),
+(10331, '微波炉'),
+(10332, '进口食品'),
+(10333, '奉承红人'),
+(10334, '迟到早退'),
+(10335, '知耻不勇'),
+(10336, '更新app'),
+(10337, '梳马尾'),
+(10338, '独自进餐'),
+(10339, '柠檬水'),
+(10340, '业内八卦'),
+(10341, '隐瞒收入'),
+(10342, '换电池'),
+(10343, '无糖配方'),
+(10344, '睡沙发'),
+(10345, '八卦老板'),
+(10346, '微软雅黑'),
+(10347, '早睡早起'),
+(10348, '保持理智'),
+(10349, '乱认男神'),
+(10350, '退格键'),
+(10351, '仿人签名'),
+(10352, '拥吻取暖'),
+(10353, '追忆备胎'),
+(10354, '青春小说'),
+(10355, '背包挂件'),
+(10356, '外套撞衫'),
+(10357, '戴假发'),
+(10358, '双肩背包'),
+(10359, '各种迟到'),
+(10360, '自爆食量'),
+(10361, '选择恐惧'),
+(10362, '鼠标右键'),
+(10363, '男性付账'),
+(10364, '侧卧入睡'),
+(10365, '请人喝茶'),
+(10366, '翘班幽会'),
+(10367, '步行回家'),
+(10368, '观影午睡'),
+(10369, '过气还魂'),
+(10370, '逞强延时'),
+(10371, '芝麻烧饼'),
+(10372, '代签快递'),
+(10373, '反复洗手'),
+(10374, '手机转账'),
+(10375, '漱口水'),
+(10376, '彩色外套'),
+(10377, '车载广播'),
+(10378, '独自在家'),
+(10379, '开窗吸霾'),
+(10380, '预约病假'),
+(10381, '指甲刀'),
+(10382, '微信鸡汤'),
+(10383, '孝敬领导'),
+(10384, '分发福利'),
+(10385, '脱衣检查'),
+(10386, '舌吻成瘾'),
+(10387, '外国人'),
+(10388, '分食柚子'),
+(10389, '追打同桌'),
+(10390, '奉承人'),
+(10391, '浅色甲油'),
+(10392, '靠门而立'),
+(10393, '多肉植物'),
+(10394, '宁舌不弯'),
+(10395, '掰腕子'),
+(10396, '多喝水'),
+(10397, '代拔胡须'),
+(10398, '灰衬衣'),
+(10399, '不粘锅'),
+(10400, '提及情敌'),
+(10401, '自曝把柄'),
+(10402, '反咬一口'),
+(10403, '蓝色衣物'),
+(10404, '继续服药'),
+(10405, '毅然分手'),
+(10406, '方言交谈'),
+(10407, '触碰菊花'),
+(10408, '白色耳机'),
+(10409, '用力吮吸'),
+(10410, '秀下限'),
+(10411, '橙色衣物'),
+(10412, '自我催眠'),
+(10413, '多管闲事'),
+(10414, '回笼觉'),
+(10415, '更换发型'),
+(10416, '删除邮件'),
+(10417, '跟风参赛'),
+(10418, '绿秋裤'),
+(10419, '追忆宿醉'),
+(10420, '分批相亲'),
+(10421, '玻璃瓶'),
+(10422, '厕内阅读'),
+(10423, '攻受联萌'),
+(10424, '远路求医'),
+(10425, '偏袒前妻'),
+(10426, '以命逼婚'),
+(10427, '抢桃花'),
+(10428, '搭顺路车'),
+(10429, '临时加班'),
+(10430, '故意装傻'),
+(10431, '炫耀哥大'),
+(10432, '逆风而行'),
+(10433, '排队等吃'),
+(10434, '假装感动'),
+(10435, '靠近河边'),
+(10436, '逃避家务'),
+(10437, '咖啡加糖'),
+(10438, '抽查手机'),
+(10439, '锻炼演技'),
+(10440, '即兴失眠'),
+(10441, '蓝牙鼠标'),
+(10442, '羽绒服装'),
+(10443, '删除文件'),
+(10444, '手洗内衣'),
+(10445, '勇斗奇葩'),
+(10446, '施发暗器'),
+(10447, '同性深吻'),
+(10448, '兄妹相认'),
+(10449, '脱离组织'),
+(10450, '日本电影'),
+(10451, '自取其乳'),
+(10452, '上午大便'),
+(10453, '温暖故人'),
+(10454, '秀才艺'),
+(10455, '修剪刘海'),
+(10456, '公开恋情'),
+(10457, '彩条牙膏'),
+(10458, '遮遮掩掩'),
+(10459, '回访学长'),
+(10460, '逢场作戏'),
+(10461, '为友做托'),
+(10462, '平锅煎炒'),
+(10463, '说漏嘴'),
+(10464, '代金券'),
+(10465, '有氧运动'),
+(10466, '当硬不硬'),
+(10467, '冒充领导'),
+(10468, '执迷不悟'),
+(10469, '怒穿秋裤'),
+(10470, '戏弄备胎'),
+(10471, '网盘下载'),
+(10472, '收发邮件'),
+(10473, '手机拍照'),
+(10474, '指桑骂槐'),
+(10475, '单曲循环'),
+(10476, '清理床下'),
+(10477, '手撕发票'),
+(10478, '便利店'),
+(10479, '棒打鸳鸯'),
+(10480, '保留包装'),
+(10481, '秀名片'),
+(10482, '调戏卖家'),
+(10483, '赠人余香'),
+(10484, '饭后散步'),
+(10485, '约请胖友'),
+(10486, '温水冲服'),
+(10487, '人肉快递'),
+(10488, '右手带表'),
+(10489, '背靠墙'),
+(10490, '逃避相亲'),
+(10491, '楼道哼歌'),
+(10492, '宣布出柜'),
+(10493, '夺门而出'),
+(10494, '取消关注'),
+(10495, '怀疑人生'),
+(10496, '功能饮料'),
+(10497, '炫富比穷'),
+(10498, '土法避孕'),
+(10499, '橙色食品'),
+(10500, '独自下棋'),
+(10501, '互赞伯父'),
+(10502, '金属外壳'),
+(10503, '挑战底线'),
+(10504, '互赠名片'),
+(10505, '清真餐馆'),
+(10506, '向人哭诉'),
+(10507, '帮人起名'),
+(10508, '冲动分手'),
+(10509, '小包纸巾'),
+(10510, '黑色内裤'),
+(10511, '格子服装'),
+(10512, '代人充电'),
+(10513, '疯狂点赞'),
+(10514, '反应慢'),
+(10515, '放生伴侣'),
+(10516, '打飞机'),
+(10517, '咬吸管'),
+(10518, '激光除毛'),
+(10519, '综艺节目'),
+(10520, '英文慢歌'),
+(10521, '与猫对视'),
+(10522, '视频快进'),
+(10523, '鸳鸯锅'),
+(10524, '下载app'),
+(10525, 'KTV合唱'),
+(10526, '关爱下属'),
+(10527, '复制粘贴'),
+(10528, '帮人搬家'),
+(10529, '饭后剔牙'),
+(10530, '乌龙茶'),
+(10531, '光膀子'),
+(10532, '在线升级'),
+(10533, '雨中小跑'),
+(10534, '拒绝肉偿'),
+(10535, '携手淋雨'),
+(10536, '韩语歌曲'),
+(10537, '裸露额头'),
+(10538, '注视乳沟'),
+(10539, '阳台午睡'),
+(10540, '故意馋人'),
+(10541, '追忆初吻'),
+(10542, '擤鼻涕'),
+(10543, '陌生旅伴'),
+(10544, '笑点诡异'),
+(10545, '提前出发'),
+(10546, '制造盲点'),
+(10547, '赠人丝袜'),
+(10548, '奖励屌丝'),
+(10549, '豆制品'),
+(10550, '抢风头'),
+(10551, '招揽合租'),
+(10551, '频繁提臀'),
+(10552, '光想着吃'),
+(10552, '戺矷㱛夛'),
+(10553, '同情坏蛋'),
+(10554, '无语飘过'),
+(10555, '霸占公款'),
+(10556, '充当肉盾'),
+(10557, '异常热情'),
+(10558, '不欢而散'),
+(10559, '绿色指甲'),
+(10560, '错过班车'),
+(10561, '廉价早点'),
+(10562, '交换名片'),
+(10563, '五笔输入'),
+(10564, '朗读情书'),
+(10565, '彩框眼镜'),
+(10566, '省略一餐'),
+(10567, '混合饮料'),
+(10568, '人来疯'),
+(10569, '回娘家'),
+(10570, '探究乳源'),
+(10571, '冲动辞职'),
+(10572, '背后夸人'),
+(10573, '自贬身价'),
+(10574, '水果削皮'),
+(10575, '缴年费'),
+(10576, '替人约炮'),
+(10577, '英文缩写'),
+(10578, '分享视频'),
+(10579, '手机群聊'),
+(10580, '中医中药'),
+(10581, '修理拉链'),
+(10582, '目测腿长'),
+(10583, '念旧情儿'),
+(10584, '频频提裤'),
+(10585, '躺着阅读'),
+(10586, '卖萌争宠'),
+(10587, '喝浓茶'),
+(10588, '冲动求婚'),
+(10589, '滴眼液'),
+(10590, '胡乱许愿'),
+(10591, '液体蚊香'),
+(10592, '露各种沟'),
+(10593, '疯狂刷卡'),
+(10594, '增大毛孔'),
+(10595, '下蹲运动'),
+(10596, '强行分红'),
+(10597, '观光电梯'),
+(10598, '翻墙搜索'),
+(10599, '爆粗口'),
+(10600, '突然造访'),
+(10601, '电吹风'),
+(10602, '更改密码'),
+(10603, '连环画'),
+(10604, '收拾厨房'),
+(10605, '捡硬币'),
+(10606, '水果冰棍'),
+(10607, '申请年假'),
+(10608, '分享愿望'),
+(10609, '推掉饭局'),
+(10610, '浅色凉鞋'),
+(10611, '推迟会议'),
+(10612, '网购自取'),
+(10613, '管教备胎'),
+(10614, '深呼吸'),
+(10615, '拒绝红包'),
+(10616, '送人玫瑰'),
+(10617, '前扣内衣'),
+(10618, '带气饮料'),
+(10619, '揉捏室友'),
+(10620, '随意翻书'),
+(10621, '分享小吃'),
+(10622, '追捧烂片'),
+(10623, '质疑领导'),
+(10624, '记录梦境'),
+(10625, '冒充结巴'),
+(10626, '爱心泛滥'),
+(10627, '频繁摇头'),
+(10628, '中西混搭'),
+(10629, '哄抬智商'),
+(10630, '各种飞机'),
+(10631, '进口烟'),
+(10632, '民族风'),
+(10633, '合撑伞'),
+(10634, '捂脸跑开'),
+(10635, '水产品'),
+(10636, '在外过夜'),
+(10637, '母性大发'),
+(10638, '老虎菜'),
+(10639, '母女逛街'),
+(10640, '吓到尿'),
+(10641, '右键另存'),
+(10642, '无线遥控'),
+(10643, '相互投食'),
+(10644, '出售废品'),
+(10645, '啃骨头'),
+(10646, '肥水外流'),
+(10647, '睡觉磨牙'),
+(10648, '调戏娘炮'),
+(10649, '忘记买票'),
+(10650, '客串男友'),
+(10651, '当街叫卖'),
+(10652, '内部解决'),
+(10653, '换位思考'),
+(10654, '拒接电话'),
+(10655, '拼插玩具'),
+(10656, '相互润唇'),
+(10657, '心灵鸡汤'),
+(10658, '皮质饰品'),
+(10659, '约而不炮'),
+(10660, '四处乱走'),
+(10661, '花式接吻'),
+(10662, '现金消费'),
+(10663, '触摸胸部'),
+(10664, '互掏耳屎'),
+(10665, '午后放歌'),
+(10666, '颜文字'),
+(10667, '人字拖'),
+(10668, '独自夜跑'),
+(10669, '更换床单'),
+(10670, '对瓶吹'),
+(10671, '韩式烧烤'),
+(10672, '客串男友'),
+(10673, '客串男友'),
+(10674, '韩式烧烤'),
+(10675, '邮寄包裹'),
+(10676, '远赴饭局'),
+(10677, '找别扭'),
+(10678, '离别赠炮'),
+(10679, '单手打字'),
+(10680, '光脚走路'),
+(10681, '踊跃报名'),
+(10682, '歧视大PP'),
+(10683, '快餐外卖'),
+(10684, '格子短裤'),
+(10685, '不辞而别'),
+(10686, '贪恋软床'),
+(10687, '提前订票'),
+(10688, '调戏草包'),
+(10689, '备胎放炮'),
+(10690, '替人挠背'),
+(10691, '房费均摊'),
+(10692, '当街大哭'),
+(10693, '胖友联谊'),
+(10694, '讨好伴侣'),
+(10695, '扔狠话'),
+(10696, '出借雨伞'),
+(10697, '电动工具'),
+(10698, '速冻食品'),
+(10699, '看电视'),
+(10700, '按时服药'),
+(10701, '红色衣物'),
+(10702, '观看演出'),
+(10703, '白T恤'),
+(10704, '延迟送货'),
+(10705, '驾车向西'),
+(10706, '收喜帖'),
+(10707, '爱咋咋地'),
+(10708, '会见老乡'),
+(10709, '街边摊'),
+(10710, '借钱请客'),
+(10711, '借钱请客'),
+(10712, '管教男友'),
+(10713, '长途电话'),
+(10714, '偏右一点'),
+(10715, '庄严滚粗'),
+(10716, '立领polo'),
+(10717, '中途退票'),
+(10718, '开冰箱'),
+(10719, '隐形眼镜'),
+(10720, '当众训话'),
+(10721, '友好对骂'),
+(10722, '奶声奶气'),
+(10723, '吐口水'),
+(10724, '人肉泻火'),
+(10725, '顶撞大V'),
+(10726, '老头衫'),
+(10727, '裸体相对'),
+(10728, '买水果'),
+(10729, '临时约饭'),
+(10730, '穿袜子'),
+(10731, '送红包'),
+(10732, '欢送基友'),
+(10733, '激吻庆生'),
+(10734, '参与促销'),
+(10735, '修剪体毛'),
+(10735, '更换备胎'),
+(10736, '回放慢镜'),
+(10737, '三方通话'),
+(10738, '云约炮'),
+(10739, '一见如故'),
+(10740, '果断下单'),
+(10741, '用手纸'),
+(10742, '不了了之'),
+(10743, '当众道歉'),
+(10744, '排队购物'),
+(10745, '自由飞翔'),
+(10746, '频繁洗手'),
+(10747, '打麻将'),
+(10748, '兜里装钱'),
+(10749, '结伴午睡'),
+(10750, '拔火罐'),
+(10751, '亲子观影'),
+(10752, '催促工作'),
+(10753, '加快语速'),
+(10754, '说软话'),
+(10755, '自疗内伤'),
+(10756, '热奶泡脚'),
+(10757, '代人求情'),
+(10758, '连续开会'),
+(10759, '搭顺风车'),
+(10760, '一路向北'),
+(10761, '做好事'),
+(10762, '横条外套'),
+(10763, '不留名'),
+(10764, '搭讪路人'),
+(10765, '食内脏'),
+(10766, '广播操'),
+(10767, '口头减肥'),
+(10768, '睡后再说'),
+(10769, '并排合影'),
+(10770, '握手腕'),
+(10771, '躲避熟人'),
+(10772, '结伙蹭饭'),
+(10773, '远程示威'),
+(10774, '坚持原则'),
+(10775, '替人挡酒'),
+(10776, '中性打扮'),
+(10777, '风中吻别'),
+(10778, '预订图书'),
+(10779, '救助笨蛋'),
+(10780, '流水账'),
+(10781, '生食黄瓜'),
+(10782, '浅色内衣'),
+(10783, '重复就餐'),
+(10784, '临时出走'),
+(10785, '逃避下厨'),
+(10786, '冻柿子'),
+(10787, '霸占厕所'),
+(10788, '挥舞舌尖'),
+(10789, '备份硬盘'),
+(10790, '回访客户'),
+(10791, '模仿领导'),
+(10792, '吹拉弹唱'),
+(10793, '夸赞好友'),
+(10794, '浅色外套'),
+(10795, '提前退场'),
+(20001, '锦鲤转运链'),
+(20002, '红色手机壳'),
+(20003, '黑曜石手链'),
+(30001, '红色'),
+(30002, '蓝色'),
+(30003, '紫色'),
+(30004, '橙色'),
+(30005, '绿色'),
+(30006, '青色'),
+(30007, '黑色'),
+(40001, '转发锦鲤微博两次'),
+(40002, '给乞讨者1块钱'),
+(40003, '发个自拍@ 大王'),
+(40004, '语音向大王问好'),
+(40005, '分享此页到朋友圈'),
+(40006, '住处外绕三圈'),
+(40007, '摇摇锦鲤大王风铃'),
+(40008, '微博名加上"锦鲤"'),
+(40009, '微博头像换成锦鲤'),
+(40010, '向大王说个好消息'),
+(40011, '向大王介绍个电影'),
+(40012, '吼大王一下'),
+(50001, '床上挖鼻孔'),
+(50002, '吃饭听摇滚'),
+(50003, '约会白富美'),
+(50004, '中英文混杂'),
+(50005, '吐槽评论员'),
+(50006, '拉黑前男友'),
+(50007, '婚后不焦虑'),
+(50008, '批量下载AV'),
+(50009, '晚七点前遛狗'),
+(50010, '转移集体财产'),
+(50011, '睁眼说瞎话'),
+(50012, '关爱待产女性'),
+(50013, '打印私人文件'),
+(50014, '开关百叶窗'),
+(50015, '下载限免应用'),
+(50016, '为女上司看手相'),
+(50017, '夸人身材好'),
+(50018, '无诚意促销'),
+(50019, '怒斥不良老板'),
+(50020, '嘲笑处男处女'),
+(50021, '亲吻左撇子'),
+(50022, '影院吃爆米花'),
+(50023, '提防男下属'),
+(50024, '转让初夜权'),
+(50025, '跨国朋友圈'),
+(50026, '鸡头巴脑汤'),
+(50027, '午后开始工作'),
+(50028, '与傻逼交谈'),
+(50029, '暴露数学功底'),
+(50030, '大面积啄伤'),
+(50031, '萝卜就热茶'),
+(50032, '白内衣配黑袜子'),
+(50033, '刷新朋友圈'),
+(50034, '听风就是雨'),
+(50035, '俄罗斯方块'),
+(50036, '关爱大脸女性'),
+(50037, '修改矢量图'),
+(50038, '无病乱投票'),
+(50039, '偷窥接吻情侣'),
+(50040, '删垃圾短信'),
+(50041, '晚11点后吸烟'),
+(50042, '饼卷臭豆腐'),
+(50043, '抢丈母娘貂儿'),
+(50044, '无限期等人'),
+(50045, '追打夹腿男'),
+(50046, '更新暗恋对象'),
+(50047, '下载电子书'),
+(50048, '六人以上会议'),
+(50049, '删除上网记录'),
+(50050, '勾引白羊座'),
+(50051, '勾引金牛座'),
+(50052, '勾引双子座'),
+(50053, '勾引巨蟹座'),
+(50054, '勾引狮子座'),
+(50055, '勾引处女座'),
+(50056, '勾引天秤座'),
+(50057, '勾引天蝎座'),
+(50058, '勾引射手座'),
+(50059, '勾引魔羯座'),
+(50060, '勾引水瓶座'),
+(50061, '勾引双鱼座'),
+(50062, '轻黑白羊座'),
+(50063, '轻黑金牛座'),
+(50064, '轻黑双子座'),
+(50065, '轻黑巨蟹座'),
+(50066, '轻黑狮子座'),
+(50067, '轻黑处女座'),
+(50068, '轻黑天秤座'),
+(50069, '轻黑天蝎座'),
+(50070, '轻黑射手座'),
+(50071, '轻黑魔羯座'),
+(50072, '轻黑水瓶座'),
+(50073, '轻黑双鱼座'),
+(50074, '巴结白羊座'),
+(50075, '巴结金牛座'),
+(50076, '巴结双子座'),
+(50077, '巴结巨蟹座'),
+(50078, '巴结狮子座'),
+(50079, '巴结处女座'),
+(50080, '巴结天秤座'),
+(50081, '巴结天蝎座'),
+(50082, '巴结射手座'),
+(50083, '巴结魔羯座'),
+(50084, '巴结水瓶座'),
+(50085, '巴结双鱼座'),
+(50086, '转基因食品'),
+(50087, '阅读长微博'),
+(50088, '散播假八卦'),
+(50089, '公交车站抽烟'),
+(50090, '尝试新餐馆'),
+(50091, '晒出黑名单'),
+(50092, '怒闯异性寝室'),
+(50093, '清空购物车'),
+(50094, '异性并排行走'),
+(50095, '出借数据线'),
+(50096, '排挤贫乳分子'),
+(50097, '酒后吐真言'),
+(50098, '扶老人过马路'),
+(50099, '夸赞别人老公'),
+(50100, '拨通不讲话'),
+(50101, '鼓励大龄剩女'),
+(50102, '预防相思病'),
+(50103, '帮女同学叠被'),
+(50104, '参与一切工作话题'),
+(50105, '小包装纸巾'),
+(50106, '烧烤类食品'),
+(50107, '各类网络测试'),
+(50108, '为父母做饭'),
+(50109, '甘当人肉撒气筒'),
+(50110, '故意不上床'),
+(50111, '狂殴加薪同事'),
+(50112, '关爱孕期妇女'),
+(50113, '一次性打火机'),
+(50114, '一贱犯众怒'),
+(50115, '夸赞美食'),
+(50116, '人工催乳'),
+(50117, '绿色下装'),
+(50118, '给老板起外号'),
+(50119, '腐乳就可乐'),
+(50120, '吞咽他人口水'),
+(50121, '交换手机号'),
+(50122, '检查伴侣手机'),
+(50123, '抽打外国朋友'),
+(50124, '携宠物出游'),
+(50125, '互称肉麻昵称'),
+(50126, '吃水果到撑'),
+(50127, '翻脸不认人'),
+(50128, '紧急避孕药'),
+(50129, '电梯内放屁'),
+(50130, '羊肉馅元宵'),
+(50131, '索要包装袋'),
+(50132, '催促快递员'),
+(50133, '上缴年终奖'),
+(50134, '冒领年终奖'),
+(50135, '请嫂子喝酒'),
+(50136, '招惹黑车司机'),
+(50137, '举报长腿女青年'),
+(50138, '使用二十元纸币'),
+(50139, '拒绝参与意见'),
+(50140, '没事儿瞎逗逼'),
+(50141, '作好事不留名'),
+(50142, '共用润唇膏'),
+(50143, '乘车掏耳朵'),
+(50144, '20页以上ppt'),
+(50145, '与杭州人握手'),
+(50146, '替同事格式硬盘'),
+(50147, '骚扰女权主义者'),
+(50148, '坐副驾驶位'),
+(50149, '无纸化办公'),
+(50150, '搭讪卧铺旅伴'),
+(50151, '撩拨销售女同事'),
+(50152, '转发猫狗图片'),
+(50153, '拆穿妄想症'),
+(50154, '勾引大头少女'),
+(50155, '临时开个会'),
+(50156, '拒绝领导奇怪要求'),
+(50157, '出借充电器'),
+(50158, '询问wifi密码'),
+(50159, '光长岁数不长个'),
+(50160, '假装有未来'),
+(50161, '转角撞到墙'),
+(50162, '粉红色内衣'),
+(50163, '跪求喜当爹'),
+(50164, '预定会议室'),
+(50165, '保持正当不性关系'),
+(50166, '争吃病号饭'),
+(50167, '投食双眼皮儿'),
+(50168, '为领导开脱'),
+(50169, '婚内损失婚外补'),
+(50170, '互签免睡合约'),
+(50171, '代买卫生巾'),
+(50172, '关爱文科生'),
+(50173, '上午发微博'),
+(50174, '交流粗口经验'),
+(50175, '混合型香烟'),
+(50176, '为红衣老人指路'),
+(50177, '微信讨论工作'),
+(50178, '带迷路麋鹿回家'),
+(50179, '发表过继感言'),
+(50180, '出恭不出力'),
+(50181, '与程序员约会'),
+(50182, '拿骚情当浪漫'),
+(50183, '追女不成反类其犬'),
+(50184, '公交换乘地铁'),
+(50185, '分享情色网址'),
+(50186, '发送偶数字短信'),
+(50187, '信用卡还款'),
+(50188, '拉黑催稿编辑'),
+(50189, '讨教梦遗技法'),
+(50190, '放任娘泡卖骚'),
+(50191, '为科学祈祷'),
+(50192, '推算预产期'),
+(50193, '交往水蛇腰'),
+(50194, '同情苦逼同事'),
+(50195, '与女汉子摔跤'),
+(50196, '私自命名小行星'),
+(50197, '强搀交警过马路'),
+(50198, '观看法制节目'),
+(50199, '给胖姑娘让座'),
+(50200, '过度刺激敏感区'),
+(50201, '嘲笑尤文噗球'),
+(50202, '拒接同事电话'),
+(50203, '礼节性互粉'),
+(50204, '颜文字和表情符'),
+(50205, '炫耀假睫毛'),
+(50206, '为同事背锅'),
+(50207, '冒充人体艺术家'),
+(50208, '扫描二维码'),
+(50209, '惯用手用餐'),
+(50210, '追究劈腿责任'),
+(50211, '拨打骚友电话'),
+(50212, '车载无线电'),
+(50213, '冲动性消费'),
+(50214, '拒绝大脸女性'),
+(50215, '拒绝非礼要求'),
+(50216, '搭救裸睡儿童'),
+(50217, '破坏打卡机'),
+(50218, '请前台吃饭'),
+(50219, '问我去哪儿'),
+(50220, '摄录私密视频'),
+(50221, '重拾不良嗜好'),
+(50222, '投食女学生'),
+(50223, '赠送贴身衣物'),
+(50224, '委托第三方'),
+(50225, '帮人挂断电话'),
+(50226, '开会不管饭'),
+(50227, '散发好人卡'),
+(50228, '请下属吃饭'),
+(50229, '与胖子同床'),
+(50230, '自行返回地球'),
+(50231, '挑逗快递员'),
+(50232, '国产电视剧'),
+(50233, '暴露土豪身份'),
+(50234, '与戴美瞳者对话'),
+(50235, '预谋周末活动'),
+(50236, '收容问题少女'),
+(50237, '奢望小概率'),
+(50238, '占用饭点儿谈事儿'),
+(50239, '按价格排序'),
+(50240, '提高工作效率'),
+(50241, '废除考勤制度'),
+(50242, '冒充情感专家'),
+(50243, '约见中学同学'),
+(50244, '预约美发师'),
+(50245, '嘲笑女胖子'),
+(50246, '清理朋友圈'),
+(50247, '英文慢歌'),
+(50248, '向男神表白'),
+(50249, '关爱苦逼设计师'),
+(50250, '虐杀小昆虫'),
+(50251, '针刺伪球迷'),
+(50252, '翻阅姑娘相册'),
+(50253, '为同事点烟'),
+(50254, '私自带外星人回家'),
+(50255, '寻找同名者'),
+(50256, '榴莲味拥吻'),
+(50257, '绿色出租车'),
+(50258, '长时间入厕'),
+(50259, '请快递员吃糖'),
+(50260, '冒充催奶师'),
+(50261, '突然拥吻邻座同事'),
+(50262, '相互点餐拒不结账'),
+(50263, '忽略旧日弯伴'),
+(50264, '多任务处理'),
+(50265, '保存聊天记录'),
+(50266, '拆除违章假睫毛'),
+(50267, '调戏实习生'),
+(50268, '小语种叫床'),
+(50269, '在厕所刷微博'),
+(50270, '为暗恋对象牵线'),
+(50271, '与尖下巴打招呼'),
+(50272, '向前任道歉'),
+(50273, '入耳式耳机'),
+(50274, '超越两厢车'),
+(50275, '观测小行星'),
+(50276, '恶意阻拦少女卖萌'),
+(50277, '调戏细眼女生'),
+(50278, '电梯内谈工作'),
+(50279, '调整假期计划'),
+(50280, '省略饭局直奔主题'),
+(50281, '多任务处理'),
+(50282, '回收旧内衣'),
+(50283, '与的哥约会'),
+(50284, '为同事背黑锅'),
+(50285, '摧残均码衣服'),
+(50286, '关爱左撇子'),
+(50287, '借用充电器'),
+(50288, '与脑残粉对骂'),
+(50289, '冷落寂寞女邻居'),
+(50290, '搞好妻妾关系'),
+(50291, '望夫成龙下猛药'),
+(50292, '深夜陪怨妇聊天'),
+(50293, '讹摔倒老太太钱'),
+(50294, '洗澡时间过长'),
+(50295, '街边不看腿'),
+(50296, '自制三明治'),
+(50297, '替下属埋单'),
+(50298, '招惹中年妇女'),
+(50299, '和大长腿做朋友'),
+(50300, '虚构姐弟恋'),
+(50301, '向男友介绍闺蜜'),
+(50302, '对射手座呵呵'),
+(50303, '转移暗恋目标'),
+(50304, '给少女指点迷津'),
+(50305, 'at三位好友'),
+(50306, '原谅减肥癖患者'),
+(50307, '大战喵星人'),
+(50308, '阅读招生简章'),
+(50309, '卫生间谈判'),
+(50310, '实名求勾搭'),
+(50311, '与东北人唠闲嗑'),
+(50312, '与戴美瞳者对视'),
+(50313, '参观博物馆'),
+(50314, '光脚穿皮鞋'),
+(50315, '自曝清凉照'),
+(50316, '小金额刷卡'),
+(50317, '冒充精英人群'),
+(50318, '把物理老师捧上天'),
+(50319, '告别自行车'),
+(50320, '背着胖女友爱别人'),
+(50321, '玩弄刘海妹'),
+(50322, '咒骂交通状况'),
+(50323, '谈论高考志愿'),
+(50324, '重口味图片'),
+(50325, '关注蓝V账号'),
+(50326, '爆发母性光辉'),
+(50327, '揪女士腿毛'),
+(50328, '为女同事开脱'),
+(50329, '拨打热线电话'),
+(50330, '单方面宣布胜利'),
+(50331, '购置数码产品'),
+(50332, '揭批抠门朋友'),
+(50333, '爱上一个不会嫁的人'),
+(50334, '消费他人苦难'),
+(50335, '凉面就热茶'),
+(50336, '挑拨国际关系'),
+(50337, '学习西方理论'),
+(50338, '棒打鸳鸯蹼'),
+(50339, '关怀异性下属'),
+(50340, '争论南北方差异'),
+(50341, '升职不请客'),
+(50342, '求种变借种'),
+(50343, '拉黑三个好友'),
+(50344, '鞭打凤凰男'),
+(50345, '与的哥废话'),
+(50346, '读情感专栏'),
+(50347, '讥讽新领导'),
+(50348, '还惦记着那货'),
+(50349, '偷看哺乳期女子'),
+(50350, '自称红领巾'),
+(50351, '调戏外卖员'),
+(50352, '自我高估智商'),
+(50353, '给妈妈做饭'),
+(50354, '为老婆按摩'),
+(50355, '请岳母刺字'),
+(50356, '背女友逛街'),
+(50357, '替弟妹买女性用品'),
+(50358, '亲吻大脸妹'),
+(50359, '敦促老板请客'),
+(50360, '长时间鼓掌'),
+(50361, '销毁个人财产'),
+(50362, '与室友一起看片'),
+(50363, '力邀女同事加班'),
+(50364, '更改约会对象'),
+(50365, '追捧过气红人'),
+(50366, '为春姑娘脱秋裤'),
+(50367, '与邻居争辩'),
+(50368, '厨房内调情'),
+(50369, '与同性合影');
 
-/*Table structure for table `user` */
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `user`
+--
 
 DROP TABLE IF EXISTS `user`;
-
-CREATE TABLE `user` (
+CREATE TABLE IF NOT EXISTS `user` (
   `user_id` bigint(20) NOT NULL,
   `wx_id` bigint(20) DEFAULT NULL,
-  `fish_number` int(20) NOT NULL AUTO_INCREMENT,
+`fish_number` int(20) NOT NULL,
   `level` int(11) DEFAULT NULL,
   `todayluck_id` int(11) DEFAULT NULL,
-  `lastlogintime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`user_id`,`fish_number`),
-  KEY `user_number` (`fish_number`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+  `lastlogintime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
-/*Data for the table `user` */
+--
+-- 转存表中的数据 `user`
+--
 
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (0,0,1,0,1,'2014-10-05 00:00:22');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (1,1,2,11,1,'2014-10-04 23:54:12');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (2,2,3,12,2,'2014-10-04 23:59:01');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (3,3,3,11,NULL,'2014-10-04 23:56:46');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (4,4,4,11,NULL,'2014-10-04 23:56:53');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (5,5,5,11,NULL,'2014-10-04 23:56:58');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (6,6,6,11,NULL,'2014-10-04 23:59:23');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (7,7,7,11,NULL,'2014-10-04 23:48:51');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (8,8,8,11,NULL,'2014-10-04 23:53:51');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (9,9,9,11,NULL,'2014-10-04 23:59:07');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (10,10,10,11,NULL,'2014-10-04 23:56:26');
-insert  into `user`(`user_id`,`wx_id`,`fish_number`,`level`,`todayluck_id`,`lastlogintime`) values (11,11,11,11,NULL,'2014-10-04 22:51:18');
+INSERT INTO `user` (`user_id`, `wx_id`, `fish_number`, `level`, `todayluck_id`, `lastlogintime`) VALUES
+(0, 0, 1, 0, 1, '2014-10-25 15:46:54'),
+(1, 1, 2, 11, 1, '2014-10-25 15:44:52'),
+(2, 2, 3, 12, 2, '2014-10-25 15:37:27'),
+(3, 3, 3, 11, NULL, '2014-10-25 15:06:13'),
+(4, 4, 4, 11, NULL, '2014-10-25 15:22:26'),
+(5, 5, 5, 11, NULL, '2014-10-25 15:33:16'),
+(6, 6, 6, 11, NULL, '2014-10-25 15:33:00'),
+(7, 7, 7, 11, NULL, '2014-10-25 15:17:35'),
+(8, 8, 8, 11, NULL, '2014-10-25 15:37:56'),
+(9, 9, 9, 11, NULL, '2014-10-25 15:22:56'),
+(10, 10, 10, 11, NULL, '2014-10-25 15:34:17'),
+(11, 11, 11, 11, NULL, '2014-10-25 15:14:39');
 
-/*Table structure for table `user_luck` */
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `user_luck`
+--
 
 DROP TABLE IF EXISTS `user_luck`;
-
-CREATE TABLE `user_luck` (
+CREATE TABLE IF NOT EXISTS `user_luck` (
   `user_id` bigint(20) NOT NULL,
   `v_caiyun` int(11) DEFAULT NULL,
   `v_shiye` int(11) DEFAULT NULL,
@@ -1431,24 +1580,64 @@ CREATE TABLE `user_luck` (
   `ji2_1` int(11) DEFAULT NULL,
   `luck_item` int(11) DEFAULT NULL,
   `luck_color` int(11) DEFAULT NULL,
-  `addluck_way` int(11) DEFAULT NULL,
-  PRIMARY KEY (`user_id`)
+  `addluck_way` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-/*Data for the table `user_luck` */
+--
+-- 转存表中的数据 `user_luck`
+--
 
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (0,7,0,8,7,3,16,22,10080,10118,50043,50118,78,109,10179,10372,50135,50207,20001,30004,40009);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (1,1,5,9,7,2,55,56,10213,10321,50031,50032,78,133,10376,10413,50103,50106,20001,30006,40010);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (2,8,9,8,0,7,72,127,10048,10289,50040,50096,134,138,10324,10420,50131,50198,20002,30004,40010);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (3,8,5,5,10,2,70,86,10121,10164,50016,50033,92,135,10252,10330,50088,50155,20001,30005,40009);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (4,1,8,9,2,8,3,25,10039,10075,50004,50024,37,85,10242,10338,50100,50157,20003,30005,40005);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (5,9,8,1,10,3,4,12,10237,10256,50153,50170,62,74,10294,10367,50179,50187,20001,30007,40003);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (6,2,2,1,10,7,27,76,10064,10299,50008,50107,97,103,10311,10321,50162,50203,20001,30003,40011);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (7,0,5,7,1,4,3,85,10014,10030,50036,50095,133,136,10145,10272,50101,50221,20003,30004,40002);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (8,5,1,5,3,4,24,102,10019,10129,50069,50174,113,115,10400,10413,50200,50217,20002,30006,40005);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (9,8,1,5,0,2,20,97,10158,10219,50079,50101,112,134,10348,10401,50179,50203,20003,30001,40010);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (10,5,8,9,10,8,31,74,10295,10349,50027,50096,101,115,10358,10397,50140,50207,20001,30003,40011);
-insert  into `user_luck`(`user_id`,`v_caiyun`,`v_shiye`,`v_aiqing`,`v_jiankang`,`v_yunqi`,`yi0_0`,`yi0_1`,`yi1_0`,`yi1_1`,`yi2_0`,`yi2_1`,`ji0_0`,`ji0_1`,`ji1_0`,`ji1_1`,`ji2_0`,`ji2_1`,`luck_item`,`luck_color`,`addluck_way`) values (11,5,0,7,3,10,56,80,10271,10340,50019,50040,111,137,10366,10401,50058,50153,20001,30002,40004);
+INSERT INTO `user_luck` (`user_id`, `v_caiyun`, `v_shiye`, `v_aiqing`, `v_jiankang`, `v_yunqi`, `yi0_0`, `yi0_1`, `yi1_0`, `yi1_1`, `yi2_0`, `yi2_1`, `ji0_0`, `ji0_1`, `ji1_0`, `ji1_1`, `ji2_0`, `ji2_1`, `luck_item`, `luck_color`, `addluck_way`) VALUES
+(0, 9, 10, 1, 1, 0, 44, 94, 10107, 10151, 50095, 50236, 144, 151, 10475, 10742, 50289, 50332, 20003, 30001, 40006),
+(1, 8, 4, 2, 2, 2, 147, 155, 10006, 10208, 50053, 50091, 176, 185, 10359, 10558, 50276, 50346, 20003, 30002, 40011),
+(2, 4, 6, 2, 8, 10, 30, 37, 10038, 10466, 50090, 50153, 160, 250, 10576, 10757, 50170, 50310, 20002, 30006, 40008),
+(3, 8, 0, 9, 4, 10, 89, 136, 10305, 10361, 50038, 50104, 175, 204, 10389, 10412, 50167, 50269, 20002, 30004, 40011),
+(4, 6, 0, 1, 1, 6, 9, 31, 10167, 10178, 50109, 50163, 41, 133, 10233, 10705, 50178, 50357, 20003, 30003, 40010),
+(5, 9, 4, 5, 4, 4, 12, 105, 10139, 10228, 50238, 50287, 126, 223, 10383, 10734, 50324, 50348, 20001, 30001, 40011),
+(6, 4, 8, 9, 4, 6, 37, 98, 10056, 10108, 50097, 50127, 123, 158, 10436, 10453, 50184, 50351, 20002, 30007, 40002),
+(7, 2, 2, 3, 3, 6, 156, 180, 10067, 10269, 50155, 50222, 181, 210, 10429, 10565, 50255, 50271, 20003, 30004, 40004),
+(8, 2, 1, 2, 5, 5, 95, 192, 10080, 10431, 50050, 50106, 202, 205, 10503, 10638, 50108, 50313, 20003, 30002, 40006),
+(9, 0, 6, 6, 7, 3, 54, 127, 10039, 10133, 50008, 50074, 167, 248, 10349, 10504, 50180, 50302, 20001, 30004, 40002),
+(10, 8, 5, 2, 0, 9, 11, 21, 10222, 10269, 50082, 50097, 44, 219, 10406, 10503, 50247, 50259, 20001, 30002, 40007),
+(11, 3, 10, 5, 8, 5, 51, 107, 10088, 10096, 50142, 50229, 158, 173, 10249, 10694, 50272, 50344, 20003, 30006, 40012);
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `template_level`
+--
+ALTER TABLE `template_level`
+ ADD PRIMARY KEY (`level_id`);
+
+--
+-- Indexes for table `template_luck`
+--
+ALTER TABLE `template_luck`
+ ADD PRIMARY KEY (`id`,`chinese`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+ ADD PRIMARY KEY (`user_id`,`fish_number`), ADD KEY `user_number` (`fish_number`);
+
+--
+-- Indexes for table `user_luck`
+--
+ALTER TABLE `user_luck`
+ ADD PRIMARY KEY (`user_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+MODIFY `fish_number` int(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
