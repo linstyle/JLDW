@@ -30,22 +30,50 @@
 
 
 【两个字】
+带饭 
 
-
+insert  into `template_luck`(`id`,`chinese`) values (265, '带饭');
 
 【三到四个字】
- 
-
+ 电视入睡 吐露基情 苦中作乐 批量购物 吃栗子 暧昧调情 配乐朗诵 打抱不平 开卷考试 临时邀约 重新启动 侧方停车 凤凰传奇 十字绣 戴耳机 反穿内裤 短信吵架 
+insert  into `template_luck`(`id`,`chinese`) values (10796, '电视入睡');
+insert  into `template_luck`(`id`,`chinese`) values (10797, '吐露基情');
+insert  into `template_luck`(`id`,`chinese`) values (10798, '苦中作乐');
+insert  into `template_luck`(`id`,`chinese`) values (10799, '批量购物');
+insert  into `template_luck`(`id`,`chinese`) values (10800, '吃栗子');
+insert  into `template_luck`(`id`,`chinese`) values (10801, '暧昧调情');
+insert  into `template_luck`(`id`,`chinese`) values (10802, '配乐朗诵');
+insert  into `template_luck`(`id`,`chinese`) values (10803, '打抱不平');
+insert  into `template_luck`(`id`,`chinese`) values (10804, '开卷考试');
+insert  into `template_luck`(`id`,`chinese`) values (10805, '临时邀约');
+insert  into `template_luck`(`id`,`chinese`) values (10806, '重新启动');
+insert  into `template_luck`(`id`,`chinese`) values (10807, '侧方停车');
+insert  into `template_luck`(`id`,`chinese`) values (10808, '凤凰传奇');
+insert  into `template_luck`(`id`,`chinese`) values (10809, '十字绣');
+insert  into `template_luck`(`id`,`chinese`) values (10810, '戴耳机');
+insert  into `template_luck`(`id`,`chinese`) values (10811, '反穿内裤');
+insert  into `template_luck`(`id`,`chinese`) values (10812, '短信吵架');
 
 
 【五-七个字】
-
+锻炼膝关节 为女邻居清理垃圾 尾随暗恋对象 规劝失恋者 与猫狗谈心 追捧各种偶像 室内燃烧小宇宙 中英文夹杂 国产护肤品 购买打折商品 睡前面膜 
+insert  into `template_luck`(`id`,`chinese`) values (50370, '锻炼膝关节');
+insert  into `template_luck`(`id`,`chinese`) values (50371, '为女邻居清理垃圾');
+insert  into `template_luck`(`id`,`chinese`) values (50372, '尾随暗恋对象');
+insert  into `template_luck`(`id`,`chinese`) values (50373, '规劝失恋者');
+insert  into `template_luck`(`id`,`chinese`) values (50374, '与猫狗谈心');
+insert  into `template_luck`(`id`,`chinese`) values (50375, '追捧各种偶像');
+insert  into `template_luck`(`id`,`chinese`) values (50376, '室内燃烧小宇宙');
+insert  into `template_luck`(`id`,`chinese`) values (50377, '中英文夹杂');
+insert  into `template_luck`(`id`,`chinese`) values (50378, '国产护肤品');
+insert  into `template_luck`(`id`,`chinese`) values (50379, '购买打折商品');
+insert  into `template_luck`(`id`,`chinese`) values (50380, '睡前面膜');
 
 
 P9
-#青年老黄历#2013年1月17日，星期四，农历腊月初六。干支：壬辰年，癸丑月，癸未日。五行：杨柳木，破执位。冲：冲牛(丁丑)煞西。宜果味饮料，宜悔婚，宜饭后踢牙，宜改善叔嫂关系，宜拧激凸男，宜交配。忌等人，忌又胖了，忌政治笑话，忌结伴健身，忌哄骗眼镜妹，忌笑床。
+#青年老黄历#2013年1月7日，星期一，农历十一月廿六。干支：壬辰年，癸丑月，癸酉日。五行：剑锋金，成执位。冲：冲兔(丁卯)煞东。宜南方送暖，宜渴望周末，宜短信吵架，宜修剪鬓角，宜香口交，宜交配。忌摆胯，忌扑克，忌被更正，忌不熟充熟，忌检索编号，忌冤冤相报。
 
-insert  into `template_luck`(`id`,`chinese`) values (255, '贪睡');
+insert  into `template_luck`(`id`,`chinese`) values (264, '发呆');
 
 增加运气方式：40001～50000
 给乞讨者1块钱 转发锦鲤微博两次 发个自拍@ 大王 语音向大王问好 分享此页到朋友圈 住处外绕三圈 摇摇锦鲤大王风铃 微博名加上\"锦鲤\" 微博头像换成锦鲤
