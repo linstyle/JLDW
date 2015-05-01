@@ -49,7 +49,7 @@
 	   好了！</br>
 	</div>  
 
-	<a href="#" class="myButton">生成锦囊</a>
+	<a href="generateQRCode.php" class="myButton">生成锦囊</a>
  
 	<div id="layExplain" style="text-align:left;">
 	  【锦囊说明】
@@ -60,7 +60,7 @@
 		</ol>
 	</div>  
 
-</div>
+</div><!-- content -->
 
 <!-- bottom -->
 <div id="layFoot">愿望什么的就交给锦鲤们把，你努力就好。握鳍:)  </br>
