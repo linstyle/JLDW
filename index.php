@@ -15,30 +15,42 @@
 </div>
 <hr size=1 style="margin-bottom:10px;color: #C0C0C0;border-style:dotted;width:100%">
 
-
+<?php //确认是从这个页面进入的，防止重复刷新 
+      // setcookie('jinlidw_enable','true');
+?> 
 <!-- content -->
 <div style="text-align: center;">	
-	<table border="0" cellspacing="3" cellpadding="0">
-        <tr height="30"> 
-			<td > 你的名字</td>
+	<table border="0" cellspacing="8" cellpadding="0">
+        <tr > 
+			<td> 帮谁求</td>
+			<td> <input type="radio" value="my" checked="checked" name="towho"/>自己
+                     <input type="radio" value="other" name="towho"/>别人
+            </td>
+        </tr>
+        
+     	<form action="generateQRCode.php" method="post">
+        <tr > 
+			<td > 名字</td>
 			<td> <input type="text" name="fname" /></td>
         </tr>
         
-        <tr height="30"> 
-			<td> 你的性别</td>
+        <tr > 
+			<td> 性别</td>
 			<td> <input type="radio" value="male" checked="checked" name="sex"/>男
                      <input type="radio" value="female" name="sex"/>女
             </td>
+        </tr>
         
-        <tr height="30"> 
+        <tr > 
 			<td> 出生年月</td>
-			<td><input type="text" placeholder="例如 1995.10" value="" /> </td>
-        </tr>               
-	</table> 
-
+			<td><input type="text" placeholder="例如 1995.10" name="ftime" /> </td>
+        </tr>
+    </table>
+   
+    	<input type="submit" name="submit" class="myButton" value="生成锦囊" />
+    	</form>    
 
 	<div id="layDelay" style="text-align:center;color:#bbbbbb;">
-	  .</br>
 	  .</br>
 	   默念三声锦鲤大王</br>
 	  .</br>
@@ -49,8 +61,6 @@
 	   好了！</br>
 	</div>  
 
-	<a href="generateQRCode.php" class="myButton">生成锦囊</a>
- 
 	<div id="layExplain" style="text-align:left;">
 	  【锦囊说明】
 		<ol id="layExplain">
@@ -68,12 +78,12 @@
 微信号：<span style="font-weight:bold">JinLiDaWang</spn>
 </div>
 
-	<!--<script src="scripts/jldw.js"></script> -->
+	<!--<script src="scripts/jldw.js"></script>
 	<script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5fd2b65ab47448896ed3dabf5a7298f1' type='text/javascript'%3E%3C/script%3E"));
 </script>
-
+ -->
 </body>
 
 </html>
