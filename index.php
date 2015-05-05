@@ -6,6 +6,19 @@
 <title>锦鲤大王护身锦囊</title>
 
 <link rel="stylesheet" type="text/css" media="screen" href="styles/basic.css" />
+
+<script language="javascript">
+	function CheckInput()
+	{
+		if (form_input.fname.value=="" || form_input.bornTime.value=="")
+		{
+			alert('姓名或出生年月不能为空哦！');	
+			return false;
+		}
+	
+		return true;
+	}
+</script>
 </head>
 
 <body>
@@ -28,7 +41,7 @@
             </td>
         </tr>
         
-     	<form action="generateQRCode.php" method="post">
+     	<form id="form_input" action="generateQRCode.php" method="post">
         <tr > 
 			<td > 名字</td>
 			<td> <input type="text" name="fname" /></td>
@@ -43,15 +56,11 @@
         
         <tr > 
 			<td> 出生年月</td>
-			<td><input type="text" placeholder="例如 1995.10" name="ftime" /> </td>
+			<td><input type="text" placeholder="例如 1995.10" name="bornTime" /> </td>
         </tr>
     </table>
-   
-    	<input type="submit" name="submit" class="myButton" value="生成锦囊" />
-    	</form>    
 
 	<div id="layDelay" style="text-align:center;color:#bbbbbb;">
-	  .</br>
 	   默念三声锦鲤大王</br>
 	  .</br>
 	  .</br>
@@ -59,8 +68,11 @@
 	  .</br>
 	  .</br>
 	   好了！</br>
-	</div>  
-
+	</div>
+	  
+    <input type="submit" name="submit" class="myButton" onclick="return CheckInput()" value="生成锦囊" />
+    	</form> 
+    	
 	<div id="layExplain" style="text-align:left;">
 	  【锦囊说明】
 		<ol id="layExplain">

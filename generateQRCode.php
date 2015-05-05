@@ -54,7 +54,6 @@
 	$file = $images[array_rand($images)];  
 ?>
 
-
 <div style="text-align: center;">	
 
 	<table border="0" cellspacing="1" cellpadding="0" width="275">		
@@ -74,7 +73,7 @@
 				{
 					$fp=fopen("QRcounter.txt","r");
 					$nCount=fgets($fp,12); 
-					echo "<td style=\"text-align:center;	color:#ababab;font-size:13px;\">锦鲤大王的第 $nCount 个锦囊</td> ";
+					echo "<td style=\"text-align:center;	color:#ababab;font-size:13px;\">锦鲤大王发出的第 $nCount 个锦囊</td> ";
 				}
 				else
 				{
