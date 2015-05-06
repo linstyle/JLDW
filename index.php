@@ -1,4 +1,4 @@
-<meta id="viewport" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=2.0;" />
+﻿<meta id="viewport" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=2.0;" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,18 +30,19 @@
 
 <?php //确认是从这个页面进入的，防止重复刷新 
       // setcookie('jinlidw_enable','true');
+      header("Content-Type:text/html;charset=utf-8");
 ?> 
 <!-- content -->
 <div style="text-align: center;">	
 	<table border="0" cellspacing="8" cellpadding="0">
+		<form id="form_input" action="generateQRCode.php" method="post">
         <tr > 
 			<td> 帮谁求</td>
-			<td> <input type="radio" value="my" checked="checked" name="towho"/>自己
+			<td> <input type="radio" value="my" checked="checked" name="getType"/>自己
                      <input type="radio" value="other" name="towho"/>别人
             </td>
         </tr>
-        
-     	<form id="form_input" action="generateQRCode.php" method="post">
+            	
         <tr > 
 			<td > 名字</td>
 			<td> <input type="text" name="fname" /></td>
@@ -49,8 +50,8 @@
         
         <tr > 
 			<td> 性别</td>
-			<td> <input type="radio" value="male" checked="checked" name="sex"/>男
-                     <input type="radio" value="female" name="sex"/>女
+			<td> <input type="radio" value="1" checked="checked" name="sex"/>男
+                     <input type="radio" value="0" name="sex"/>女
             </td>
         </tr>
         

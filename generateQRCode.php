@@ -1,4 +1,4 @@
-<meta id="viewport" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=2.0;" />
+﻿<meta id="viewport" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=2.0;" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,18 +21,33 @@
 	}
 	setcookie('jinlidw_enable','false');
 */	
-	$nCount=1;
-	if(file_exists("QRcounter.txt"))
+ header("Content-Type:text/html;charset=utf-8");
+	//db
+	@$db_handle = new mysqli('localhost', 'root', '19871001', 'jldw');
+	if( mysqli_connect_error() )
 	{
-		$fp=fopen("QRcounter.txt","r");
-		$nCount=fgets($fp,12);
-		$nCount++;
-		fclose($fp);
+		chdir ($_SERVER['DOCUMENT_ROOT']);
+	    error_log(date("Y/m/d H:i:s") ."  "."Could not connect to database.!\n",   3,   "log/errors.txt");
 	}
 	
-	$fp=fopen("QRcounter.txt","w");
-	fputs($fp,$nCount);
-	fclose($fp);
+	$db_getType=mysql_real_escape_string($_POST['getType']);
+	$db_name=mysql_real_escape_string($_POST['fname']);
+	$db_sex=$_POST['sex'];
+	$db_bornTime=mysql_real_escape_string($_POST['bornTime']);
+	
+	$db_query = "insert into jinnang(`getType`,`name`,`sex`,`bornTime`) values('$db_getType', '$db_name', $db_sex, '$db_bornTime')";
+
+	if (!$db_handle->query($db_query))
+   	{
+		error_log(date("Y/m/d H:i:s") ."  "."insert failed!"."   ".$db_query."\n",   3,   "log/errors.txt");	
+	}	
+	
+	global $nCount;
+	$db_query = "SELECT * FROM jinnang";	
+	
+	$db_result = $db_handle->query($db_query);
+	$nCount = $db_result->num_rows;	
+	
 	echo "<div style=\"font-weight:bold;font-size:25px;color:0xffffff;margin-bottom:12px;margin-top:12px;text-align:center;\">
 	第 $nCount 个护身锦囊生成 </div>"
 ?>
@@ -68,17 +83,7 @@
 
         <tr>
         	<?php
-        		chdir ($_SERVER['DOCUMENT_ROOT']);
-				if(file_exists("QRcounter.txt"))
-				{
-					$fp=fopen("QRcounter.txt","r");
-					$nCount=fgets($fp,12); 
-					echo "<td style=\"text-align:center;	color:#ababab;font-size:13px;\">锦鲤大王发出的第 $nCount 个锦囊</td> ";
-				}
-				else
-				{
-					echo "<td style=\"text-align:center;	color:#ababab;font-size:13px;\">锦鲤大王给你的锦囊</td> ";
-				}
+        		echo "<td style=\"text-align:center;	color:#ababab;font-size:13px;\">锦鲤大王发出的第 $nCount 个锦囊</td> ";
 			?>       	
         </tr>        
         <tr>
