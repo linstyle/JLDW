@@ -71,7 +71,7 @@
 
 <div style="text-align: center;">	
 
-	<table border="0" cellspacing="1" cellpadding="0" width="275">		
+	<table border="0" cellspacing="1" cellpadding="0" width="290">		
 		 <tr > 
 			<td style="text-align:center"><img src="/images/QRCodeTitle.png" border="0" /> 
 		    </td>
