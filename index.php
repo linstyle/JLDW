@@ -56,7 +56,7 @@
         </tr>
         
         <tr > 
-			<td> 出生年月(农历)</td>
+			<td> 出生年月</br>(农历)</td>
 			<td><input type="text" placeholder="例如 1995.10，格式不定" name="bornTime" /> </td>
         </tr>
     </table>
