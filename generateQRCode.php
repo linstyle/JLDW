@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>锦鲤大王护身锦囊</title>
+<title>锦鲤大王人生锦囊</title>
 
 <link rel="stylesheet" type="text/css" media="screen" href="styles/basic.css" />
 </head>
@@ -49,7 +49,7 @@
 	$nCount = $db_result->num_rows;	
 	
 	echo "<div style=\"font-weight:bold;font-size:25px;color:0xffffff;margin-bottom:12px;margin-top:12px;text-align:center;\">
-	第 $nCount 个护身锦囊生成 </div>"
+	第 $nCount 个人生锦囊生成 </div>"
 ?>
 
 <hr size=1 style="margin-bottom:10px;color: #C0C0C0;border-style:dotted;width:100%">
@@ -57,8 +57,9 @@
 <!-- content -->
 	<div id="layExplain" style="text-align:left;">
 		<ol id="layExplain">
-	   		<li>把此二维码截屏放在相册中即可有平安效果。在人生特别绝望，需要指点的时候可以扫描获取指示，用过即无效</li>
-	   		<li>申请时间只能一个月一次，多次申请无效</li>
+			<li>先把此锦囊截屏，保存在相册中</li>
+	   		<li>在你某天特别需要指点和安慰的时候(比如绝望、太开心、心血来潮等)可以扫一扫获得一个易经卦文的指示。平常放相册里还有平安护身效果哦~</li>
+	   		<li>随意扫描无效，每个码只能扫描一次，申请时间只能一个月一次。</li>
 		</ol>
 	</div>  
 	
@@ -71,7 +72,7 @@
 
 <div style="text-align: center;">	
 
-	<table border="0" cellspacing="1" cellpadding="0" width="290">		
+	<table border="0" cellspacing="1" cellpadding="0" width="292">		
 		 <tr > 
 			<td style="text-align:center"><img src="/images/QRCodeTitle.png" border="0" /> 
 		    </td>
