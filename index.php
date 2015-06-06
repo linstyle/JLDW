@@ -19,6 +19,28 @@
 		return true;
 	}
 </script>
+
+<style type="text/css">
+	input[type=text], textarea {
+	    -webkit-transition: all 0.30s ease-in-out;
+	    -moz-transition: all 0.30s ease-in-out;
+	    -ms-transition: all 0.30s ease-in-out;
+	    -o-transition: all 0.30s ease-in-out;
+	    outline: none;
+	    padding: 3px 0px 3px 3px;
+	    margin: 5px 1px 3px 0px;
+	    border: 1px solid #ddd;
+	}
+  
+	input[type=text]:focus, textarea:focus {
+	    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	    padding: 3px 0px 3px 3px;
+	    margin: 5px 1px 3px 0px;
+	    border: 1px solid rgba(81, 203, 238, 1);
+	}
+} 
+</style>
+
 </head>
 
 <body>
@@ -45,7 +67,7 @@
             	
         <tr > 
 			<td > 名字</td>
-			<td> <input type="text" name="fname" /></td>
+			<td> <input type="text" name="fname" class="input-text" /></td>
         </tr>
         
         <tr > 
@@ -56,8 +78,8 @@
         </tr>
         
         <tr > 
-			<td> 出生年月</br>(农历)</td>
-			<td><input type="text" placeholder="例如 1995.10，格式不定" name="bornTime" /> </td>
+			<td> 出生年月</br></td>
+			<td><input type="text" placeholder="农历 例1995.10，格式不定" name="bornTime" /> </td>
         </tr>
     </table>
 
