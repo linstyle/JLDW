@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>锦鲤大王人生锦囊</title>
+<title>锦鲤大王的易经命数</title>
 
 <link rel="stylesheet" type="text/css" media="screen" href="styles/basic.css" />
 </head>
@@ -49,7 +49,7 @@
 	$nCount = $db_result->num_rows;	
 	
 	echo "<div style=\"font-weight:bold;font-size:25px;color:0xffffff;margin-bottom:12px;margin-top:12px;text-align:center;\">
-	第 $nCount 个人生锦囊生成 </div>"
+	第 $nCount 个运势指点锦囊生成 </div>"
 ?>
 
 <hr size=1 style="margin-bottom:10px;color: #C0C0C0;border-style:dotted;width:100%">

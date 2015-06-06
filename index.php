@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>锦鲤大王的人生锦囊</title>
+<title>锦鲤大王的易经命数  </title>
 
 <link rel="stylesheet" type="text/css" media="screen" href="styles/basic.css" />
 
@@ -46,7 +46,7 @@
 <body>
 <!-- head -->
 <div style="font-weight:bold;font-size:25px;color:0xffffff;margin-bottom:12px;margin-top:12px;text-align:center;">
-   求个人生的锦囊！	
+   求个运势指点锦囊！	
 </div>
 <hr size=1 style="margin-bottom:10px;color: #C0C0C0;border-style:dotted;width:100%">
 
@@ -99,7 +99,7 @@
 	<div id="layExplain" style="text-align:left;">
 	  【锦囊说明】
 		<ol id="layExplain">
-	   		<li>点击"生成锦囊"的按钮，就会得到一个专属你的锦囊二维码。在你某天特别需要指点和安慰的时候(比如绝望、太开心、心血来潮等)可以扫一扫获得一个易经卦文的指示。锦囊截屏放相册中即可，还有平安效果哦~</li>
+	   		<li>点击"生成锦囊"的按钮，就会得到一个专属你的运势锦囊二维码。在你某天特别需要指点和安慰的时候(比如绝望、太开心、心血来潮等)可以扫一扫获得一个易经卦文的指示。锦囊截屏放相册中即可，还有平安效果哦~</li>
 	   		<li>随意扫描无效，每个码只能扫描一次，申请时间只能一个月一次。</li>
 	   		<li>请认真填写，并且保证环境安静，心情虔诚</li>
 		</ol>
