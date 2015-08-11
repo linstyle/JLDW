@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>锦鲤大王的易经命数  </title>
+<title>易经卜卦</title>
 
 <link rel="stylesheet" type="text/css" media="screen" href="styles/basic.css" />
 
@@ -46,7 +46,7 @@
 <body>
 <!-- head -->
 <div style="font-weight:bold;font-size:25px;color:0xffffff;margin-bottom:12px;margin-top:12px;text-align:center;">
-   求个运势指点锦囊！	
+   这位18岁的兄台，求个卦？
 </div>
 <hr size=1 style="margin-bottom:10px;color: #C0C0C0;border-style:dotted;width:100%">
 
@@ -79,7 +79,7 @@
         
         <tr > 
 			<td> 出生年月</br></td>
-			<td><input type="text" placeholder="农历 例1995.10，格式不定" name="bornTime" /> </td>
+			<td><input type="text" placeholder="填农历 例1995.10" name="bornTime" /> </td>
         </tr>
     </table>
 
@@ -93,15 +93,17 @@
 	   好了！心诚则灵</br>
 	</div>
 	  
-    <input type="submit" name="submit" class="myButton" onclick="return CheckInput()" value="生成锦囊" />
+    <input type="submit" name="submit" class="myButton" onclick="return CheckInput()" value="生成卦象" />
     	</form> 
     	
 	<div id="layExplain" style="text-align:left;">
-	  【锦囊说明】
+	  【卜卦说明】
 		<ol id="layExplain">
-	   		<li>点击"生成锦囊"的按钮，就会得到一个专属你的运势锦囊二维码。在你某天特别需要指点和安慰的时候(比如绝望、太开心、心血来潮等)可以扫一扫获得一个易经卦文的指示。锦囊截屏放相册中即可，还有平安效果哦~</li>
-	   		<li>随意扫描无效，每个码只能扫描一次，申请时间只能一个月一次。</li>
-	   		<li>请认真填写，并且保证环境安静，心情虔诚</li>
+			<li><span style="font-weight:bold; color:#003366">原理：</span>根据姓名、出生年月，当前所求之事、结合易经八卦，算出一个专属你的卦象二维码。</li>
+			
+			<li><span style="font-weight:bold; color:#003366">用法：</span>当你有事相求或者需要指点时(比如绝望、太开心、心血来潮等)可以扫一扫此二维码获得易经卦文的指示。如果不急于扫开，平常先截图存放在手机相册中。</li>
+			
+			<li><span style="font-weight:bold; color:#003366">注意：</span>不能随意扫描，每个码只能扫描一次，申请时间只能一个月一次。一定要认真填写，并且保证环境安静，心情虔诚</li>
 		</ol>
 	</div>  
 
@@ -111,7 +113,7 @@
 <div id="layFoot">愿望什么的就交给锦鲤们把，你努力就好。握鳍:)  </br>
 新浪微博 <a href="http://weibo.com/u/3641513235">@锦鲤大王</a> 
 微信号：<span style="font-weight:bold">JinLiDaWang</span></br>
-版本号：v0.1
+版本号：v0.3
 </div>
 
 	<!--<script src="scripts/jldw.js"></script> -->

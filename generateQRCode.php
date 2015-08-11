@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>锦鲤大王的易经命数</title>
+<title>易经卜卦</title>
 
 <link rel="stylesheet" type="text/css" media="screen" href="styles/basic.css" />
 </head>
@@ -49,17 +49,19 @@
 	$nCount = $db_result->num_rows;	
 	
 	echo "<div style=\"font-weight:bold;font-size:25px;color:0xffffff;margin-bottom:12px;margin-top:12px;text-align:center;\">
-	第 $nCount 个运势指点锦囊生成 </div>"
+	第 $nCount 个易经卦象二维码生成 </div>"
 ?>
 
 <hr size=1 style="margin-bottom:10px;color: #C0C0C0;border-style:dotted;width:100%">
 
 <!-- content -->
-	<div id="layExplain" style="text-align:left;">
+	<div id="layExplain" style="text-align:left;">	
 		<ol id="layExplain">
-			<li>先把此锦囊截屏，保存在相册中</li>
-	   		<li>在你某天特别需要指点和安慰的时候(比如绝望、太开心、心血来潮等)可以扫一扫获得一个易经卦文的指示。平常放相册里还有平安护身效果哦~</li>
-	   		<li>随意扫描无效，每个码只能扫描一次，申请时间只能一个月一次。</li>
+			<li><span style="font-weight:bold; color:#003366">原理：</span>此二维码卦象是根据你的姓名、出生年月，当前心态等结合易经八卦所得到。</li>
+			
+			<li><span style="font-weight:bold; color:#003366">用法：</span>当你有事相求或者需要指点时(比如绝望、太开心、心血来潮等)可以扫一扫此二维码获得易经卦文的指示。如果不急于扫开，平常先截图存放在手机相册中。</li>
+			
+			<li><span style="font-weight:bold; color:#003366">注意：</span>每个码只能扫描一次，申请时间只能一个月一次。</li>
 		</ol>
 	</div>  
 	
@@ -84,9 +86,16 @@
 
         <tr>
         	<?php
-        		echo "<td style=\"text-align:center;	color:#ababab;font-size:13px;\">锦鲤大王发出的第 $nCount 个锦囊</td> ";
+        		echo "<td style=\"text-align:center;	color:#ababab;font-size:13px;\">锦鲤大王发出的第 $nCount 卦</td> ";
 			?>       	
-        </tr>        
+        </tr>    
+        
+        <tr>
+        	<?php
+        		echo "<td style=\"text-align:center;	color:#ababab;font-size:13px;\">截屏保存。需要时打开微信扫一扫(选择相册)</td> ";
+			?>       	
+        </tr>  
+                    
         <tr>
         	<td style="text-align:center;font-size:14px;">
         		<?php  echo $_POST['fname']." 于 "?> 
