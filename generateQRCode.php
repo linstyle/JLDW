@@ -83,27 +83,35 @@
 			<td><img src="<?php echo ("/images/QRCode/$file"); ?>" border="0" /> 
 		    </td>
 		</tr>
-
+           
+        <tr>
+        	<td style="text-align:center; font-size:14px;">
+        		<?php  echo $_POST['fname']." 于"?> 
+        		<span style="color:#0000ff">  <?php  echo date("Y-m-d") ?> </span> 求得
+        	</td>        	
+        </tr>
+        <tr>
+        	<td style="text-align:center; font-size:14px;">
+        	    赠语：行好事莫问前程，算一卦妙里乾坤
+        	</td>        	
+        </tr>        
+        
+        <tr>
+        	<td style="text-align:center; height:10px;">
+        	</td>        	
+        </tr>            
+ 
+         <tr>
+        	<?php
+        		echo "<td style=\"text-align:center;	color:#ababab;font-size:13px;\">截屏保存。需要时打开微信扫一扫(选择相册)</td> ";
+			?>       	
+        </tr> 
         <tr>
         	<?php
         		echo "<td style=\"text-align:center;	color:#ababab;font-size:13px;\">锦鲤大王发出的第 $nCount 卦</td> ";
 			?>       	
-        </tr>    
-        
-        <tr>
-        	<?php
-        		echo "<td style=\"text-align:center;	color:#ababab;font-size:13px;\">截屏保存。需要时打开微信扫一扫(选择相册)</td> ";
-			?>       	
-        </tr>  
-                    
-        <tr>
-        	<td style="text-align:center;font-size:14px;">
-        		<?php  echo $_POST['fname']." 于 "?> 
-        		<?php  echo date("Y-m-d")."求得" ?>
-        	</td>        	
-        </tr>
- 
-                
+        </tr>                        
+                       
 	</table>
 </div>
 
