@@ -116,12 +116,12 @@
 版本号：v0.3
 </div>
 
-	<!--<script src="scripts/jldw.js"></script> -->
+	<!--<script src="scripts/jldw.js"></script>
 	<script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5fd2b65ab47448896ed3dabf5a7298f1' type='text/javascript'%3E%3C/script%3E"));
 </script>
-
+ -->
 </body>
 
 </html>
