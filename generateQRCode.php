@@ -100,10 +100,10 @@
         	<td style="text-align:center; height:10px;">
         	</td>        	
         </tr>            
- 
+
          <tr>
         	<?php
-        		echo "<td style=\"text-align:center;	color:#ababab;font-size:13px;\">截屏保存。需要时打开微信扫一扫(选择相册)</td> ";
+        		echo "<td style=\"text-align:center;	color:#ababab;font-size:13px;\">截屏保存。需要时发到微信聊天窗口，点开图片，按住，选择识别二维码</td> ";
 			?>       	
         </tr> 
         <tr>
