@@ -48,6 +48,9 @@
 	$db_result = $db_handle->query($db_query);
 	$nCount = $db_result->num_rows;	
 	
+	//数据库已清空一次
+	$nCount = $nCount+87400;
+	
 	echo "<div style=\"font-weight:bold;font-size:25px;color:0xffffff;margin-bottom:12px;margin-top:12px;text-align:center;\">
 	第 $nCount 个易经卦象二维码生成 </div>"
 ?>
